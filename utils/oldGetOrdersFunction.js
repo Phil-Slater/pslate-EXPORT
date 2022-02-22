@@ -1,50 +1,3 @@
-const express = require("express");
-const req = require("express/lib/request");
-const router = express.Router();
-const uCG = require('../utils/unsleevedCableGroups')
-const updateUnsleeved1 = require('../utils/updateUnsleeved')
-const reWriteDate = require('../utils/reWriteDate')
-
-
-
-let sleevedOrders = []
-
-router.get('/', (req, res) => {
-    res.render('index')
-});
-
-router.get('/get-orders', async (req, res) => {
-    const orders = await getOrders()
-    res.render('view-orders', { allOrders: orders })
-})
-
-router.get('/get-unsleeved-orders', async (req, res) => {
-    const ordersFetched = await getUnsleevedOrders()
-    const unsleevedFiltered = filterUnsleevedOrders(ordersFetched)
-    const ordersUpdated = updateUnsleeved1(unsleevedFiltered)
-    const ordersFinalized = reWriteDate(ordersUpdated)
-    res.render('view-orders', { allOrders: ordersFinalized })
-})
-
-async function getUnsleevedOrders() {
-    return await instance.get('/orders.json?status=unfilfilled&limit=250&fields=order_number,line_items,created_at,order_status_url,note')
-    //unsleevedOrdersFetched(response)
-}
-
-function filterUnsleevedOrders(orders) {
-    let unsleevedOrders = []
-    orders.data.orders.forEach(order => {
-        order.line_items.forEach(product => {
-            let orderNumberCheck = unsleevedOrders.some(key => key.order_number === order.order_number)
-            if (!orderNumberCheck && product.title.includes('Unsleeved')) {
-                unsleevedOrders.push(order)
-            }
-        })
-    })
-    console.log(unsleevedOrders.length)
-    return unsleevedOrders
-}
-
 async function getOrders() {
     const response = await instance.get('/orders.json?status=unfilfilled&limit=250&fields=order_number,line_items,created_at,order_status_url,note')
     const orders = response.data.orders
@@ -270,5 +223,3 @@ async function getOrders() {
     })
     return orders
 }
-
-module.exports = router;

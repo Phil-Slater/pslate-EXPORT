@@ -1,0 +1,32 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: space-around;
+    background-color: rgba(163, 163, 163, 1);
+}
+
+body {
+    background-color: rgba(163, 163, 163, 1);
+}
+
+#orders {
+    background-color: rgb(77, 157, 184);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 3px 3px 10px rgb(10 10 10 / 60%);
+    /* border: groove 1em; */
+    border-radius: 10px;
+    width: 30em;
+    margin-bottom: 4em;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}

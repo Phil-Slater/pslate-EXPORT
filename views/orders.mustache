@@ -15,15 +15,6 @@
         <div id="orders">
             <h1>#{{order_number}}</h1>
             <h2>Order placed on: {{created_at}}</h2>
-            <p><b>Customer order note: </b>{{note}}</p>
-            {{#line_items}}
-            <h2>{{title}}</h2>
-            <p><b>Build instructions: {{instructions}}</b></p>
-            <img src={{design}} width="100%" onerror="this.style.display='none'" />
-            {{#properties}}
-            <p><b>{{name}}</b> {{value}}</p>
-            {{/properties}}
-            {{/line_items}}
         </div>
         {{/allOrders}}
 

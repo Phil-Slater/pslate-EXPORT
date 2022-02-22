@@ -1,61 +1,9 @@
-const express = require("express");
-const req = require("express/lib/request");
-const router = express.Router();
 const uCG = require('../utils/unsleevedCableGroups')
-const updateUnsleeved1 = require('../utils/updateUnsleeved')
-const reWriteDate = require('../utils/reWriteDate')
 
-
-
-let sleevedOrders = []
-
-router.get('/', (req, res) => {
-    res.render('index')
-});
-
-router.get('/get-orders', async (req, res) => {
-    const orders = await getOrders()
-    res.render('view-orders', { allOrders: orders })
-})
-
-router.get('/get-unsleeved-orders', async (req, res) => {
-    const ordersFetched = await getUnsleevedOrders()
-    const unsleevedFiltered = filterUnsleevedOrders(ordersFetched)
-    const ordersUpdated = updateUnsleeved1(unsleevedFiltered)
-    const ordersFinalized = reWriteDate(ordersUpdated)
-    res.render('view-orders', { allOrders: ordersFinalized })
-})
-
-async function getUnsleevedOrders() {
-    return await instance.get('/orders.json?status=unfilfilled&limit=250&fields=order_number,line_items,created_at,order_status_url,note')
-    //unsleevedOrdersFetched(response)
-}
-
-function filterUnsleevedOrders(orders) {
-    let unsleevedOrders = []
-    orders.data.orders.forEach(order => {
+function updateUnsleeved(orders) {
+    orders.forEach(order => {
         order.line_items.forEach(product => {
-            let orderNumberCheck = unsleevedOrders.some(key => key.order_number === order.order_number)
-            if (!orderNumberCheck && product.title.includes('Unsleeved')) {
-                unsleevedOrders.push(order)
-            }
-        })
-    })
-    console.log(unsleevedOrders.length)
-    return unsleevedOrders
-}
-
-async function getOrders() {
-    const response = await instance.get('/orders.json?status=unfilfilled&limit=250&fields=order_number,line_items,created_at,order_status_url,note')
-    const orders = response.data.orders
-    orders.forEach((order) => {
-        const string_date = order.created_at
-        const date = new Date(string_date)
-        order.created_at = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
-        //console.log(orders)
-        order.line_items.forEach((product) => {
-            delete product.name
-            product.properties.forEach((property) => {
+            product.properties.forEach(property => {
 
                 // CORSAIR
                 if (property.value === 'Corsair SF450/SF600/SF750 Gold/Platinum') {
@@ -132,7 +80,7 @@ async function getOrders() {
                     }
 
                     // 8 & 6 PCIE
-                    else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
+                    else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || unsleevedPCIEGroupThree.includes(product.title)) {
                         product.instructions = "300 - Silverstone Type 1"
                     } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
                         product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
@@ -237,7 +185,7 @@ async function getOrders() {
                     }
 
                     // 8 & 6 PCIE
-                    else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
+                    else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || unsleevedPCIEGroupThree.includes(product.title)) {
                         product.instructions = "300 - Silverstone Type 1"
                     }
 
@@ -252,6 +200,7 @@ async function getOrders() {
                     // Not an option for Lian Li (SFX-L)
                 }
 
+
                 if (property.name === 'Preview') {
                     product.design = property.value
                 }
@@ -264,11 +213,11 @@ async function getOrders() {
                     delete property.name
                     delete property.value
                 }
-
             })
         })
     })
+    //console.log(orders)
     return orders
 }
 
-module.exports = router;
+module.exports = updateUnsleeved;

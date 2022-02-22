@@ -5,6 +5,7 @@ const debug = require('debug')('pslateexport:server');
 const axios = require("axios");
 const http = require('http');
 const app = express();
+const path = require("path");
 const server = http.createServer(app);
 require('dotenv').config();
 
@@ -20,6 +21,8 @@ app.set('view engine', 'mustache');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+//app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')));
 
 const { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SHOPIFY_ACCESS_TOKEN, SHOP } = process.env
 
