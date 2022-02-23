@@ -11,7 +11,7 @@ require('dotenv').config();
 
 const port = 3000;
 app.set('port', port);
-server.listen(port);
+server.listen(process.env.PORT || port);
 server.on('error', onError);
 server.on('listening', onListening);
 
