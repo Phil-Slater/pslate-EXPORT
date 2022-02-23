@@ -1,5 +1,4 @@
 const express = require("express")
-const req = require("express/lib/request")
 const router = express.Router()
 const uCG = require('../utils/unsleevedCableGroups')
 const updateUnsleeved = require('../utils/updateUnsleeved')
