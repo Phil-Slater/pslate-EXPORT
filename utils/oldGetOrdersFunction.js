@@ -1,3 +1,16 @@
+// router.get('/unsleeved-orders', async (req, res) => {
+//     const ordersFetched = await getOrders()
+//     const unsleevedFiltered = filterUnsleevedOrders(ordersFetched)
+//     const ordersUpdated = updateUnsleeved(unsleevedFiltered)
+//     const ordersFinalized = reWriteDate(ordersUpdated)
+//     res.render('view-orders', { allOrders: ordersFinalized })
+// })
+
+// router.get('/orders', async (req, res) => {
+//     const orders = await getOrdersOld()
+//     res.render('view-orders', { allOrders: orders })
+// })
+
 async function getOrders() {
     const response = await instance.get('/orders.json?status=unfilfilled&limit=250&fields=order_number,line_items,created_at,order_status_url,note')
     const orders = response.data.orders

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pslatecustoms Orders</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<body>
+    <h1>Unsleeved Orders</h1>
+    <div id="container">
+        {{#allOrders}}
+        <div>
+            <form method="GET" action="/unsleeved-order/{{id}}">
+                <button class="button-29" role="button">
+                    <h1>#{{order_number}}</h1>
+                    <h2>Order placed on:</h2>
+                    <h2>{{created_at}}</h2>
+                </button>
+            </form>
+        </div>
+        {{/allOrders}}
+
+    </div>
+</body>
+<!--<script src="something"></script>-->
+
+</html>

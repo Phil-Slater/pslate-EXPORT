@@ -10,11 +10,17 @@
 </head>
 
 <body>
+    <h1>Sleeved Orders</h1>
     <div id="container">
         {{#allOrders}}
-        <div id="orders">
-            <h1>#{{order_number}}</h1>
-            <h2>Order placed on: {{created_at}}</h2>
+        <div>
+            <form method="GET" action="/sleeved-order/{{id}}">
+                <button class="button-29" role="button">
+                    <h1>#{{order_number}}</h1>
+                    <h2>Order placed on:</h2>
+                    <h2>{{created_at}}</h2>
+                </button>
+            </form>
         </div>
         {{/allOrders}}
 

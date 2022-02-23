@@ -2,7 +2,10 @@ const uCG = require('../utils/unsleevedCableGroups')
 
 function updateUnsleeved(orders) {
     orders.forEach(order => {
+        order.total_items = 0
         order.line_items.forEach(product => {
+            delete product.name
+            order.total_items += product.quantity
             product.properties.forEach(property => {
 
                 // CORSAIR
@@ -80,7 +83,7 @@ function updateUnsleeved(orders) {
                     }
 
                     // 8 & 6 PCIE
-                    else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || unsleevedPCIEGroupThree.includes(product.title)) {
+                    else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                         product.instructions = "300 - Silverstone Type 1"
                     } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
                         product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
@@ -214,6 +217,7 @@ function updateUnsleeved(orders) {
                     delete property.value
                 }
             })
+            //console.log(product)
         })
     })
     //console.log(orders)

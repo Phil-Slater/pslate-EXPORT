@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pslatecustoms Orders</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 
 <body>
     <div id="container">
         {{#allOrders}}
-        <div id="orders">
+        <div class="order-button">
             <h1>#{{order_number}}</h1>
             <h2>Order placed on: {{created_at}}</h2>
             <p><b>Customer order note: </b>{{note}}</p>
+            <p><b>Total items:</b> {{total_items}}</p>
             {{#line_items}}
             <h2>{{title}}</h2>
-            <p><b>Build instructions: {{instructions}}</b></p>
-            <img src={{design}} width="100%" onerror="this.style.display='none'" />
+            <p><b>Quantity:</b> {{quantity}}</p>
+            <p><b>Build instructions:</b> {{instructions}}</p>
+            <img src="{{design}}" width="50%" onerror="this.style.display='none'" />
             {{#properties}}
             <p><b>{{name}}</b> {{value}}</p>
             {{/properties}}
