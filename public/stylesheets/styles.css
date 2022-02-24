@@ -26,6 +26,11 @@ body {
 
 p {
     font-size: 20px;
+    margin-bottom: 4px;
+}
+
+p:empty {
+  font-size: 0px;
 }
 
 h1 {
@@ -57,6 +62,24 @@ a {
     margin-bottom: 1em;
 }
 
+.order-line-items {
+  background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  color: rgb(240, 240, 240);
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 1em;
+  line-height: 30px;
+}
+
 .order-button img {
   width: 60%; 
   margin-left: auto; 
@@ -65,7 +88,7 @@ a {
 
 /* CSS */
 .button-29 {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
@@ -144,9 +167,14 @@ a {
   .order-button {
     width: 75%;
   }
-  
-  .order-button img {
+
+  .order-line-items {
+    width: 75%;
+  }
+
+  .order-line-items img {
     width: 30%;
+    
   }
 }
 
