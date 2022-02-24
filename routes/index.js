@@ -5,10 +5,18 @@ const updateUnsleeved = require('../utils/updateUnsleeved')
 const updateSleeved = require('../utils/updateSleeved')
 const reWriteDate = require('../utils/reWriteDate')
 const urlFields = 'fields=order_number,line_items,created_at,order_status_url,note,id'
+const getOrdersOld = require('../utils/oldGetOrdersFunction')
 
 // PAGES
 router.get('/', (req, res) => {
     res.render('index')
+})
+
+
+// for testing - view all
+router.get('/orders', async (req, res) => {
+    const orders = await getOrdersOld()
+    res.render('view-orders', { allOrders: orders })
 })
 
 router.get('/unsleeved-order-numbers', async (req, res) => {

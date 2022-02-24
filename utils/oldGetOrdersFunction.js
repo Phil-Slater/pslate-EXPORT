@@ -1,3 +1,5 @@
+const uCG = require('../utils/unsleevedCableGroups')
+
 // router.get('/unsleeved-orders', async (req, res) => {
 //     const ordersFetched = await getOrders()
 //     const unsleevedFiltered = filterUnsleevedOrders(ordersFetched)
@@ -236,3 +238,6 @@ async function getOrders() {
     })
     return orders
 }
+
+
+module.exports = getOrders

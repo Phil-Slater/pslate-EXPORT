@@ -28,12 +28,13 @@ function updateUnsleeved(orders) {
                     else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
                         product.instructions = "265 - Corsair Type 1"
                     }
-                    else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
-                        product.instructions = "360 - Corsair Meshlicious"
-                    }
                     else if (uCG.unsleevedEPSImpactGroup.includes(product.title) && property.value === 'Asus ROG Crosshair VIII Impact') {
                         product.instructions = "200 - Corsair Type 2"
                     }
+                    else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
+                        product.instructions = "360 - Corsair Meshlicious"
+                    }
+
 
                     // 8 & 6 PCIE
                     else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
