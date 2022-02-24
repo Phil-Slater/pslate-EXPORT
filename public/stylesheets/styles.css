@@ -1,7 +1,7 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    padding: 1em;
+    padding: .5em;
     justify-content: space-around;
     background-color: rgb(71, 71, 71);
 }
@@ -15,12 +15,12 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 10px;
     box-shadow: 3px 3px 10px rgb(10 10 10 / 60%);
     /* border: groove 1em; */
     border-radius: 10px;
     width: 30em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     text-align: left;
 }
 
@@ -53,12 +53,19 @@ a {
     position: relative;
     text-align: left;
     font-size: 18px;
-    /* width: 30em; */
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.order-button img {
+  width: 60%; 
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 /* CSS */
 .button-29 {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
@@ -74,7 +81,7 @@ a {
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  padding: 2em;
+  padding: 1em;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -128,11 +135,22 @@ a {
   white-space: nowrap;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
+
   .button-50 {
     padding: 12px 50px;
   }
+
+  .order-button {
+    width: 75%;
+  }
+  
+  .order-button img {
+    width: 30%;
+  }
 }
+
+
 
 
 

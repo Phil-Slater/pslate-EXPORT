@@ -17,17 +17,19 @@
             <h2>Order placed on: {{created_at}}</h2>
             <p><b>Customer order note: </b>{{note}}</p>
             <p><b>Total items:</b> {{total_items}}</p>
-            {{#line_items}}
+        </div>
+        {{#line_items}}
+        <div class="order-button">
             <h2>{{title}}</h2>
             <p><b>Quantity:</b> {{quantity}}</p>
             <p><b>Build instructions:</b> {{instructions}}</p>
-            <img src="{{design}}" style="width:60%; margin-left: auto; margin-right: auto;"
-                onerror="this.style.display='none'" />
+            <img src="{{design}}" onerror="this.style.display='none'" />
             {{#properties}}
             <p><b>{{name}}</b> {{value}}</p>
             {{/properties}}
-            {{/line_items}}
         </div>
+        {{/line_items}}
+
         {{/allOrders}}
 
     </div>
