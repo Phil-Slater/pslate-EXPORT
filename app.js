@@ -9,7 +9,7 @@ const path = require("path");
 const server = http.createServer(app);
 require('dotenv').config();
 
-const port = 3000;
+const port = 3001;
 app.set('port', port);
 server.listen(process.env.PORT || port);
 server.on('error', onError);
