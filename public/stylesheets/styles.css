@@ -84,7 +84,7 @@ a {
 
 /* CSS */
 .button-29 {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
@@ -107,6 +107,8 @@ a {
   transition: box-shadow .15s,transform .15s;
   touch-action: manipulation;
   font-size: 18px;
+  width: 30vw;
+  height: 25vh;
 }
 
 .button-29:focus {
