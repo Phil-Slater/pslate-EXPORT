@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const uCG = require('../utils/unsleevedCableGroups')
+const getSignificantKeys = require('../utils/getSignificantKeys')
 const updateUnsleeved = require('../utils/updateUnsleeved')
 const updateSleeved = require('../utils/updateSleeved')
 const reWriteDate = require('../utils/reWriteDate')
@@ -23,26 +24,30 @@ router.get('/unsleeved-order-numbers', async (req, res) => {
     const ordersFetched = await getOrders()
     const unsleevedFiltered = filterUnsleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(unsleevedFiltered)
-    res.render('unsleeved-orders', { allOrders: ordersFinalized })
-})
-
-router.get('/unsleeved-order/:id', async (req, res) => {
-    const order = await getOrder(req.params.id)
-    const ordersUpdated = updateUnsleeved(order.data.orders)
-    const ordersFinalized = reWriteDate(ordersUpdated)
-    res.render('view-orders', { allOrders: ordersFinalized })
+    const lastOrders = filterRushOrders(ordersFinalized)
+    res.render('unsleeved-orders', { allOrders: lastOrders })
 })
 
 router.get('/sleeved-order-numbers', async (req, res) => {
     const ordersFetched = await getOrders()
     const sleevedFiltered = filterSleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(sleevedFiltered)
-    res.render('sleeved-orders', { allOrders: ordersFinalized })
+    const lastOrders = filterRushOrders(ordersFinalized)
+    res.render('sleeved-orders', { allOrders: lastOrders })
+})
+
+router.get('/unsleeved-order/:id', async (req, res) => {
+    const order = await getOrder(req.params.id)
+    const orderKeysAdded = getSignificantKeys(order.data.orders)
+    const ordersUpdated = updateUnsleeved(orderKeysAdded)
+    const ordersFinalized = reWriteDate(ordersUpdated)
+    res.render('view-orders', { allOrders: ordersFinalized })
 })
 
 router.get('/sleeved-order/:id', async (req, res) => {
     const order = await getOrder(req.params.id)
-    const ordersUpdated = updateUnsleeved(order.data.orders) // change to updateSleeved when that function is ready
+    const orderKeysAdded = getSignificantKeys(order.data.orders)
+    const ordersUpdated = updateUnsleeved(orderKeysAdded) // change to updateSleeved when that function is ready
     const ordersFinalized = reWriteDate(ordersUpdated)
     res.render('view-orders', { allOrders: ordersFinalized })
 })
@@ -81,8 +86,27 @@ function filterUnsleevedOrders(orders) {
             }
         })
     })
-    console.log(unsleevedOrders.length)
+    //console.log(unsleevedOrders.length)
     return unsleevedOrders
+}
+
+function filterRushOrders(orders) {
+    orders.forEach(order => {
+        order.line_items.forEach(product => {
+            product.properties.forEach(property => {
+                if (property.value.includes('ships in')) {
+                    order.rushOrder = 'RUSH ORDER'
+                    console.log('rush!')
+                }
+            })
+        })
+    })
+
+    orders.sort((a, b) => {
+        return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
+    })
+
+    return orders
 }
 
 module.exports = router
