@@ -107,8 +107,8 @@ a {
   transition: box-shadow .15s,transform .15s;
   touch-action: manipulation;
   font-size: 18px;
-  width: 30vw;
-  height: 25vh;
+  width: 40vw;
+  height: 40vh;
 }
 
 .button-29:focus {
