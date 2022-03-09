@@ -1,4 +1,5 @@
 const uCG = require('./unsleevedCableGroups')
+const gCD = require('./gpuClipDirections')
 
 function updateUnsleeved(orders) {
     orders.forEach(order => {
@@ -23,28 +24,27 @@ function updateUnsleeved(orders) {
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
                     product.instructions = "265 - Corsair Type 1"
-                }
-
-                else if (product.moboModel == 'Asus ROG Crosshair VIII Impact' && uCG.unsleevedEPSImpactGroup.includes(product.title)) {
-                    console.log('made it!')
+                } else if (product.moboModel == 'Asus ROG Crosshair VIII Impact' && uCG.unsleevedEPSImpactGroup.includes(product.title)) {
                     product.instructions = "200 - Corsair Type 2"
-                }
-
-                else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
+                } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - Corsair Meshlicious"
-                    //console.log(product.properties[2])
-                    //console.log(property, product.title, product.instructions)
                 }
-
-
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
                     product.instructions = "300 - Corsair Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
-                    product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '180/165 - Corsair Type 2'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '180/175 - Corsair Type 2'
+                    }
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
-                    product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '240/215 - Corsair Type 1'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '240 - Corsair Type 1'
+                    }
                 }
 
                 // SATA
@@ -89,7 +89,11 @@ function updateUnsleeved(orders) {
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     product.instructions = "300 - Silverstone Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
-                    product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '155/150 - Silverstone Type 2'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '170/155 - Silverstone Type 2'
+                    }
                 }
 
                 // SATA
@@ -128,9 +132,15 @@ function updateUnsleeved(orders) {
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
                     product.instructions = "300 - Silverstone Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
+                    //NCASE/NR200/S610 - not avaialble for cooler master unsleeded yet
                     product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
-                    product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '230/205 - Cooler Master Type 1'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '220 - Cooler Master Type 1'
+                    }
+
                 }
 
                 // SATA

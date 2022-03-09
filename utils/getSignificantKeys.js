@@ -31,17 +31,14 @@ function getSignificantKeys(orders) {
                 }
 
                 if (property.value.includes('Over GPU Backplate')) {
-                    console.log('inside over GPU')
                     product.gpuCableRouting = property.value
                 }
 
                 if (property.value.includes('Around end of GPU')) {
-                    console.log('inside around GPU')
                     product.gpuCableRouting = property.value
                 }
 
                 if (property.value.includes('Vertical GPU')) {
-                    console.log('inside vertical GPU')
                     product.gpuMountPosition = property.value
                 }
 

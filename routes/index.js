@@ -47,7 +47,7 @@ router.get('/unsleeved-order/:id', async (req, res) => {
 router.get('/sleeved-order/:id', async (req, res) => {
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
-    const ordersUpdated = updateUnsleeved(orderKeysAdded) // change to updateSleeved when that function is ready
+    const ordersUpdated = updateSleeved(orderKeysAdded) // change to updateSleeved when that function is ready
     const ordersFinalized = reWriteDate(ordersUpdated)
     res.render('view-orders', { allOrders: ordersFinalized })
 })
