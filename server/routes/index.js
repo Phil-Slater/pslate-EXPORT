@@ -33,7 +33,8 @@ router.get('/sleeved-order-numbers', async (req, res) => {
     const sleevedFiltered = filterSleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(sleevedFiltered)
     const lastOrders = filterRushOrders(ordersFinalized)
-    res.render('sleeved-orders', { allOrders: lastOrders })
+    res.json(lastOrders)
+    // res.render('sleeved-orders', { allOrders: lastOrders })
 })
 
 router.get('/unsleeved-order/:id', async (req, res) => {
