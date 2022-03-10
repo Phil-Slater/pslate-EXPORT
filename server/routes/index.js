@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 })
 
 
-// for testing - view all
+// for testing - view all open orders
 router.get('/orders', async (req, res) => {
     const orders = await getOrdersOld()
     res.render('view-orders', { allOrders: orders })
