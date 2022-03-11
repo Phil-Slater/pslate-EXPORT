@@ -9,7 +9,7 @@ function SleevedOrders() {
     })
 
     const fetchSleevedOrders = () => {
-        fetch('http://localhost:8080/sleeved-order-numbers')
+        fetch('https://pslate-export.herokuapp.com/sleeved-order-numbers')
             .then(response => response.json())
             .then(result => console.log(result))
     }
