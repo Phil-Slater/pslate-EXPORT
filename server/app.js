@@ -8,8 +8,10 @@ const app = express();
 const path = require("path");
 const server = http.createServer(app);
 require('dotenv').config();
+const cors = require('cors')
+app.use(cors())
 
-const port = 3001;
+const port = 8080;
 app.set('port', port);
 server.listen(process.env.PORT || port);
 server.on('error', onError);

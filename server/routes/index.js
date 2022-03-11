@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 })
 
 
-// for testing - view all
+// for testing - view all open orders
 router.get('/orders', async (req, res) => {
     const orders = await getOrdersOld()
     res.render('view-orders', { allOrders: orders })
@@ -33,7 +33,8 @@ router.get('/sleeved-order-numbers', async (req, res) => {
     const sleevedFiltered = filterSleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(sleevedFiltered)
     const lastOrders = filterRushOrders(ordersFinalized)
-    res.render('sleeved-orders', { allOrders: lastOrders })
+    res.json(lastOrders)
+    // res.render('sleeved-orders', { allOrders: lastOrders })
 })
 
 router.get('/unsleeved-order/:id', async (req, res) => {
