@@ -7,6 +7,27 @@
   justify-content: space-around;
 }
 
+.button-29-app {
+  /* display: inline-block; */
+  padding: 1rem;
+  width: 20rem;
+  height: 4rem;
+  font-size:1.25rem;
+  margin-bottom: 1em;
+  background-image: radial-gradient(100% 100% at 100% 0, #269bbb 10%, #6d0aa7 100%);
+  border: 0;
+  border-radius: .75rem;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Roboto;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
 .button-29 {
   margin-bottom: 2em;
   align-items: center;
@@ -19,7 +40,6 @@
   color: rgb(240, 240, 240);
   cursor: pointer;
   /* display: inline-flex; */
-  font-family: Roboto;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -48,6 +68,20 @@
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(5px);
   }
+
+  .button-29-app:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    }
+    
+    .button-29-app:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    }
+    
+    .button-29-app:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(5px);
+    }
 
 .orders {
   background-color: rgb(77, 157, 184);

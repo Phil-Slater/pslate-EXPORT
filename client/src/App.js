@@ -1,10 +1,7 @@
-
+import './css/styles.css'
 import './App.css';
 import '../src/css/tailwind/tailwind.min.css'
 import './assets/js/main.js'
-import bgLines from './assets/zospace-assets/lines/circle.svg'
-import Menu from './components/Menu';
-import SleevedOrders from './components/SleevedOrders';
 import { NavLink } from 'react-router-dom'
 
 function App() {
@@ -20,12 +17,12 @@ function App() {
             <h2 className="max-w-lg lg:max-w-md 2xl:max-w-none mt-7 mb-12 mb:mb-20 text-6xl lg:text-7xl 2xl:text-9xl text-white font-bold font-heading">
               Welcome to pslate Order Exporter.</h2>
           </div>
-          <div className="flex flex-col px-12 mx-12 sm:-mx-8">
-            <NavLink to='/rush-orders'><div className="inline-block px-20 py-5 w-112 text-lg text-white text-center font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200">Rush Orders</div></NavLink>
-            <NavLink to='/sleeved-orders'><div className="inline-block px-20 py-5 w-112 text-lg text-white text-center font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200">Sleeved Orders</div></NavLink>
-            <NavLink to='/unsleeved-orders'><div className="inline-block px-20 py-5 w-112 text-lg text-white text-center font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200">Unsleeved Orders</div></NavLink>
-            <NavLink to='/power-switches'><div className="inline-block px-20 py-5 w-112 text-lg text-white text-center font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200">Power Switches</div></NavLink>
-            <NavLink to='/sleeved-12-pins'><div className="inline-block px-20 py-5 w-112 text-lg text-white text-center font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200">Sleeved 12 Pins</div></NavLink>
+          <div className="flex flex-col mx-4">
+            <NavLink to='/rush-orders'><div className="button-29-app">Rush Orders</div></NavLink>
+            <NavLink to='/sleeved-orders'><div className="button-29-app">Sleeved Orders</div></NavLink>
+            <NavLink to='/unsleeved-orders'><div className="button-29-app">Unsleeved Orders</div></NavLink>
+            <NavLink to='/power-switches'><div className="button-29-app">Power Switches</div></NavLink>
+            <NavLink to='/sleeved-12-pins'><div className="button-29-app">Sleeved 12 Pins</div></NavLink>
           </div>
 
         </div>

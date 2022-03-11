@@ -49,7 +49,7 @@ function Menu() {
                         </ul>
                     </div>
                     <div className="hidden lg:block"><a
-                        className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
+                        className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-xl"
                         href="#">Sign Up</a></div>
                 </nav>
                 <div className="hidden navbar-menu fixed top-0 left-0 h-full w-5/6 max-w-sm z-50">
@@ -71,9 +71,9 @@ function Menu() {
                         </div>
                         <div className="mt-auto px-10">
                             <div className="pt-6"><a
-                                className="block mb-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full"
+                                className="block mb-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-100 rounded-xl"
                                 href="#">Sign in</a><a
-                                    className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                                    className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-xl transition duration-200"
                                     href="#">Sign up</a></div>
                         </div>
                     </nav>
