@@ -3,10 +3,10 @@ module.exports = {
         './src/pug/*.pug',
         './src/html/*.html',
     ],
-    
+
     theme: {
         screens: {
-            sm: '640px',
+            sm: '240px',
             md: '768px',
             lg: '1024px',
             xl: '1280px',

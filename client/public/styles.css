@@ -1,8 +1,11 @@
-body, html {
-    /* background-color: #4827a5; */
-    margin-bottom:
-  }
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
   body {
       background-color: black;
+  }
+
+  .h1-text {
+    font-size: 40px;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    color: rgb(240, 240, 240); 
   }

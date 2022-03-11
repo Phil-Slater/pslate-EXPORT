@@ -1,10 +1,12 @@
+
 import Menu from "./Menu"
 
 
-function BaseLayout() {
+function BaseLayout(props) {
     return (
         <div>
             <Menu />
+            {props.children}
         </div>
     )
 }
