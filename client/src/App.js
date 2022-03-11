@@ -21,7 +21,7 @@ function App() {
             <h2 className="max-w-lg lg:max-w-md 2xl:max-w-none mt-7 mb-12 mb:mb-20 text-6xl lg:text-7xl 2xl:text-9xl text-white font-bold font-heading">
               Welcome to pslate Order Exporter.</h2>
           </div>
-          <div className="flex flex-col px-20 mx-20 sm:-mx-16"><a
+          <div className="flex flex-col px-20 mx-20 sm:-mx-8"><a
             className="inline-block px-20 py-5 text-lg text-white font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200"
             href="#">Rush Orders</a>
             <a className="inline-block px-20 py-5 text-lg text-white font-bold bg-blue-500 mb-6 hover:bg-blue-600 rounded-full transition duration-200"
