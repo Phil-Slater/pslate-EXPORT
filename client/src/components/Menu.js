@@ -52,7 +52,7 @@ function Menu() {
                         className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-full"
                         href="#">Sign Up</a></div>
                 </nav>
-                <div className="hidden navbar-menu fixed top-0 left-0 bottom-32 w-5/6 max-w-sm z-50">
+                <div className="hidden navbar-menu fixed top-0 left-0 h-full w-5/6 max-w-sm z-50">
                     <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
                     <nav className="relative flex flex-col py-8 h-full w-full bg-gray-600 overflow-y-auto">
                         <div className="flex items-center mb-16 pr-6">
