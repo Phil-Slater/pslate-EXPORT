@@ -26,7 +26,7 @@ function UnsleevedOrders() {
 
     return (
         <div>
-            <h1 className='h1-text'>Unsleeved Orders</h1>
+            <h1 className='text-white font-bold text-5xl p-4 text-center'>Unsleeved Orders</h1>
             <div className='order-container'>{ordersMapped}</div>
         </div>
     )
