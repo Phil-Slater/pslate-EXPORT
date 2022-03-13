@@ -54,6 +54,21 @@ router.get('/sleeved-order/:id', async (req, res) => {
     res.render('view-orders', { allOrders: ordersFinalized })
 })
 
+router.get('/rush-orders', async (req, res) => {
+    const ordersFetched = await getOrders()
+    const ordersFinalized = reWriteDate(ordersFetched.data.orders)
+    const lastOrders = filterRushOrders(ordersFinalized)
+    res.json(lastOrders)
+})
+
+router.get('/power-switches', async (req, res) => {
+    const ordersFetched = await getOrders()
+    const ordersFinalized = reWriteDate(ordersFetched.data.orders)
+    const dateUpdated = getPowerSwitchOrders(ordersFinalized)
+    const lastOrders = filterRushOrders(dateUpdated)
+    res.json(lastOrders)
+})
+
 
 // FUNCTIONS
 async function getOrder(id) {
@@ -88,7 +103,7 @@ function filterUnsleevedOrders(orders) {
             }
         })
     })
-    //console.log(unsleevedOrders.length)
+    console.log(unsleevedOrders.length)
     return unsleevedOrders
 }
 
@@ -98,7 +113,6 @@ function filterRushOrders(orders) {
             product.properties.forEach(property => {
                 if (property.value.includes('ships in')) {
                     order.rushOrder = 'RUSH ORDER'
-                    console.log('rush!')
                 }
             })
         })
@@ -107,8 +121,19 @@ function filterRushOrders(orders) {
     orders.sort((a, b) => {
         return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
     })
-
     return orders
+}
+
+function getPowerSwitchOrders(orders) {
+    powerSwitchOrders = []
+    orders.forEach(order => {
+        order.line_items.forEach(product => {
+            if (product.title.includes('Switch Power Button')) {
+                powerSwitchOrders.push(order)
+            }
+        })
+    })
+    return powerSwitchOrders
 }
 
 module.exports = router
