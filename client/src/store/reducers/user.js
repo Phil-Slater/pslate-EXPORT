@@ -1,4 +1,4 @@
-import ON_AUTH from '../actions/actionTypes'
+import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
     isAuthenticated: false
@@ -6,7 +6,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case ON_AUTH:
+        case actionTypes.ON_AUTH:
             return {
                 ...state,
                 isAuthenticated: action.payload != null

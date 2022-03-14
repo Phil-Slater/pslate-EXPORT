@@ -13,8 +13,13 @@ import Sleeved12Pins from './components/Sleeved12Pins';
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import userReducer from './store/reducers/user'
+import orderReducer from './store/reducers/order'
 
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({
+  userReducer: userReducer,
+  orderReducer: orderReducer
+})
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

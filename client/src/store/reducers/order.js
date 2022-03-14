@@ -1,4 +1,4 @@
-import GET_ORDER from '../actions/actionTypes'
+import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
     order: {}
@@ -6,7 +6,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case GET_ORDER:
+        case actionTypes.GET_ORDER:
             return {
                 ...state,
                 order: action.payload
