@@ -10,10 +10,11 @@ const server = http.createServer(app);
 require('dotenv').config();
 const cors = require('cors')
 app.use(cors())
+const mongoose = require('mongoose')
 
 const port = 8080;
 app.set('port', port);
-server.listen(process.env.PORT || port);
+server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -25,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 
-const { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SHOPIFY_ACCESS_TOKEN, SHOP } = process.env
+const { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SHOPIFY_ACCESS_TOKEN, SHOP, MONGO_URL } = process.env
 
 global.instance = axios.create({
     baseURL: `https://${SHOPIFY_API_KEY}:${SHOPIFY_API_SECRET}@${SHOP}/admin/api/2022-01`,
@@ -36,8 +37,19 @@ global.instance = axios.create({
     }
 })
 
+mongoose.connect(MONGO_URL, {
+    useNewUrlParser: true, useUnifiedTopology: true
+}, (error) => {
+    if (error) {
+        console.log(error)
+    } else {
+        console.log('Connected to MongoDB.')
+    }
+})
+
 // ROUTES
-app.use("/", require('./routes/index.js'));
+app.use('/', require('./routes/order.js'));
+app.use('/user', require('./routes/user.js'))
 
 // error handler
 function onError(error) {

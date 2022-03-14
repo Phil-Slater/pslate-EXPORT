@@ -15,6 +15,8 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import userReducer from './store/reducers/user'
 import orderReducer from './store/reducers/order'
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -29,6 +31,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+        <Routes>
+        </Routes>
         <BaseLayout>
           <Routes>
             <Route path='/' element={<App />} />
@@ -37,6 +41,8 @@ ReactDOM.render(
             <Route path='/rush-orders' element={<RushOrders />} />
             <Route path='/power-switches' element={<PowerSwitches />} />
             <Route path='/sleeved-12-pins' element={<Sleeved12Pins />} />
+            <Route path='/sign-up' element={<SignUp />} />
+            <Route path='/login' element={<LogIn />} />
           </Routes>
         </BaseLayout>
       </BrowserRouter>

@@ -3,6 +3,7 @@ import logo2 from '../assets/logo2.png'
 import { NavLink } from 'react-router-dom'
 
 function Menu() {
+
     return (
         <div>
             <section className="py-8 px-4 lg:px-10 bg-gray-800">
