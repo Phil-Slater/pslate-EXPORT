@@ -54,7 +54,7 @@ router.get('/sleeved-order/:id', async (req, res) => {
     res.render('view-orders', { allOrders: ordersFinalized })
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/order/:id', async (req, res) => {
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
     const unsleevedUpdated = updateUnsleeved(orderKeysAdded)
@@ -65,6 +65,7 @@ router.get('/:id', async (req, res) => {
 })
 
 router.get('/rush-orders', async (req, res) => {
+    console.log('hi')
     const ordersFetched = await getOrders()
     const ordersFinalized = reWriteDate(ordersFetched.data.orders)
     const lastOrders = filterRushOrders(ordersFinalized)
