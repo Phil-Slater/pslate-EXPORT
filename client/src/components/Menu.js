@@ -1,3 +1,4 @@
+
 import '../assets/js/main.js'
 import logo2 from '../assets/logo2.png'
 import { NavLink } from 'react-router-dom'
@@ -22,7 +23,7 @@ function Menu() {
                     </div>
                     <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                         <ul className="flex items-center text-white space-x-8">
-                            <NavLink to='/rush-orders'><li><div className="text-white font-bold text-lg" >Rush Orders</div></li></NavLink>
+                            <NavLink to='/rush-orders'><li><div className="text-white font-bold text-lg">Rush Orders</div></li></NavLink>
                             <span>
                                 <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>

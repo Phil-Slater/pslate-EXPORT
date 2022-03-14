@@ -20,7 +20,7 @@ function SignUp() {
         const response = await axios.post('http://localhost:8080/user/sign-up', user)
         alert(response.data.message)
         if (response.data.success) {
-            navigate('/login')
+            navigate('/sign-in')
         }
     }
 

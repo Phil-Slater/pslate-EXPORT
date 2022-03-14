@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, NavLink } from 'react-router-dom'
 import logo from '../assets/pslate.png'
 import axios from 'axios'
 
@@ -35,7 +35,7 @@ function SignIn() {
                         <div className="flex flex-wrap items-center -mx-4">
                             <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                                 <div className="max-w-md">
-                                    <img className="h-52" src={logo} alt="" width="auto" />
+                                    <NavLink to='/'><img className="h-52 items-center" src={logo} alt="" width="auto" /></NavLink>
                                     {/* <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">Create an account for pslate Order Exporter.</h2> */}
 
                                 </div>
