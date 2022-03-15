@@ -13,7 +13,7 @@ function SleevedOrders() {
     }, [])
 
     const fetchSleevedOrders = async () => {
-        const orders = await axios.get('https://pslate-export.herokuapp.com/sleeved-order-numbers')
+        const orders = await axios.get('http://localhost:8080/sleeved-order-numbers')
         setOrders(orders.data)
     }
 

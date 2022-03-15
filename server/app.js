@@ -14,7 +14,7 @@ const mongoose = require('mongoose')
 
 const port = 8080;
 app.set('port', port);
-server.listen(port);
+server.listen(process.env.PORT || port);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -48,7 +48,7 @@ mongoose.connect(MONGO_URL, {
 })
 
 // ROUTES
-app.use('/', require('./routes/order.js'));
+app.use('/', require('./routes/index.js'));
 app.use('/user', require('./routes/user.js'))
 
 // error handler
