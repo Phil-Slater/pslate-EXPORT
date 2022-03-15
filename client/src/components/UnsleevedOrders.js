@@ -11,7 +11,7 @@ function UnsleevedOrders() {
     }, [])
 
     const fetchUnsleevedOrders = async () => {
-        const orders = await axios.get('http://localhost:8080/unsleeved-order-numbers')
+        const orders = await axios.get('https://pslate-export.herokuapp.com/unsleeved-order-numbers')
         setOrders(orders.data)
     }
 

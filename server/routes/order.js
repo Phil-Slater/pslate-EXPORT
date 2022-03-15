@@ -70,7 +70,6 @@ router.get('/order/:id', authenticate, async (req, res) => {
 })
 
 router.get('/rush-orders', authenticate, async (req, res) => {
-    console.log('hi')
     const ordersFetched = await getOrders()
     const ordersFinalized = reWriteDate(ordersFetched.data.orders)
     const lastOrders = filterRushOrders(ordersFinalized)
