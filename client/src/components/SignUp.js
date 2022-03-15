@@ -24,10 +24,6 @@ function SignUp() {
         }
     }
 
-
-
-
-
     return (
         <div>
             <section className="relative py-32 2xl:py-40 bg-gray-800 overflow-hidden">

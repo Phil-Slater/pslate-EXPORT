@@ -2,8 +2,9 @@
 import '../assets/js/main.js'
 import logo2 from '../assets/logo2.png'
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-function Menu() {
+function Menu(props) {
 
     return (
         <div>
@@ -50,8 +51,13 @@ function Menu() {
                             <NavLink to='/sleeved-12-pins'><li><div className="text-white font-bold text-lg" >Sleeved 12 Pins</div></li></NavLink>
                         </ul>
                     </div>
-                    <div className="hidden lg:block"><NavLink to='/sign-in'><div
-                        className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-xl">Sign In</div></NavLink></div>
+                    {!props.isAuthenticated ?
+
+                        <div className="hidden lg:block"><NavLink to='/sign-in'><div
+                            className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-xl">Sign In</div></NavLink></div>
+                        : <div className="hidden lg:block"><NavLink to='/sign-out'><div
+                            className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-xl">Sign out</div></NavLink></div>
+                    }
                 </nav>
                 <div className="hidden navbar-menu fixed top-0 left-0 h-full w-5/6 max-w-sm z-50">
                     <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
@@ -71,13 +77,26 @@ function Menu() {
                             </ul>
                         </div>
                         <div className="mt-auto px-10">
-                            <div className="pt-6"><NavLink to='/sign-in'><div
-                                className="block mb-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-100 rounded-xl"
-                                href="#">Sign In</div></NavLink>
-                                <NavLink to='/sign-up'><div
-                                    className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-xl transition duration-200"
-                                    href="#">Sign Up</div></NavLink>
-                            </div>
+                            {!props.isAuthenticated ?
+                                <div className="pt-6">
+
+                                    <NavLink to='/sign-in'>
+                                        <div className="block mb-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-100 rounded-xl">Sign In
+                                        </div>
+                                    </NavLink>
+                                    <NavLink to='/sign-up'>
+                                        <div className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-xl transition duration-200">Sign Up
+                                        </div>
+                                    </NavLink>
+                                </div>
+                                : <div className="pt-6">
+
+                                    <NavLink to='/sign-out'>
+                                        <div className="block mb-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-100 rounded-xl">Sign Out
+                                        </div>
+                                    </NavLink>
+                                </div>
+                            }
                         </div>
                     </nav>
                 </div>
@@ -86,4 +105,10 @@ function Menu() {
     )
 }
 
-export default Menu
+const mapStateToProps = (state) => {
+    return {
+        isAuthenticated: state.userReducer.isAuthenticated
+    }
+}
+
+export default connect(mapStateToProps)(Menu)

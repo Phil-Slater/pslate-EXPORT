@@ -1,9 +1,12 @@
+
 import { useState } from 'react'
 import { useNavigate, NavLink } from 'react-router-dom'
 import logo from '../assets/pslate.png'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import * as actionCreators from '../store/creators/actionCreators'
 
-function SignIn() {
+function SignIn(props) {
 
     const [user, setUser] = useState()
     const navigate = useNavigate()
@@ -16,16 +19,14 @@ function SignIn() {
     }
 
     const handleSignIn = async () => {
-        const response = await axios.post('http://localhost:8080/user/login', user)
+        const response = await axios.post('http://localhost:8080/user/sign-in', user)
         alert(response.data.message)
         if (response.data.success) {
+            localStorage.setItem('jwt', response.data.token)
+            props.onSignIn(response.data.token)
             navigate('/')
         }
     }
-
-
-
-
 
     return (
         <div>
@@ -92,4 +93,10 @@ function SignIn() {
     )
 }
 
-export default SignIn
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSignIn: (token) => dispatch(actionCreators.signIn(token))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SignIn)

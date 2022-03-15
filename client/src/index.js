@@ -28,6 +28,9 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
+const token = localStorage.getItem('jwt')
+store.dispatch({ type: 'ON_AUTH', payload: token })
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
