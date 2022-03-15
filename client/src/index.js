@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios'
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import BaseLayout from './components/BaseLayout';
 import SleevedOrders from './components/SleevedOrders';
@@ -17,7 +18,8 @@ import userReducer from './store/reducers/user'
 import orderReducer from './store/reducers/order'
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
-
+import SignOut from './components/SignOut';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -31,6 +33,8 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 const token = localStorage.getItem('jwt')
 store.dispatch({ type: 'ON_AUTH', payload: token })
 
+axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -40,13 +44,31 @@ ReactDOM.render(
         <BaseLayout>
           <Routes>
             <Route path='/' element={<App />} />
-            <Route path='/sleeved-orders' element={<SleevedOrders />} />
-            <Route path='/unsleeved-orders' element={<UnsleevedOrders />} />
-            <Route path='/rush-orders' element={<RushOrders />} />
-            <Route path='/power-switches' element={<PowerSwitches />} />
-            <Route path='/sleeved-12-pins' element={<Sleeved12Pins />} />
             <Route path='/sign-up' element={<SignUp />} />
             <Route path='/sign-in' element={<SignIn />} />
+            <Route path='/sign-out' element={<SignOut />} />
+
+            <Route path='/sleeved-orders' element={
+              <ProtectedRoute>
+                <SleevedOrders />
+              </ProtectedRoute>} />
+            <Route path='/unsleeved-orders' element={
+              <ProtectedRoute>
+                <UnsleevedOrders />
+              </ProtectedRoute>} />
+            <Route path='/rush-orders' element={
+              <ProtectedRoute>
+                <RushOrders />
+              </ProtectedRoute>} />
+            <Route path='/power-switches' element={
+              <ProtectedRoute>
+                <PowerSwitches />
+              </ProtectedRoute>} />
+            <Route path='/sleeved-12-pins' element={
+              <ProtectedRoute>
+                <Sleeved12Pins />
+              </ProtectedRoute>} />
+
           </Routes>
         </BaseLayout>
       </BrowserRouter>
