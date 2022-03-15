@@ -9,6 +9,7 @@ const urlFields = 'fields=order_number,line_items,created_at,order_status_url,no
 const getOrdersOld = require('../utils/oldGetOrdersFunction')
 const cors = require('cors')
 router.use(cors())
+const authenticate = require('../utils/authenticationMiddleware')
 
 // PAGES
 router.get('/', (req, res) => {
@@ -22,7 +23,7 @@ router.get('/orders', async (req, res) => {
     res.render('view-orders', { allOrders: orders })
 })
 
-router.get('/unsleeved-order-numbers', async (req, res) => {
+router.get('/unsleeved-order-numbers', authenticate, async (req, res) => {
     const ordersFetched = await getOrders()
     const unsleevedFiltered = filterUnsleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(unsleevedFiltered)
@@ -31,7 +32,7 @@ router.get('/unsleeved-order-numbers', async (req, res) => {
     //res.render('unsleeved-orders', { allOrders: lastOrders })
 })
 
-router.get('/sleeved-order-numbers', async (req, res) => {
+router.get('/sleeved-order-numbers', authenticate, async (req, res) => {
     const ordersFetched = await getOrders()
     const sleevedFiltered = filterSleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(sleevedFiltered)
@@ -40,7 +41,7 @@ router.get('/sleeved-order-numbers', async (req, res) => {
     // res.render('sleeved-orders', { allOrders: lastOrders })
 })
 
-router.get('/unsleeved-order/:id', async (req, res) => {
+router.get('/unsleeved-order/:id', authenticate, async (req, res) => {
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
     const ordersUpdated = updateUnsleeved(orderKeysAdded)
@@ -48,7 +49,7 @@ router.get('/unsleeved-order/:id', async (req, res) => {
     res.render('view-orders', { allOrders: ordersFinalized })
 })
 
-router.get('/sleeved-order/:id', async (req, res) => {
+router.get('/sleeved-order/:id', authenticate, async (req, res) => {
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
     const ordersUpdated = updateSleeved(orderKeysAdded) // change to updateSleeved when that function is ready
@@ -56,7 +57,7 @@ router.get('/sleeved-order/:id', async (req, res) => {
     res.render('view-orders', { allOrders: ordersFinalized })
 })
 
-router.get('/order/:id', async (req, res) => {
+router.get('/order/:id', authenticate, async (req, res) => {
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
     const unsleevedUpdated = updateUnsleeved(orderKeysAdded)
@@ -66,7 +67,7 @@ router.get('/order/:id', async (req, res) => {
     res.json(lastOrders)
 })
 
-router.get('/rush-orders', async (req, res) => {
+router.get('/rush-orders', authenticate, async (req, res) => {
     console.log('hi')
     const ordersFetched = await getOrders()
     const ordersFinalized = reWriteDate(ordersFetched.data.orders)
@@ -74,7 +75,7 @@ router.get('/rush-orders', async (req, res) => {
     res.json(lastOrders)
 })
 
-router.get('/power-switches', async (req, res) => {
+router.get('/power-switches', authenticate, async (req, res) => {
     const ordersFetched = await getOrders()
     const ordersFinalized = reWriteDate(ordersFetched.data.orders)
     const dateUpdated = getPowerSwitchOrders(ordersFinalized)
