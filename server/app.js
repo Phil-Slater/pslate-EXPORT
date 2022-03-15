@@ -48,7 +48,7 @@ mongoose.connect(MONGO_URL, {
 })
 
 // ROUTES
-app.use('/', require('./routes/index.js'));
+app.use('/', require('./routes/order.js'));
 app.use('/user', require('./routes/user.js'))
 
 // error handler
