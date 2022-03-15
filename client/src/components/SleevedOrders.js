@@ -13,8 +13,15 @@ function SleevedOrders() {
     }, [])
 
     const fetchSleevedOrders = async () => {
-        const orders = await axios.get('http://localhost:8080/sleeved-order-numbers')
-        setOrders(orders.data)
+        console.log('fetching sleeved orders...')
+        try {
+            const orders = await axios.get('http://localhost:8080/sleeved-order-numbers')
+            console.log(orders.data)
+            setOrders(orders.data)
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
     const getOrder = (orderNumber) => {

@@ -33,7 +33,7 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 const token = localStorage.getItem('jwt')
 store.dispatch({ type: 'ON_AUTH', payload: token })
 
-axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
 
 ReactDOM.render(
   <React.StrictMode>

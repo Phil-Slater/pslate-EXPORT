@@ -33,7 +33,9 @@ router.get('/unsleeved-order-numbers', authenticate, async (req, res) => {
 })
 
 router.get('/sleeved-order-numbers', authenticate, async (req, res) => {
+    console.log('in sleeved order numbers')
     const ordersFetched = await getOrders()
+    console.log('fetched the orders')
     const sleevedFiltered = filterSleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(sleevedFiltered)
     const lastOrders = filterRushOrders(ordersFinalized)
