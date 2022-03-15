@@ -11,7 +11,7 @@ function PowerSwitches() {
     }, [])
 
     const fetchPowerSwitches = async () => {
-        console.log('hello')
+        console.log('fetching power switches...')
         const orders = await axios.get('http://localhost:8080/power-switches')
         setOrders(orders.data)
         console.log(orders.data)
