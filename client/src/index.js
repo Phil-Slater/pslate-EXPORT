@@ -16,7 +16,8 @@ import thunk from 'redux-thunk';
 import userReducer from './store/reducers/user'
 import orderReducer from './store/reducers/order'
 import SignUp from './components/SignUp';
-import LogIn from './components/LogIn';
+import SignIn from './components/SignIn';
+
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -26,6 +27,9 @@ const rootReducer = combineReducers({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
+
+const token = localStorage.getItem('jwt')
+store.dispatch({ type: 'ON_AUTH', payload: token })
 
 ReactDOM.render(
   <React.StrictMode>
@@ -42,7 +46,7 @@ ReactDOM.render(
             <Route path='/power-switches' element={<PowerSwitches />} />
             <Route path='/sleeved-12-pins' element={<Sleeved12Pins />} />
             <Route path='/sign-up' element={<SignUp />} />
-            <Route path='/login' element={<LogIn />} />
+            <Route path='/sign-in' element={<SignIn />} />
           </Routes>
         </BaseLayout>
       </BrowserRouter>

@@ -3,7 +3,8 @@ const router = express.Router()
 const User = require('../schemas/user')
 require('dotenv').config()
 const getDate = require('../utils/date')
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 router.post('/sign-up', async (req, res) => {
     const username = req.body.username
@@ -35,6 +36,28 @@ router.post('/sign-up', async (req, res) => {
     }
 })
 
+router.post('/sign-in', async (req, res) => {
+    const username = req.body.username
+    const password = req.body.password
+
+    const user = await User.findOne({ username: username })
+
+    if (user) {
+        try {
+            const match = await bcrypt.compare(password, user.password)
+            if (match) {
+                const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET_KEY)
+                res.send({ success: true, message: 'You are signed in!', username: user.username, token: token })
+            } else {
+                res.json({ success: false, message: 'Username or password is incorrect.' })
+            }
+        } catch (error) {
+            res.json({ success: false, message: 'Server error. Please try again.' })
+        }
+    } else {
+        res.json({ success: false, message: 'Username or password is incorrect.' })
+    }
+})
 
 
 

@@ -11,3 +11,17 @@ export const getOrder = async (orderNumber) => {
         })
     }
 }
+
+export const signIn = (token) => {
+    return {
+        type: actionTypes.ON_AUTH,
+        payload: token
+    }
+}
+
+export const signOut = () => {
+    return {
+        type: actionTypes.ON_AUTH,
+        payload: null
+    }
+}

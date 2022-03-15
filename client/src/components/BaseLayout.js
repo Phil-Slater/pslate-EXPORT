@@ -5,10 +5,10 @@ import { useLocation } from 'react-router-dom'
 function BaseLayout(props) {
 
     const { pathname } = useLocation()
-
+    // {pathname !== '/sign-up' ?   : null}
     return (
         <div>
-            {pathname !== '/sign-up' ? <Menu /> : null}
+            <Menu />
             {props.children}
         </div>
     )
