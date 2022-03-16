@@ -33,9 +33,7 @@ router.get('/unsleeved-order-numbers', authenticate, async (req, res) => {
 })
 
 router.get('/sleeved-order-numbers', authenticate, async (req, res) => {
-    console.log('in sleeved order numbers')
     const ordersFetched = await getOrders()
-    console.log('fetched the orders')
     const sleevedFiltered = filterSleevedOrders(ordersFetched)
     const ordersFinalized = reWriteDate(sleevedFiltered)
     const lastOrders = filterRushOrders(ordersFinalized)
@@ -65,7 +63,6 @@ router.get('/order/:id', authenticate, async (req, res) => {
     const unsleevedUpdated = updateUnsleeved(orderKeysAdded)
     const sleevedUpdated = updateSleeved(unsleevedUpdated)
     const ordersFinalized = reWriteDate(sleevedUpdated)
-    console.log(ordersFinalized)
     res.json(ordersFinalized)
 })
 
@@ -78,10 +75,19 @@ router.get('/rush-orders', authenticate, async (req, res) => {
 
 router.get('/power-switches', authenticate, async (req, res) => {
     const ordersFetched = await getOrders()
-    const ordersFinalized = reWriteDate(ordersFetched.data.orders)
-    const dateUpdated = getPowerSwitchOrders(ordersFinalized)
-    const lastOrders = filterRushOrders(dateUpdated)
+    const dateUpdated = reWriteDate(ordersFetched.data.orders)
+    const ordersFinalized = getPowerSwitchOrders(dateUpdated)
+    const lastOrders = filterRushOrders(ordersFinalized)
     res.json(lastOrders)
+})
+
+router.get('/sleeved-12-pins', authenticate, async (req, res) => {
+    const ordersFetched = await getOrders()
+    const orderKeysAdded = getSignificantKeys(ordersFetched.data.orders)
+    const sleevedUpdated = updateSleeved(orderKeysAdded)
+    const ordersFinalized = reWriteDate(sleevedUpdated)
+    const sleeved12PinOrders = getSleeved12PinOrders(ordersFinalized)
+    res.json(sleeved12PinOrders)
 })
 
 
@@ -151,6 +157,18 @@ function getPowerSwitchOrders(orders) {
         })
     })
     return powerSwitchOrders
+}
+
+function getSleeved12PinOrders(orders) {
+    sleeved12PinOrders = []
+    orders.forEach(order => {
+        order.line_items.forEach(product => {
+            if (product.title.includes('12 Pin PCIE Sleeved')) {
+                sleeved12PinOrders.push(order)
+            }
+        })
+    })
+    return sleeved12PinOrders
 }
 
 module.exports = router
