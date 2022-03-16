@@ -18,7 +18,7 @@ function getSignificantKeys(orders) {
                     product.moboModel = property.value
                 }
 
-                if (property.name.includes('GPU Make')) {
+                if (property.name.includes('GPU Make') || property.name === 'GPU Model') {
                     product.gpuModel = property.value
                 }
 
@@ -44,6 +44,11 @@ function getSignificantKeys(orders) {
 
                 if (property.name.includes('sense wires')) {
                     product.senseWires = property.value
+                }
+
+                // for 12 pins
+                if (property.name === 'Case') {
+                    product.case = property.value
                 }
 
                 // FOR SSUPD under mobo cable routing with standoff mod

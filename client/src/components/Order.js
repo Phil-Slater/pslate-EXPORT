@@ -22,7 +22,7 @@ function Order() {
         const order = await axios.get(`https://pslate-export.herokuapp.com/order/${orderNumber}`)
         setOrder(order.data[0])
     }
-
+    console.log(order)
     const products = order && order.line_items.map(product => {
         return <div className='order-button' key={product.id}>
             <h2>{product.title}</h2>
@@ -31,6 +31,7 @@ function Order() {
             <p>{product.crimps ? product.crimps : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
             {product.design ? <img src={product.design} /> : null}
+            {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
             {product.properties.map(property => {
                 if (property.name?.includes('Color') || property.name?.includes('Length')) {
                     return <p><b>{property.name}:</b> {property.value}</p>

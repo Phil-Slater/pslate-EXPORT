@@ -22,7 +22,23 @@ const unsleevedCableGroups = {
 
     unsleevedDualSATAGroupOne: ['DAN Cases A4-SFX Dual SATA Power Unsleeved Custom Cable', 'LOUQE Ghost S1 Dual SATA Power Unsleeved Custom Cable'],
 
-    unsleevedDualSATAGroupTwo: ['Sliger SM550/SM560/SM570/SM580 Dual SATA Power Unsleeved Custom Cable', 'Sliger S610/S620 Dual SATA Power Unsleeved Custom Cable', 'NCASE M1 Dual SATA Power Unsleeved Custom Cable', 'Cooler Master NR200 Dual SATA Power Unsleeved Custom Cable']
+    unsleevedDualSATAGroupTwo: ['Sliger SM550/SM560/SM570/SM580 Dual SATA Power Unsleeved Custom Cable', 'Sliger S610/S620 Dual SATA Power Unsleeved Custom Cable', 'NCASE M1 Dual SATA Power Unsleeved Custom Cable', 'Cooler Master NR200 Dual SATA Power Unsleeved Custom Cable'],
+
+    unsleeved12PCIECaseGroupOne3080Corsair: ['NCASE M1', 'LOUQE Ghost S1', 'LOUQE RAW S1', 'FormD T1', 'Sliger S610/S620', 'Cooler Master NR200', 'Nouvolo Steck'],
+
+    unsleeved12PCIECaseGroupTwo3080Corsair: ['Dan A4', 'Sliger SM series', 'Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto', 'SSUPD Meshlicious'],
+
+    unsleeved12PCIECaseGroupOne3090Corsair: ['NCASE M1', 'LOUQE Ghost S1', 'LOUQE RAW S1', 'Dan A4', 'FormD T1', 'Sliger SM series', 'SSUPD Meshlicious', 'Nouvolo Steck'],
+
+    unsleeved12PCIECaseGroupTwo3090Corsair: ['Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto'],
+
+    unsleeved12PCIECaseGroupOne3080Silverstone: ['NCASE M1', 'LOUQE Ghost S1', 'LOUQE RAW S1', 'Sliger S610/S620', 'Cooler Master NR200', 'Nouvolo Steck'],
+
+    unsleeved12PCIECaseGroupTwo3080Silverstone: ['Dan A4', 'FormD T1', 'Sliger SM series', 'Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto', 'SSUPD Meshlicious'],
+
+    unsleeved12PCIECaseGroupOne3090Silverstone: ['NCASE M1', 'LOUQE Ghost S1', 'LOUQE RAW S1', 'Sliger S610/S620', 'Cooler Master NR200', 'Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto', 'Nouvolo Steck'],
+
+    unsleeved12PCIECaseGroupTwo3090Silverstone: ['Dan A4', 'FormD T1', 'Sliger SM series', 'SSUPD Meshlicious']
 
 }
 

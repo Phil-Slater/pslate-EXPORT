@@ -12,7 +12,11 @@ const sleevedCableGroups = {
 
     sleevedSATAGroupOne: ['DAN Cases A4-SFX SATA Power Paracord Custom Sleeved Cable', 'LOUQE Ghost S1 SATA Power Paracord Custom Sleeved Cable', 'FormD T1 SATA Power Paracord Custom Sleeved Cable', 'Nouvolo Steck SATA Power Paracord Custom Sleeved Cable'],
 
-    sleevedSATAGroupTwo: ['Cooler Master NR200 SATA Power Paracord Custom Sleeved Cable', 'NCASE M1 SATA Power Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 SATA Power Paracord Custom Sleeved Cable', 'Sliger S610/S620 SATA Power Paracord Custom Sleeved Cable', 'Lazer3D LZ7 SATA Power Paracord Custom Sleeved Cable']
+    sleevedSATAGroupTwo: ['Cooler Master NR200 SATA Power Paracord Custom Sleeved Cable', 'NCASE M1 SATA Power Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 SATA Power Paracord Custom Sleeved Cable', 'Sliger S610/S620 SATA Power Paracord Custom Sleeved Cable', 'Lazer3D LZ7 SATA Power Paracord Custom Sleeved Cable'],
+
+    sleeved12PCIECaseGroupOneCorsair: ['NCASE M1', 'Dan A4', 'FormD T1', 'Sliger SM series', 'Sliger S610/S620', 'Cooler Master NR200', 'Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto', 'SSUPD Meshlicious'],
+
+    sleeved12PCIECaseGroupTwoCorsair: ['LOUQE Ghost S1', 'LOUQE RAW S1', 'Nouvolo Steck']
 
 }
 
