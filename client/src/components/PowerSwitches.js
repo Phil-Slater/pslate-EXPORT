@@ -11,7 +11,6 @@ function PowerSwitches() {
     }, [])
 
     const fetchPowerSwitches = async () => {
-        console.log('fetching power switches...')
         const orders = await axios.get('https://pslate-export.herokuapp.com/power-switches')
         setOrders(orders.data)
         console.log(orders.data)

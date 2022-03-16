@@ -65,8 +65,8 @@ router.get('/order/:id', authenticate, async (req, res) => {
     const unsleevedUpdated = updateUnsleeved(orderKeysAdded)
     const sleevedUpdated = updateSleeved(unsleevedUpdated)
     const ordersFinalized = reWriteDate(sleevedUpdated)
-    const lastOrders = filterRushOrders(ordersFinalized)
-    res.json(lastOrders)
+    console.log(ordersFinalized)
+    res.json(ordersFinalized)
 })
 
 router.get('/rush-orders', authenticate, async (req, res) => {
@@ -87,7 +87,9 @@ router.get('/power-switches', authenticate, async (req, res) => {
 
 // FUNCTIONS
 async function getOrder(id) {
-    return await instance.get(`/orders.json?ids=${id}&${urlFields}`)
+    const order = await instance.get(`/orders.json?name=${id}&${urlFields}`)
+    console.log(order.data)
+    return order
 }
 
 async function getOrders() {

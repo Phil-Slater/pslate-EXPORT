@@ -20,6 +20,7 @@ import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
 import ProtectedRoute from './components/ProtectedRoute';
+import Order from './components/Order';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -67,6 +68,10 @@ ReactDOM.render(
             <Route path='/sleeved-12-pins' element={
               <ProtectedRoute>
                 <Sleeved12Pins />
+              </ProtectedRoute>} />
+            <Route path='/order/:id' element={
+              <ProtectedRoute>
+                <Order />
               </ProtectedRoute>} />
 
           </Routes>

@@ -2,12 +2,12 @@
 import * as actionTypes from '../actions/actionTypes'
 import axios from 'axios'
 
-export const getOrder = async (orderNumber) => {
-    return (dispatch) => {
-        const order = axios.get(`http:localhost:8080/${orderNumber}`)
+export const getOrder = (orderNumber) => {
+    return async (dispatch) => {
+        const order = await axios.get(`http://localhost:8080/order/${orderNumber}`)
         dispatch({
             type: actionTypes.GET_ORDER,
-            payload: order
+            payload: order.data
         })
     }
 }
