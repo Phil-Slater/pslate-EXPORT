@@ -19,7 +19,7 @@ function SignIn(props) {
     }
 
     const handleSignIn = async () => {
-        const response = await axios.post('http://localhost:8080/user/sign-in', user)
+        const response = await axios.post('https://pslate-export.herokuapp.com/user/sign-up', user)
         alert(response.data.message)
         if (response.data.success) {
             localStorage.setItem('jwt', response.data.token)

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../css/styles.css'
+import { NavLink } from 'react-router-dom'
 
 function RushOrders() {
 
@@ -17,12 +18,14 @@ function RushOrders() {
 
     const ordersMapped = orders.map(order => {
         if (order.rushOrder) {
-            return <div key={order.order_number} className="button-29">
-                <h1>#{order.order_number}</h1>
-                <h3>Order placed on:</h3>
-                <h2>{order.created_at}</h2>
-                <h3 className='rush'>{order.rushOrder ? order.rushOrder : null}</h3>
-            </div>
+            return <NavLink to={`/order/${order.order_number}`} key={order.order_number}>
+                <div key={order.order_number} className="button-29">
+                    <h1>#{order.order_number}</h1>
+                    <h3>Order placed on:</h3>
+                    <h2>{order.created_at}</h2>
+                    <h3 className='rush'>{order.rushOrder ? order.rushOrder : null}</h3>
+                </div>
+            </NavLink>
         }
     })
 

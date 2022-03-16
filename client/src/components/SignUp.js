@@ -17,7 +17,7 @@ function SignUp() {
     }
 
     const handleSignUp = async () => {
-        const response = await axios.post('http://localhost:8080/user/sign-up', user)
+        const response = await axios.post('https://pslate-export.herokuapp.com/user/sign-up', user)
         alert(response.data.message)
         if (response.data.success) {
             navigate('/sign-in')

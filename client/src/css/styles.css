@@ -27,6 +27,7 @@ body {
   font-size: 18px;
   width: 100%;
   margin-bottom: 1em;
+  letter-spacing: .03em;
 }
 
 .order-button h1 {
@@ -133,6 +134,8 @@ margin-right: auto;
  .quantity {
     font-size: 1.75em;
     color: yellow;
+    padding-left: .125em;
+    
   }
 
   .button-29 h1 {

@@ -25,7 +25,7 @@ function Order() {
     const products = order && order.line_items.map(product => {
         return <div className='order-button' key={product.id}>
             <h2>{product.title}</h2>
-            <h3>Quantity: {product.quantity !== 1 ? <b className='quantity'>{product.quantity}</b> : product.quantity}</h3>
+            <h3>Quantity: {product.quantity !== 1 ? <b className='quantity'> {product.quantity}</b> : product.quantity}</h3>
             <p>Build instructions: {product.instructions}</p>
             <p>{product.crimps ? product.crimps : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
