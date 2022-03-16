@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import '../css/styles.css'
 import { useLocation } from 'react-router-dom'
+import PSUModel from './PSUModel';
 
 function Order() {
 
@@ -26,14 +27,18 @@ function Order() {
         return <div className='order-button' key={product.id}>
             <h2>{product.title}</h2>
             <h3>Quantity: {product.quantity !== 1 ? <b className='quantity'>{product.quantity}</b> : product.quantity}</h3>
-            <p>Build instructions: {product.instructions}</p>
+            <p><b>Build instructions:</b> {product.instructions}</p>
             <p>{product.crimps ? product.crimps : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
             {product.design ? <img src={product.design} /> : null}
+            {product.properties.map(property => {
+                if (property.name?.includes('Color') || property.name?.includes('Length')) {
+                    return <p><b>{property.name}:</b> {property.value}</p>
+                }
+            })}
+            <p>{product.psuModel ? <PSUModel psuModel={product.psuModel} /> : null}</p>
         </div>
     })
-
-    console.log(order)
 
     return (
 
