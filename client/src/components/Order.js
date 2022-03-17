@@ -1,18 +1,16 @@
 import axios from 'axios';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import '../css/styles.css'
+import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom'
 import PSUModel from './PSUModel';
 
 function Order() {
 
     const [order, setOrder] = useState()
+    const [style, setStyle] = useState([])
 
     const location = useLocation()
     const splitPath = location.pathname.split('/')
     const orderNumber = splitPath[2]
-    console.log(orderNumber)
 
     useEffect(() => {
         fetchOrder(orderNumber)
@@ -25,17 +23,37 @@ function Order() {
         } catch (error) {
             console.log(error)
         }
-
     }
+
+    // const sortProductDiv = (index, id) => {
+    //     console.log(style)
+    //     if (style.includes(id)) {
+    //         order.line_items.push(order.line_items.splice(index, 1)[0])
+    //     } else {
+    //         order.line_items.push(order.line_items.splice(index, 1)[0])
+    //     }
+
+    //     setOrder({ ...order })
+    // }
+
+    const updateStyle = (id) => {
+        if (style.includes(id)) {
+            setStyle(style.filter(styleId => styleId !== id))
+        } else {
+            setStyle([...style, id])
+        }
+    }
+
     console.log(order)
-    const products = order && order.line_items.map(product => {
-        return <div className='order-button' key={product.id}>
+
+    const products = order && order.line_items.map((product, index) => {
+        return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }}>
             <h2><b>{product.title}</b></h2>
             <h3><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity'>{product.quantity}</b> : product.quantity}</h3>
             <p><b>Build instructions:</b></p> <p>{product.instructions}</p>
             <p>{product.crimps ? product.crimps : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
-            {product.design ? <img src={product.design} /> : null}
+            {product.design ? <img src={product.design} className="product-image" /> : null}
             {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
             {product.properties.map((property, index) => {
                 if (property.name?.includes('Color') || property.name?.includes('Length')) {
@@ -54,7 +72,7 @@ function Order() {
                 <h3>{order ? 'Order placed on:' : null}</h3>
                 <h2>{order ? order.created_at : null}</h2>
                 <h3 className='rush'>{order ? order.rushOrder ? order.rushOrder : null : null}</h3>
-                <h3>{order ? order.note ? `Customer order note: ${order.note}` : null : null}</h3>
+                <h4 className='order-note'>{order ? order.note ? `Customer order note: ${order.note}` : null : null}</h4>
                 <h3>{order ? `Total items: ${order.total_items}` : null}</h3>
                 <h3>{order ?
                     order.shipping_lines[0].title === 'Economy' ? 'Shipping method: First Class Package' :

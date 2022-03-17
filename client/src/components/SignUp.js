@@ -96,6 +96,7 @@ function SignUp() {
                                     <button onClick={handleSignUp}
                                         className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200">Get
                                         started</button>
+                                    <NavLink to='/sign-in'><h3 className="mt-10 text-xl text-center text-white font-bold font-heading">Already have an account? <u>Sign In</u></h3></NavLink>
                                 </div>
                             </div>
                         </div>

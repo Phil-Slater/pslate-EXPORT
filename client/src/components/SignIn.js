@@ -85,6 +85,7 @@ function SignIn(props) {
                                     </div>
                                     <button onClick={handleSignIn}
                                         className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200">Let's Go!</button>
+                                    <NavLink to='/sign-up'><h3 className="mt-10 text-xl text-center text-white font-bold font-heading">Don't have an account? <u>Sign Up</u></h3></NavLink>
                                 </div>
                             </div>
                         </div>

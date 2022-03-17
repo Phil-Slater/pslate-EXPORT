@@ -18,19 +18,43 @@ body {
   border-radius: 10px;
   box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
   color: rgb(240, 240, 240);
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
   justify-content: center;
   padding: 1em;
-  line-height: 2.5em;
+  line-height: 2em;
   position: relative;
   text-align: left;
   font-size: 18px;
   width: 100%;
   margin-bottom: 1em;
-  letter-spacing: .03em;
+  letter-spacing: .02em;
+}
+
+.order-button-grey {
+  background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  color: rgb(240, 240, 240);
+  justify-content: center;
+  padding: 1em;
+  line-height: 2em;
+  position: relative;
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 1em;
+  letter-spacing: .02em;
+  opacity: 0.5;
 }
 
 .order-button h1 {
+  font-size: 3em;
+  font-family:"Calibri";
+  line-height: 1.5em;
+}
+
+.order-button-grey h1 {
   font-size: 3em;
   font-family:"Calibri";
   line-height: 1.5em;
@@ -41,7 +65,16 @@ body {
   font-family:"Calibri";
 }
 
+.order-button-grey h2 {
+  font-size: 1.5em;
+  font-family:"Calibri";
+}
+
 .order-button p {
+  line-height: 2em;
+}
+
+.order-button-grey p {
   line-height: 2em;
 }
 
@@ -49,9 +82,23 @@ body {
   padding-top: 1em;
 }
 
+.order-button-grey div {
+  padding-top: 1em;
+}
+
 .order-button h3 {
   font-size: 1.25em;
   font-family:"Calibri";
+}
+
+.order-button-grey h3 {
+  font-size: 1.25em;
+  font-family:"Calibri";
+}
+
+.order-note {
+  line-height: 1.5em;
+  font-size: 20px;
 }
 
 .order-line-items {
@@ -78,6 +125,13 @@ width: 50%;
 margin-left: auto; 
 margin-right: auto;
 }
+
+.order-button-grey img {
+  padding-top: 2em;
+  width: 50%; 
+  margin-left: auto; 
+  margin-right: auto;
+  }
 
 .button-29-app {
   /* display: inline-block; */
@@ -202,7 +256,8 @@ margin-right: auto;
 
 p {
   font-size: 20px;
-  margin-bottom: 4px;
+  margin-bottom: 2em;
+  line-height: 1em;
 }
 
 .h1-text {
@@ -219,37 +274,6 @@ a {
   text-decoration: none;
 }
 
-
-
-
-
-.button-50 {
-appearance: button;
-background-color: #000;
-background-image: none;
-border: 1px solid #000;
-border-radius: 4px;
-box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
-box-sizing: border-box;
-color: #fff;
-cursor: pointer;
-display: inline-block;
-font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-font-size: 14px;
-font-weight: 400;
-line-height: 20px;
-margin: 0 5px 10px 0;
-overflow: visible;
-padding: 12px 40px;
-text-align: center;
-text-transform: none;
-touch-action: manipulation;
-user-select: none;
--webkit-user-select: none;
-vertical-align: middle;
-white-space: nowrap;
-}
-
 @media (min-width: 1200px) {
 
 .button-50 {
@@ -257,6 +281,9 @@ white-space: nowrap;
 }
 
 .order-button {
+  width: 75%;
+}
+.order-button-grey {
   width: 75%;
 }
 
@@ -267,47 +294,5 @@ white-space: nowrap;
 .order-line-items img {
   width: 30%;
   
-}
-}
-
-
-
-
-
-
-
-
-
-/* <!-- HTML !-->
-<button class="button-54" role="button">Button 54</button> */
-
-/* CSS */
-.button-54 {
-font-family: "Open Sans", sans-serif;
-background-color: white;
-font-size: 16px;
-letter-spacing: 2px;
-text-decoration: none;
-text-transform: uppercase;
-color: #000;
-cursor: pointer;
-border: 3px solid;
-padding: 0.25em 0.5em;
-box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-/* position: relative; */
-user-select: none;
--webkit-user-select: none;
-touch-action: manipulation;
-}
-
-.button-54:active {
-box-shadow: 0px 0px 0px 0px;
-top: 5px;
-left: 5px;
-}
-
-@media (min-width: 768px) {
-.button-54 {
-  padding: 0.25em 0.75em;
 }
 }
