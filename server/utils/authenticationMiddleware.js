@@ -9,27 +9,23 @@ const authenticate = async (req, res, next) => {
 
     if (headers) {
         const token = headers.split(' ')[1]
-        console.log(token)
         jwt.verify(token, process.env.JWT_SECRET_KEY, async (error, decoded) => {
             if (error) {
-                console.log('auth failed 1')
                 console.log(error)
-                res.json({ success: false, message: 'Unable to authenticate! 1' })
+                res.json({ success: false, message: 'Unable to authenticate!' })
             } else {
                 const username = decoded.username
                 const user = await User.findOne({ username: username })
                 if (user) {
                     next()
                 } else {
-                    console.log('auth failed 2')
-                    res.json({ success: false, message: 'Unable to authenticate! 2' })
+                    res.json({ success: false, message: 'Unable to authenticate!' })
                 }
 
             }
         })
     } else {
-        console.log('auth failed 3')
-        res.json({ success: false, message: 'Unable to authenticate! 3' })
+        res.json({ success: false, message: 'Unable to authenticate!' })
     }
 }
 

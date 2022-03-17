@@ -22,8 +22,10 @@ function SignIn(props) {
         const response = await axios.post('https://pslate-export.herokuapp.com/user/sign-in', user)
         alert(response.data.message)
         if (response.data.success) {
-            localStorage.setItem('jwt', response.data.token)
-            props.onSignIn(response.data.token)
+            const token = response.data.token
+            localStorage.setItem('jwt', token)
+            props.onSignIn(token)
+            axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
             navigate('/')
         }
     }

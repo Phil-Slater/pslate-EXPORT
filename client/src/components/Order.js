@@ -37,9 +37,9 @@ function Order() {
             <p>{product.doubles ? product.doubles : null}</p>
             {product.design ? <img src={product.design} /> : null}
             {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
-            {product.properties.map(property => {
+            {product.properties.map((property, index) => {
                 if (property.name?.includes('Color') || property.name?.includes('Length')) {
-                    return <p><b>{property.name}:</b> {property.value}</p>
+                    return <p key={index}><b>{property.name}:</b> {property.value}</p>
                 }
             })}
             <p>{product.psuModel ? <PSUModel psuModel={product.psuModel} /> : null}</p>
