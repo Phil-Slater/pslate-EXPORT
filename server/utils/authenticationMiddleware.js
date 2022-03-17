@@ -9,9 +9,11 @@ const authenticate = async (req, res, next) => {
 
     if (headers) {
         const token = headers.split(' ')[1]
+        console.log(token)
         jwt.verify(token, process.env.JWT_SECRET_KEY, async (error, decoded) => {
             if (error) {
                 console.log('auth failed 1')
+                console.log(error)
                 res.json({ success: false, message: 'Unable to authenticate! 1' })
             } else {
                 const username = decoded.username
