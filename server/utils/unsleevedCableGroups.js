@@ -1,6 +1,6 @@
 const unsleevedCableGroups = {
 
-    unsleeved24GroupOne: ['DAN Cases A4-SFX 24 Pin Unsleeved Custom Cable', 'Sliger SM550/SM560/SM570/SM580', 'FormD T1 24 Pin Unsleeved Custom Cable', 'LOUQE Ghost S1 24 Pin Unsleeved Custom Cable', 'LOUQE RAW S1 24 Pin Unsleeved Custom Cable', 'Nouvolo Steck 24 Pin Unsleeved Custom Cable'],
+    unsleeved24GroupOne: ['DAN Cases A4-SFX 24 Pin Unsleeved Custom Cable', 'Sliger SM550/SM560/SM570/SM580 24 Pin Unsleeved Custom Cable', 'FormD T1 24 Pin Unsleeved Custom Cable', 'LOUQE Ghost S1 24 Pin Unsleeved Custom Cable', 'LOUQE RAW S1 24 Pin Unsleeved Custom Cable', 'Nouvolo Steck 24 Pin Unsleeved Custom Cable'],
 
     unsleeved24GroupTwo: ['Cooler Master NR200 24 Pin Unsleeved Custom Cable', 'Sliger S610/S620 24 Pin Unsleeved Custom Cable'],
 

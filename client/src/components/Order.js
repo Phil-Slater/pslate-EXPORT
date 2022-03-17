@@ -19,15 +19,20 @@ function Order() {
     }, [])
 
     const fetchOrder = async (orderNumber) => {
-        const order = await axios.get(`https://pslate-export.herokuapp.com/order/${orderNumber}`)
-        setOrder(order.data[0])
+        try {
+            const order = await axios.get(`https://pslate-export.herokuapp.com/order/${orderNumber}`)
+            setOrder(order.data[0])
+        } catch (error) {
+            console.log(error)
+        }
+
     }
     console.log(order)
     const products = order && order.line_items.map(product => {
         return <div className='order-button' key={product.id}>
-            <h2>{product.title}</h2>
-            <h3>Quantity: {product.quantity !== 1 ? <b className='quantity'>{product.quantity}</b> : product.quantity}</h3>
-            <p><b>Build instructions:</b> {product.instructions}</p>
+            <h2><b>{product.title}</b></h2>
+            <h3><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity'>{product.quantity}</b> : product.quantity}</h3>
+            <p><b>Build instructions:</b></p> <p>{product.instructions}</p>
             <p>{product.crimps ? product.crimps : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
             {product.design ? <img src={product.design} /> : null}
@@ -51,6 +56,9 @@ function Order() {
                 <h3 className='rush'>{order ? order.rushOrder ? order.rushOrder : null : null}</h3>
                 <h3>{order ? order.note ? `Customer order note: ${order.note}` : null : null}</h3>
                 <h3>{order ? `Total items: ${order.total_items}` : null}</h3>
+                <h3>{order ?
+                    order.shipping_lines[0].title === 'Economy' ? 'Shipping method: First Class Package' :
+                        `Shipping method: ${order.shipping_lines[0].title}` : null}</h3>
             </div>
             {products}
         </div>

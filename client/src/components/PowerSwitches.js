@@ -12,9 +12,13 @@ function PowerSwitches() {
     }, [])
 
     const fetchPowerSwitches = async () => {
-        const orders = await axios.get('https://pslate-export.herokuapp.com/power-switches')
-        setOrders(orders.data)
-        console.log(orders.data)
+        try {
+            const orders = await axios.get('https://pslate-export.herokuapp.com/power-switches')
+            setOrders(orders.data)
+            console.log(orders.data)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const ordersMapped = orders.map(order => {

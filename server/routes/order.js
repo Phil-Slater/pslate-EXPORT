@@ -5,7 +5,7 @@ const getSignificantKeys = require('../utils/getSignificantKeys')
 const updateUnsleeved = require('../utils/updateUnsleeved')
 const updateSleeved = require('../utils/updateSleeved')
 const reWriteDate = require('../utils/reWriteDate')
-const urlFields = 'fields=order_number,line_items,created_at,order_status_url,note,id'
+const urlFields = 'fields=order_number,line_items,created_at,order_status_url,note,id,shipping_lines'
 const getOrdersOld = require('../utils/oldGetOrdersFunction')
 const cors = require('cors')
 router.use(cors())

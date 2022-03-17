@@ -12,9 +12,13 @@ function Sleeved12Pins() {
     }, [])
 
     const fetchSleeved12PinOrders = async () => {
-        const orders = await axios.get('https://pslate-export.herokuapp.com/sleeved-12-pins')
-        console.log(orders.data)
-        setOrders(orders.data)
+        try {
+            const orders = await axios.get('https://pslate-export.herokuapp.com/sleeved-12-pins')
+            console.log(orders.data)
+            setOrders(orders.data)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const ordersMapped = orders.map(order => {

@@ -18,7 +18,8 @@ function getSignificantKeys(orders) {
                     product.moboModel = property.value
                 }
 
-                if (property.name.includes('GPU Make') || property.name === 'GPU Model') {
+                // || property.name.includes('GPU Make')
+                if (property.name.includes('GPUs') || property.name === 'GPU Model') {
                     product.gpuModel = property.value
                 }
 

@@ -12,8 +12,12 @@ function RushOrders() {
     }, [])
 
     const fetchRushOrders = async () => {
-        const orders = await axios.get('https://pslate-export.herokuapp.com/rush-orders')
-        setOrders(orders.data)
+        try {
+            const orders = await axios.get('https://pslate-export.herokuapp.com/rush-orders')
+            setOrders(orders.data)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const ordersMapped = orders.map(order => {

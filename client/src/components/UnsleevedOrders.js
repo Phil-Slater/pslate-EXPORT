@@ -12,9 +12,13 @@ function UnsleevedOrders() {
     }, [])
 
     const fetchUnsleevedOrders = async () => {
-        const orders = await axios.get('https://pslate-export.herokuapp.com/unsleeved-order-numbers')
-        console.log(orders.data)
-        setOrders(orders.data)
+        try {
+            const orders = await axios.get('https://pslate-export.herokuapp.com/unsleeved-order-numbers')
+            console.log(orders.data)
+            setOrders(orders.data)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const ordersMapped = orders.map(order => {

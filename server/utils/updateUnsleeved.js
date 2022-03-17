@@ -200,7 +200,7 @@ function updateUnsleeved(orders) {
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
-                    product.instructions = "300 - Silverstone Type 1"
+                    product.instructions = "300 - Cooler Master Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
                     //NCASE/NR200/S610 - not avaialble for cooler master unsleeded yet
                     product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
