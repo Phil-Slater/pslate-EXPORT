@@ -14,6 +14,14 @@ All of the routes in the top menu are protected. Click Sign In and Continue as a
 
 ## Example images: 
 
+<img src="/readme-images/screenshot1.png" width="60%">
+
+<img src="/readme-images/screenshot3.png" width="60%">
+
+Mobile menu:
+
+<img src="/readme-images/screenshot4.jpg" width="60%">
+
 ## Future goals:
 
 During production, each cable order is set aside in its own plastic bin with dividers to separate each type of cable. Right now, the printed out order cards PDFs serve as a label for these boxes. Once we go digital with this website, we will need some type of label for these boxes that identifies each order.
