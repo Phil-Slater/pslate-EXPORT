@@ -25,17 +25,6 @@ function Order() {
         }
     }
 
-    // const sortProductDiv = (index, id) => {
-    //     console.log(style)
-    //     if (style.includes(id)) {
-    //         order.line_items.push(order.line_items.splice(index, 1)[0])
-    //     } else {
-    //         order.line_items.push(order.line_items.splice(index, 1)[0])
-    //     }
-
-    //     setOrder({ ...order })
-    // }
-
     const updateStyle = (id) => {
         if (style.includes(id)) {
             setStyle(style.filter(styleId => styleId !== id))
@@ -49,7 +38,7 @@ function Order() {
     const products = order && order.line_items.map((product, index) => {
         return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }}>
             <h2><b>{product.title}</b></h2>
-            <h3><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity'>{product.quantity}</b> : product.quantity}</h3>
+            <h3 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h3>
             <p><b>Build instructions:</b></p> <p>{product.instructions}</p>
             <p>{product.crimps ? product.crimps : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>

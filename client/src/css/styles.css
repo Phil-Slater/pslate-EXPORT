@@ -99,6 +99,7 @@ body {
 .order-note {
   line-height: 1.5em;
   font-size: 20px;
+  padding: 1em 0em;
 }
 
 .order-line-items {
@@ -185,12 +186,19 @@ margin-right: auto;
     color: yellow;
   }
 
- .quantity {
+ .quantity-num {
     font-size: 1.75em;
     color: yellow;
     padding-left: .125em;
-    
+
   }
+
+  .quantity {
+    margin-bottom: 1.5em;
+    margin-top: .5em;
+  }
+
+
 
   .button-29 h1 {
     font-size: 3em;

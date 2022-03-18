@@ -13,7 +13,7 @@ function Guest(props) {
     })
 
     const handleGuestSignIn = async () => {
-        const response = await axios.post('http://localhost:8080/user/guest')
+        const response = await axios.post('https://pslate-export.herokuapp.com/user/guest')
         if (response.data.success) {
             const token = response.data.token
             localStorage.setItem('jwt', token)
