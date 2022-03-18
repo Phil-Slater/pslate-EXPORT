@@ -14,7 +14,11 @@ All of the routes in the top menu are protected. Click Sign In and Continue as a
 
 ## Example images: 
 
+Order page:
+
 <img src="/readme-images/screenshot1.png" width="60%">
+
+Unsleeved orders page:
 
 <img src="/readme-images/screenshot3.png" width="60%">
 
