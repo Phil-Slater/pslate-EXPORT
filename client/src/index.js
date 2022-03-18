@@ -21,6 +21,7 @@ import SignIn from './components/SignIn';
 import SignOut from './components/SignOut';
 import ProtectedRoute from './components/ProtectedRoute';
 import Order from './components/Order';
+import Guest from './components/Guest';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -48,6 +49,7 @@ ReactDOM.render(
             <Route path='/sign-up' element={<SignUp />} />
             <Route path='/sign-in' element={<SignIn />} />
             <Route path='/sign-out' element={<SignOut />} />
+            <Route path='/guest' element={<Guest />} />
 
             <Route path='/sleeved-orders' element={
               <ProtectedRoute>

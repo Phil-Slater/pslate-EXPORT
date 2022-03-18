@@ -59,6 +59,29 @@ router.post('/sign-in', async (req, res) => {
     }
 })
 
+router.post('/guest', async (req, res) => {
+    const username = 'Guest'
+    const password = 'guestpw'
+
+    const user = await User.findOne({ username: username })
+
+    if (user) {
+        try {
+            const match = await bcrypt.compare(password, user.password)
+            if (match) {
+                const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET_KEY)
+                res.send({ success: true, message: 'You are signed in!', username: user.username, token: token })
+            } else {
+                res.json({ success: false, message: 'Username or password is incorrect.' })
+            }
+        } catch (error) {
+            res.json({ success: false, message: 'Server error. Please try again.' })
+        }
+    } else {
+        res.json({ success: false, message: 'Username or password is incorrect.' })
+    }
+})
+
 
 
 

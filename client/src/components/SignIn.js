@@ -45,7 +45,7 @@ function SignIn(props) {
                             </div>
 
                             <div className="w-full lg:w-1/2 px-4">
-                                <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
+                                <div className="px-6 lg:px-20 py-12 lg:py-16 bg-gray-600 rounded-lg">
 
                                     <h3 className="mb-10 text-2xl text-white font-bold font-heading">Sign In</h3>
                                     <div className="flex items-center pl-6 mb-3 bg-white rounded-xl">
@@ -86,6 +86,7 @@ function SignIn(props) {
                                     <button onClick={handleSignIn}
                                         className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200">Let's Go!</button>
                                     <NavLink to='/sign-up'><h3 className="mt-10 text-xl text-center text-white font-bold font-heading">Don't have an account? <u>Sign Up</u></h3></NavLink>
+                                    <NavLink to='/guest'><h3 className="mt-10 text-xl text-center text-white font-bold font-heading">Continue as a guest</h3></NavLink>
                                 </div>
                             </div>
                         </div>
