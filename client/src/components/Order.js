@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom'
 import PSUModel from './PSUModel';
+import Color from './Color';
 
 function Order() {
 
@@ -45,7 +46,10 @@ function Order() {
             {product.design ? <img src={product.design} className="product-image" /> : null}
             {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
             {product.properties.map((property, index) => {
-                if (property.name?.includes('Color') || property.name?.includes('Length')) {
+                if (property.name?.includes('Color')) {
+                    return < Color color={property} key={index} />
+                }
+                if (property.name?.includes('Length')) {
                     return <p key={index}><b>{property.name}:</b> {property.value}</p>
                 }
             })}

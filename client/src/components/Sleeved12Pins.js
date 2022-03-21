@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../css/styles.css'
 import { NavLink } from 'react-router-dom'
+import Sleeved12PinColors from './Sleeved12PinColors';
 
 function Sleeved12Pins() {
 
@@ -32,7 +33,7 @@ function Sleeved12Pins() {
                     if (product.title.includes('12 Pin PCIE Sleeved')) {
                         return <div key={product.id}>
                             <h2>{product.instructions}</h2>
-                            <h2>{product.properties[3].name}: {product.properties[3].value}</h2>
+                            <Sleeved12PinColors color={product.properties[3]} />
                         </div>
                     }
                 })}
