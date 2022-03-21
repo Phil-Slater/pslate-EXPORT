@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom'
 import PSUModel from './PSUModel';
 import Color from './Color';
-import OrderNumber from './OrderNumber';
 
 function Order() {
 
