@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom'
 import PSUModel from './PSUModel';
 import Color from './Color';
+import OrderNumber from './OrderNumber';
 
 function Order() {
 
@@ -61,7 +62,7 @@ function Order() {
 
         <div className='order-container'>
             <div className='order-button'>
-                <h1>{order ? `#${order.order_number}` : `Loading...`}</h1>
+                <h1>{order ? <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a> : `Loading...`}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
                 <h2>{order ? order.created_at : null}</h2>
                 <h3 className='rush'>{order ? order.rushOrder ? order.rushOrder : null : null}</h3>
