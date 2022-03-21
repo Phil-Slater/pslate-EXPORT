@@ -272,7 +272,7 @@ function updateUnsleeved(orders) {
                 }
 
                 // 8 & 6 PCIE
-                else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || unsleevedPCIEGroupThree.includes(product.title)) {
+                else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     product.instructions = "300 - Silverstone Type 1"
                 }
 
