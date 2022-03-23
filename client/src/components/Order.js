@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'
 import PSUModel from './PSUModel';
 import Color from './Color';
+import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
 
 function Order() {
 
@@ -27,6 +28,7 @@ function Order() {
     }
 
     const updateStyle = (id) => {
+        console.log('single clicked!')
         if (style.includes(id)) {
             setStyle(style.filter(styleId => styleId !== id))
         } else {
@@ -34,14 +36,17 @@ function Order() {
         }
     }
 
-    console.log(order)
+    const addToMissing = (id) => {
+        console.log('double clicked!')
+        console.log(id)
+    }
 
     const products = order && order.line_items.map((product, index) => {
-        return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }}>
+        return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }} onDoubleClick={() => { addToMissing(product.id) }}>
             <h2><b>{product.title}</b></h2>
             <h3 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h3>
             <p><b>Build instructions:</b></p> <p>{product.instructions}</p>
-            <p>{product.crimps ? product.crimps : null}</p>
+            <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
             {product.design ? <img src={product.design} className="product-image" /> : null}
             {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
