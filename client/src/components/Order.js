@@ -20,7 +20,7 @@ function Order() {
 
     const fetchOrder = async (orderNumber) => {
         try {
-            const order = await axios.get(`https://pslate-export.herokuapp.com/order/${orderNumber}`)
+            const order = await axios.get(`https://pslate-export.herokuapp.com/${orderNumber}`)
             setOrder(order.data[0])
         } catch (error) {
             console.log(error)
@@ -38,7 +38,7 @@ function Order() {
 
     const addToMissing = (id) => {
         console.log('double clicked!')
-        console.log(id)
+        alert(id)
     }
 
     const products = order && order.line_items.map((product, index) => {
@@ -46,20 +46,23 @@ function Order() {
             <h2><b>{product.title}</b></h2>
             <h3 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h3>
             <p><b>Build instructions:</b></p> <p>{product.instructions}</p>
-            <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
+            <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
+            <p>{product.combs ? <span className='combs'>{product.combs}</span> : null}</p>
             {product.design ? <img src={product.design} className="product-image" /> : null}
             {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
-            {product.properties.map((property, index) => {
-                if (property.name?.includes('Color')) {
-                    return < Color color={property} key={index} />
-                }
-                if (property.name?.includes('Length')) {
-                    return <p key={index}><b>{property.name}:</b> {property.value}</p>
-                }
-            })}
+            {
+                product.properties.map((property, index) => {
+                    if (property.name?.includes('Color')) {
+                        return < Color color={property} key={index} />
+                    }
+                    if (property.name?.includes('Length')) {
+                        return <p key={index}><b>{property.name}:</b> {property.value}</p>
+                    }
+                })
+            }
             <p>{product.psuModel ? <PSUModel psuModel={product.psuModel} /> : null}</p>
-        </div>
+        </div >
     })
 
     return (
