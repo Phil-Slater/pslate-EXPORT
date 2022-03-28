@@ -100,6 +100,7 @@ body {
   line-height: 1.5em;
   font-size: 20px;
   padding: 1em 0em;
+  white-space: break-spaces;
 }
 
 .order-line-items {

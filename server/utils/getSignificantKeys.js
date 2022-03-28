@@ -19,8 +19,12 @@ function getSignificantKeys(orders) {
                 }
 
                 // || property.name.includes('GPU Make')
-                if (property.name.includes('GPUs') || property.name === 'GPU Model') {
+                if (property.name.includes('GPUs') || property.name === 'GPU Model' || property.name.includes('GPU Make')) {
                     product.gpuModel = property.value
+                }
+
+                if (property.name.includes('GPU Make')) {
+                    product.gpuTextBox = property.value
                 }
 
                 if (property.value.includes('ships in')) {

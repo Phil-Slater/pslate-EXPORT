@@ -38,7 +38,7 @@ function Order() {
 
     const addToMissing = (id) => {
         console.log('double clicked!')
-        alert(id)
+        //alert(id)
     }
 
     const products = order && order.line_items.map((product, index) => {
@@ -64,6 +64,7 @@ function Order() {
             <p>{product.psuModel ? <PSUModel psuModel={product.psuModel} /> : null}</p>
         </div >
     })
+    console.log(order)
 
     return (
 
