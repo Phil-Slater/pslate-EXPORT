@@ -36,6 +36,8 @@ const token = localStorage.getItem('jwt')
 store.dispatch({ type: 'ON_AUTH', payload: token })
 
 axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
+// axios.defaults.baseURL = 'http://localhost:8080'
+axios.defaults.baseURL = 'https://pslate-export.herokuapp.com'
 
 ReactDOM.render(
   <React.StrictMode>

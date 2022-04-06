@@ -13,7 +13,7 @@ function UnsleevedOrders() {
 
     const fetchUnsleevedOrders = async () => {
         try {
-            const orders = await axios.get('https://pslate-export.herokuapp.com/unsleeved-order-numbers')
+            const orders = await axios.get('/unsleeved-order-numbers')
             console.log(orders.data)
             setOrders(orders.data)
         } catch (error) {

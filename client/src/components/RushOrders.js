@@ -13,7 +13,7 @@ function RushOrders() {
 
     const fetchRushOrders = async () => {
         try {
-            const orders = await axios.get('https://pslate-export.herokuapp.com/rush-orders')
+            const orders = await axios.get('/rush-orders')
             setOrders(orders.data)
         } catch (error) {
             console.log(error)

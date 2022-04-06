@@ -20,7 +20,7 @@ function Order() {
 
     const fetchOrder = async (orderNumber) => {
         try {
-            const order = await axios.get(`https://pslate-export.herokuapp.com/order/${orderNumber}`)
+            const order = await axios.get(`/order/${orderNumber}`)
             setOrder(order.data[0])
         } catch (error) {
             console.log(error)

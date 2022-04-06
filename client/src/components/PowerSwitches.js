@@ -13,7 +13,7 @@ function PowerSwitches() {
 
     const fetchPowerSwitches = async () => {
         try {
-            const orders = await axios.get('https://pslate-export.herokuapp.com/power-switches')
+            const orders = await axios.get('/power-switches')
             setOrders(orders.data)
             console.log(orders.data)
         } catch (error) {
@@ -32,8 +32,8 @@ function PowerSwitches() {
                     if (product.title.includes('Switch Power Button')) {
                         const splitSku = product.sku.split(' ')
                         return <div key={product.id}><h2>{splitSku[0]} - {splitSku[3]} {splitSku[4]}</h2>
-                            <h2>{product.properties[0].name}: {product.properties[0].value}</h2>
-                            <h2>{product.properties[1].name === 'Case' && product.title.includes('12mm') ? `Case: ${product.properties[1].value}` : null}</h2>
+                            {product.properties[0] ? <h2>{product.properties[0].name}: {product.properties[0].value}</h2> : null}
+                            {product.properties[1] ? <h2>{product.properties[1].name === 'Case' && product.title.includes('12mm') ? `Case: ${product.properties[1].value}` : null}</h2> : null}
                         </div>
                     }
                 })}
