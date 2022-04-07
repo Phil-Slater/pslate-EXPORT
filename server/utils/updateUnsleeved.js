@@ -189,12 +189,14 @@ function updateUnsleeved(orders) {
                     product.instructions = "140 - Cooler Master Type 1"
                 } else if (product.title === 'SSUPD Meshlicious 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "280/290 - Cooler Master Meshlicious"
+                } else if (uCG.unsleeved24GroupTwo.includes(product.title) || product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
+                    product.instructions = "200 - Cooler Master Type 2"
                 }
 
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
                     product.instructions = "280 - Silverstone Type 1"
-                } else if (product.title === 'SSUPD Meshlicious 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - Silverstone Type 2/3"
                 }
 
@@ -202,15 +204,17 @@ function updateUnsleeved(orders) {
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
                     product.instructions = "300 - Cooler Master Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
-                    //NCASE/NR200/S610 - not avaialble for cooler master unsleeded yet
-                    product.instructions = "Length cannot be calculated yet. We need to setup dropdown fields on the site for the GPU Model."
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '170/155 - Cooler Master Type 2'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '160/155 - Cooler Master Type 2'
+                    }
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.instructions = '230/205 - Cooler Master Type 1'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.instructions = '220 - Cooler Master Type 1'
                     }
-
                 }
 
                 // SATA
