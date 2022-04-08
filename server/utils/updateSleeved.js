@@ -8,7 +8,7 @@ function updateSleeved(orders) {
     orders.forEach(order => {
         order.line_items.forEach(product => {
 
-            // SLEEVED 12 PINS
+            // ALL SLEEVED 12 PINS
             if (product.title === 'Nvidia 12 Pin PCIE Sleeved Custom Cable') {
                 if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum') {
                     if (product.case === 'Sliger SV series') {
@@ -119,7 +119,7 @@ function updateSleeved(orders) {
                 } else if (product.title === 'SSUPD Meshlicious 24 Pin Paracord Custom Sleeved Cable') {
                     product.crimps = 'Opposite crimps'
                     product.doubles = '3, 4, 6, 12 - 292/64x2, 292/55, 292/85 - top, bottom, bottom, bottom'
-                    product.instructions = 'All 292 (2 wires in box 5) - Build from right '
+                    product.instructions = 'All 292 (2 wires in box 5) - Build from right'
                     product.combs = "4 combs"
                     // NCASE
                 } else if (product.title === 'NCASE M1 24 Pin Paracord Custom Sleeved Cable') {
@@ -404,11 +404,13 @@ function updateSleeved(orders) {
                     product.instructions = '148 - Corsair'
                     product.combs = "1 comb"
                 } else if (product.title === 'SSUPD Meshlicious SATA Power Paracord Custom Sleeved Cable') {
-                    // get length somehow! This is one is configured with product personalizer
+                    // length is provided by customer
+                    product.instructions = 'Corsair SATA build'
                     product.crimps = 'Same crimps - Female'
                     product.combs = "1 comb for every 100mm in length"
                 } else if (product.title === 'XTIA Xproto SATA Power Paracord Custom Sleeved Cable') {
-                    // get length somehow! This is one is configured with shopify product options
+                    // length is provided by customer
+                    product.instructions = 'Corsair SATA build'
                     product.crimps = 'Same crimps - Female'
                     product.combs = "1 comb for every 100mm in length"
                 } else if (product.title === 'Lazer3D LZ7 XTD SATA Power Paracord Custom Sleeved Cable') {
@@ -416,7 +418,8 @@ function updateSleeved(orders) {
                     product.instructions = '178 - Corsair'
                     product.combs = "2 combs"
                 } else if (product.title === 'Dr Zaber Sentry SATA Power Paracord Custom Sleeved Cable') {
-                    // get length somehow! This is one is configured with shopify product options
+                    // length is provided by customer
+                    product.instructions = 'Corsair SATA build'
                     product.crimps = 'Same crimps - Female'
                     product.combs = "1 comb for every 100mm in length"
                 } else if (product.title === 'Sliger SV590 SATA Power Paracord Custom Sleeved Cable') {
@@ -428,19 +431,607 @@ function updateSleeved(orders) {
                 // DUAL SATA
                 else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '80 - Corsair (5 doubles'
+                    product.instructions = '80 - Corsair (5 doubles)'
                     product.combs = "1 comb"
                 } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '148 - Corsair (5 doubles'
+                    product.instructions = '148 - Corsair (5 doubles)'
                     product.combs = "1 comb"
                 }
-
-
-
-
-
             }
+
+            // SILVERSTONE
+            else if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT') {
+
+                // 24 PIN
+                if (sCG.sleeved24GroupOne.includes(product.title) && product.senseWires === 'No') {
+                    product.crimps = 'Opposite crimps'
+                    product.doubles = 'No doubles'
+
+                    // POSITION OF 24 HEADER
+                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 178 - Build from right"
+                        product.combs = "1 comb"
+                    } else if (m24H.offsetHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 190 - Build from right"
+                        product.combs = "1 comb"
+                    } else if (m24H.middleHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 214 - Build from right"
+                        product.combs = "1 comb"
+                    }
+
+                } else if (sCG.sleeved24GroupOne.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+
+                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 178 - Build from right"
+                        product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.offsetHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 190 - Build from right"
+                        product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.middleHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 214 - Build from right"
+                        product.doubles = '6, 7, 9, 12 - 178/85, 172/85, 166/64, 142/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    }
+                }
+
+                // NCASE / NR200 / S610
+                else if (sCG.sleeved24GroupTwo.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = 'Start at 280 - Build from right'
+                    if (product.senseWires === 'No') {
+                        product.doubles = 'No doubles'
+                    } else {
+                        product.doubles = '6, 7, 9, 12 - 244/85, 238/85, 232/64, 208/55 - bottom, bottom, top, bottom'
+                    }
+                }
+
+                // XPROTO
+                else if (product.title === 'XTIA Xproto 24 Pin Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = 'All wires 142 - Build from right'
+                    if (product.senseWires === 'No') {
+                        product.doubles = 'No doubles'
+                    } else {
+                        product.doubles = '6, 7, 9, 12 - 142/85, 142/85, 142/64, 142/55 - bottom, bottom, top, bottom'
+                    }
+                }
+
+                // EPS
+
+                // sandwich EPS
+                else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "3 combs"
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 256 - Colors: 4, 3, 2, 1'
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 286 - Colors: 4, 3, 2, 1'
+                    }
+                }
+
+                // NCASE / S610 EPS
+                else if (product.title === 'NCASE M1 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'Sliger S610/S620 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '500/494 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.impact.includes(product.moboModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/226, 238/220, 232/214, 226/208 - Colors: 1, 2, 3, 4 - Long on bottom'
+                        product.combs = "3 combs"
+                    }
+                }
+
+                // NR200 EPS
+                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '536/530 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.impact.includes(product.moboModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/226, 238/220, 232/214, 226/208 - Colors: 1, 2, 3, 4 - Long on bottom'
+                        product.combs = "3 combs"
+                    }
+                }
+
+                // Xproto EPS
+                else if (product.title === 'XTIA Xproto 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '360/354 - Colors: 4, 3, 2, 1 - No cross'
+                    product.combs = "4 combs"
+                }
+
+                //8&6 PCIE
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
+                    product.doubles = 'No double'
+                    product.combs = "3 combs"
+                }
+
+                else if (sCG.sleevedPCIEGroupTwo.includes(product.title)) {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = 'All 244 - Silverstone PCIE build!'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    }
+                }
+
+                else if (sCG.sleevedPCIEGroupThree.includes(product.title)) {
+                    if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
+                        product.doubles = 'No double'
+                        product.combs = "3 combs"
+                    } else if (product.gpuCableRouting === 'Over GPU Backplate') {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.crimps = 'Same crimps - Female'
+                            product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.crimps = 'Opposite crimps'
+                            product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        }
+                    } else if (product.gpuMountPosition.includes('Vertical GPU')) {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.crimps = 'Same crimps - Female'
+                            product.instructions = 'All 244 - Silverstone PCIE build!'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.crimps = 'Opposite crimps'
+                            product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        }
+                    }
+                }
+
+                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    }
+                }
+
+                // SATA
+                else if (sCG.sleevedSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '100 - Silverstone'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '148 - Silverstone'
+                    product.combs = "1 comb"
+                } else if (product.title === 'XTIA Xproto SATA Power Paracord Custom Sleeved Cable') {
+                    // length is provided by customer
+                    product.instructions = 'Silverstone SATA build'
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "1 comb for every 100mm in length"
+                }
+
+                // DUAL SATA
+                else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '80 - Silverstone (5 doubles)'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '148 - Silverstone (5 doubles)'
+                    product.combs = "1 comb"
+                }
+            }
+
+            // EVGA GM
+            else if (product.psuModel === 'EVGA 450/550/650/750/850 GM') {
+
+                // 24 PIN - Sandwich
+                // still calculating lengths needed for EVGA sandwich 24 pins
+                if (sCG.sleeved24GroupOne.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+
+                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                        // product.instructions = "Start at 178 - Build from right"
+                        // product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.offsetHeaders.includes(product.moboModel)) {
+                        // product.instructions = "Start at 190 - Build from right"
+                        // product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.middleHeaders.includes(product.moboModel)) {
+                        // product.instructions = "Start at 214 - Build from right"
+                        // product.doubles = '6, 7, 9, 12 - 178/85, 172/85, 166/64, 142/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    }
+                }
+
+                // NCASE / NR200 / S610
+                else if (sCG.sleeved24GroupTwo.includes(product.title)) {
+                    product.crimps = 'Same crimps - Male'
+                    product.instructions = 'Start at 220 - Red Box - Build from right'
+                    product.doubles = 'No doubles'
+                    product.combs = "3 combs"
+                }
+                // EPS
+
+                // sandwich EPS
+                else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "3 combs"
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 256 - Colors: 4, 3, 2, 1'
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 286 - Colors: 4, 3, 2, 1'
+                    }
+                }
+
+                // NCASE / S610 EPS
+                else if (product.title === 'NCASE M1 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'Sliger S610/S620 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '500/494 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.impact.includes(product.moboModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/226, 238/220, 232/214, 226/208 - Colors: 1, 2, 3, 4 - Long on bottom'
+                        product.combs = "3 combs"
+                    }
+                }
+
+                // NR200 EPS
+                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '536/530 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.impact.includes(product.moboModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/226, 238/220, 232/214, 226/208 - Colors: 1, 2, 3, 4 - Long on bottom'
+                        product.combs = "3 combs"
+                    }
+                }
+
+                //8&6 PCIE
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
+                    product.doubles = 'No double'
+                    product.combs = "3 combs"
+                }
+
+                else if (sCG.sleevedPCIEGroupTwo.includes(product.title)) {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = 'All 244 - Silverstone PCIE build!'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    }
+                }
+
+                else if (sCG.sleevedPCIEGroupThree.includes(product.title)) {
+                    if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
+                        product.doubles = 'No double'
+                        product.combs = "3 combs"
+                    } else if (product.gpuCableRouting === 'Over GPU Backplate') {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.crimps = 'Same crimps - Female'
+                            product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.crimps = 'Opposite crimps'
+                            product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        }
+                    } else if (product.gpuMountPosition.includes('Vertical GPU')) {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.crimps = 'Same crimps - Female'
+                            product.instructions = 'All 244 - Silverstone PCIE build!'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.crimps = 'Opposite crimps'
+                            product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                            product.doubles = 'No double'
+                            product.combs = "2 combs"
+                        }
+                    }
+                }
+
+                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
+                        product.doubles = 'No double'
+                        product.combs = "2 combs"
+                    }
+                }
+
+                // SATA
+                else if (sCG.sleevedSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = '148 - EVGA'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = '178 - EVGA'
+                    product.combs = "2 combs"
+                } else if (product.title === 'XTIA Xproto SATA Power Paracord Custom Sleeved Cable') {
+                    // length is provided by customer
+                    product.instructions = 'EVGA SATA build'
+                    product.crimps = 'Opposite crimps'
+                    product.combs = "1 comb for every 100mm in length"
+                }
+
+                // DUAL SATA
+                else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = '148 - Silverstone (5 doubles)'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = '178 - Silverstone (5 doubles)'
+                    product.combs = "2 comb"
+                }
+            }
+
+            // COOLER MASTER
+            else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
+                // 24 PIN - Sandwich
+                // still calculating lengths needed for Cooler Master sandwich 24 pins
+                if (sCG.sleeved24GroupOne.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+
+                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                        // product.instructions = "Start at 178 - Build from right"
+                        // product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.offsetHeaders.includes(product.moboModel)) {
+                        // product.instructions = "Start at 190 - Build from right"
+                        // product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.middleHeaders.includes(product.moboModel)) {
+                        // product.instructions = "Start at 214 - Build from right"
+                        // product.doubles = '6, 7, 9, 12 - 178/85, 172/85, 166/64, 142/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    }
+                }
+
+                // NR200 / S610 24
+                else if (product.title === 'Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Sliger S610/S620 24 Pin Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Male'
+                    product.doubles = 'No doubles'
+                    product.combs = "3 combs"
+                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 208 - Red Box - Build from right'
+                    } else if (m24H.offsetHeaders.includes(product.moboModel) || m24H.middleHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 202 - Red Box - Build from right'
+                    }
+                }
+
+                // NCASE 24
+                else if (product.title === 'NCASE M1 24 Pin Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Male'
+                    product.doubles = 'No doubles'
+                    product.combs = "3 combs"
+                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 202 - Red Box - Build from right'
+                    } else if (m24H.offsetHeaders.includes(product.moboModel) || m24H.middleHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 190 - Red Box - Build from right'
+                    }
+                }
+
+                // MESHLICIOUS 24
+                else if (product.title === 'SSUPD Meshlicious 24 Pin Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.doubles = '1, 2, 3, 12 - 280/55, 280/55, 280/64, 280/55 - bottom, bottom, top, bottom'
+                    product.instructions = 'All 280 except for top wire in box 1 (290) - 2 wires in box 5 - Build from right - Cooler Master build'
+                    product.combs = "4 combs"
+                }
+
+                // EPS
+
+                // sandwich EPS
+                else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "3 combs"
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 256 - Colors: 4, 3, 2, 1'
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 286 - Colors: 4, 3, 2, 1'
+                    }
+                }
+
+                // NCASE / S610 EPS
+                else if (product.title === 'NCASE M1 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'Sliger S610/S620 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '500/494 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.impact.includes(product.moboModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/226, 238/220, 232/214, 226/208 - Colors: 1, 2, 3, 4 - Long on bottom'
+                        product.combs = "3 combs"
+                    }
+                }
+
+                // NR200 EPS
+                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '536/530 - Colors: 4, 3, 2, 1 - With cross'
+                        product.combs = "5 combs"
+                    } else if (mEH.impact.includes(product.moboModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/226, 238/220, 232/214, 226/208 - Colors: 1, 2, 3, 4 - Long on bottom'
+                        product.combs = "3 combs"
+                    }
+                }
+
+                // MESHLICIOUS EPS
+                else if (product.title === 'SSUPD Meshlicious 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '380/374 - Colors: 4, 3, 2, 1 - No cross'
+                    product.combs = "4 combs"
+                }
+
+                //8&6 PCIE
+                // Sandwich PCIE + Meshlicious
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = 'All 304'
+                    product.doubles = 'Bottom left double - #1 is double'
+                    product.combs = "3 combs"
+                }
+
+                else if (sCG.sleevedPCIEGroupTwo.includes(product.title)) {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
+                        product.doubles = 'Bottom right double - #4 is double'
+                        product.combs = "2 combs"
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = 'All 232'
+                        product.doubles = 'Bottom left double - #1 is double'
+                        product.combs = "2 combs"
+                    }
+                }
+
+                else if (sCG.sleevedPCIEGroupThree.includes(product.title)) {
+                    if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = 'All 304'
+                        product.doubles = 'Bottom left double - #1 is double'
+                        product.combs = "3 combs"
+                    } else if (product.gpuCableRouting === 'Over GPU Backplate') {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.crimps = 'Same crimps - Female'
+                            product.instructions = '178/160 - Long on bottom - Cross then 2 combs'
+                            product.doubles = 'Bottom right double - #4 is double'
+                            product.combs = "2 combs"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.crimps = 'Opposite crimps'
+                            product.instructions = '160/154 - Long on top'
+                            product.doubles = 'Bottom left double - #1 is double'
+                            product.combs = "2 combs"
+                        }
+                    } else if (product.gpuMountPosition.includes('Vertical GPU')) {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.crimps = 'Same crimps - Female'
+                            product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
+                            product.doubles = 'Bottom right double - #4 is double'
+                            product.combs = "2 combs"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.crimps = 'Opposite crimps'
+                            product.instructions = 'All 232'
+                            product.doubles = 'Bottom left double - #1 is double'
+                            product.combs = "2 combs"
+                        }
+                    }
+                }
+
+                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.crimps = 'Same crimps - Female'
+                        product.instructions = '178/160 - Long on bottom - Cross then 2 combs'
+                        product.doubles = 'Bottom right double - #4 is double'
+                        product.combs = "2 combs"
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.crimps = 'Opposite crimps'
+                        product.instructions = '160/154 - Long on top'
+                        product.doubles = 'Bottom left double - #1 is double'
+                        product.combs = "2 combs"
+                    }
+                }
+
+                // SATA
+                else if (sCG.sleevedSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '100 - Cooler Master'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '148 - Cooler Master'
+                    product.combs = "1 comb"
+                } else if (product.title === 'SSUPD Meshlicious SATA Power Paracord Custom Sleeved Cable') {
+                    // length is provided by customer
+                    product.instructions = 'Cooler Master SATA build'
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "1 comb for every 100mm in length"
+                }
+
+                // DUAL SATA
+                else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '100 - Cooler Master (5 doubles)'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '148 - Cooler Master (5 doubles)'
+                    product.combs = "1 comb"
+                }
+            }
+
+            // next PSU model here
 
         })
     })
