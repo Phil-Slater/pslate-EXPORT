@@ -572,7 +572,7 @@ function updateSleeved(orders) {
                 else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
-                    product.doubles = 'No double'
+                    product.doubles = 'No doubles'
                     product.combs = "3 combs"
                 }
 
@@ -580,12 +580,12 @@ function updateSleeved(orders) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = 'All 244 - Silverstone PCIE build!'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     }
                 }
@@ -594,30 +594,30 @@ function updateSleeved(orders) {
                     if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "3 combs"
                     } else if (product.gpuCableRouting === 'Over GPU Backplate') {
                         if (gCD.fanClips.includes(product.gpuModel)) {
                             product.crimps = 'Same crimps - Female'
                             product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
                             product.crimps = 'Opposite crimps'
                             product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         }
                     } else if (product.gpuMountPosition.includes('Vertical GPU')) {
                         if (gCD.fanClips.includes(product.gpuModel)) {
                             product.crimps = 'Same crimps - Female'
                             product.instructions = 'All 244 - Silverstone PCIE build!'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
                             product.crimps = 'Opposite crimps'
                             product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         }
                     }
@@ -627,12 +627,12 @@ function updateSleeved(orders) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     }
                 }
@@ -746,7 +746,7 @@ function updateSleeved(orders) {
                 else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
-                    product.doubles = 'No double'
+                    product.doubles = 'No doubles'
                     product.combs = "3 combs"
                 }
 
@@ -754,12 +754,12 @@ function updateSleeved(orders) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = 'All 244 - Silverstone PCIE build!'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     }
                 }
@@ -768,30 +768,30 @@ function updateSleeved(orders) {
                     if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "3 combs"
                     } else if (product.gpuCableRouting === 'Over GPU Backplate') {
                         if (gCD.fanClips.includes(product.gpuModel)) {
                             product.crimps = 'Same crimps - Female'
                             product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
                             product.crimps = 'Opposite crimps'
                             product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         }
                     } else if (product.gpuMountPosition.includes('Vertical GPU')) {
                         if (gCD.fanClips.includes(product.gpuModel)) {
                             product.crimps = 'Same crimps - Female'
                             product.instructions = 'All 244 - Silverstone PCIE build!'
-                            product.doubles = 'No double'
+                            product.doubles = 's'
                             product.combs = "2 combs"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
                             product.crimps = 'Opposite crimps'
                             product.instructions = '256/232 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                            product.doubles = 'No double'
+                            product.doubles = 'No doubles'
                             product.combs = "2 combs"
                         }
                     }
@@ -801,12 +801,12 @@ function updateSleeved(orders) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '178/160 - Silverstone PCIE - Long on bottom - Build from 6+2 (or 6 pin) connector - 2 combs, then cross into full 8 PCIE'
-                        product.doubles = 'No double'
+                        product.doubles = 'No doubles'
                         product.combs = "2 combs"
                     }
                 }

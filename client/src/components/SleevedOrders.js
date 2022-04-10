@@ -20,7 +20,6 @@ function SleevedOrders() {
         } catch (error) {
             console.log(error)
         }
-
     }
 
     const ordersMapped = orders.map(order => {
@@ -37,6 +36,10 @@ function SleevedOrders() {
     return (
         <div>
             <h1 className='text-white font-bold text-5xl p-4 text-center'>Sleeved Orders</h1>
+            <div className='buttons-div'>
+                {orders ? <NavLink to="/sleeved-doubles" state={{ state: orders }}><button className="py-4 w-60 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200 mb-2">View Doubles</button></NavLink> : null}
+                {orders ? <button className="py-4 w-60 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200">View Adapters</button> : null}
+            </div>
             <div className='order-container'>{ordersMapped}</div>
         </div>
     )

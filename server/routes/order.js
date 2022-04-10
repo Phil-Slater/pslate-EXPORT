@@ -41,6 +41,15 @@ router.get('/sleeved-order-numbers', authenticate, async (req, res) => {
     // res.render('sleeved-orders', { allOrders: lastOrders })
 })
 
+router.get('/sleeved-doubles', authenticate, async (req, res) => {
+    const order = await getOrders()
+    const orderKeysAdded = getSignificantKeys(order.data.orders)
+    const sleevedUpdated = updateSleeved(orderKeysAdded)
+    console.log(sleevedUpdated)
+    const doublesOrdersFiltered = filterSleevedDoubles(sleevedUpdated)
+    res.json(doublesOrdersFiltered)
+})
+
 router.get('/unsleeved-order/:id', authenticate, async (req, res) => {
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
@@ -145,6 +154,21 @@ function filterRushOrders(orders) {
         return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
     })
     return orders
+}
+
+function filterSleevedDoubles(orders) {
+    let sleevedDoublesProducts = []
+    orders.forEach(order => {
+        order.line_items.forEach(product => {
+            // let orderNumberCheck = sleevedDoublesProducts.some(key => key.order_number === order.order_number) !orderNumberCheck && 
+            if (product.doubles && product.doubles !== 'No doubles') {
+                product.orderNumber = order.order_number
+                sleevedDoublesProducts.push(product)
+            }
+        })
+    })
+    console.log(sleevedDoublesProducts.length)
+    return sleevedDoublesProducts
 }
 
 function getPowerSwitchOrders(orders) {
