@@ -450,13 +450,13 @@ function updateSleeved(orders) {
 
                     // POSITION OF 24 HEADER
                     if (m24H.cornerHeaders.includes(product.moboModel)) {
-                        product.instructions = "Start at 178 - Build from right"
+                        product.instructions = "Start at 178 - Build from right - Connectors: 2x 24 pin"
                         product.combs = "1 comb"
                     } else if (m24H.offsetHeaders.includes(product.moboModel)) {
-                        product.instructions = "Start at 190 - Build from right"
+                        product.instructions = "Start at 190 - Build from right - Connectors: 2x 24 pin"
                         product.combs = "1 comb"
                     } else if (m24H.middleHeaders.includes(product.moboModel)) {
-                        product.instructions = "Start at 214 - Build from right"
+                        product.instructions = "Start at 214 - Build from right - Connectors: 2x 24 pin"
                         product.combs = "1 comb"
                     }
 
@@ -464,15 +464,15 @@ function updateSleeved(orders) {
                     product.crimps = 'Opposite crimps'
 
                     if (m24H.cornerHeaders.includes(product.moboModel)) {
-                        product.instructions = "Start at 178 - Build from right"
+                        product.instructions = "Start at 178 - Build from right - Connectors: 2x 24 pin and 4 pin"
                         product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
                     } else if (m24H.offsetHeaders.includes(product.moboModel)) {
-                        product.instructions = "Start at 190 - Build from right"
+                        product.instructions = "Start at 190 - Build from right - Connectors: 2x 24 pin and 4 pin"
                         product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
                     } else if (m24H.middleHeaders.includes(product.moboModel)) {
-                        product.instructions = "Start at 214 - Build from right"
+                        product.instructions = "Start at 214 - Build from right - Connectors: 2x 24 pin and 4 pin"
                         product.doubles = '6, 7, 9, 12 - 178/85, 172/85, 166/64, 142/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
                     }
@@ -481,22 +481,24 @@ function updateSleeved(orders) {
                 // NCASE / NR200 / S610
                 else if (sCG.sleeved24GroupTwo.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-                    product.instructions = 'Start at 280 - Build from right'
                     if (product.senseWires === 'No') {
                         product.doubles = 'No doubles'
+                        product.instructions = 'Start at 280 - Build from right - Connectors: 2x 24 pin'
                     } else {
                         product.doubles = '6, 7, 9, 12 - 244/85, 238/85, 232/64, 208/55 - bottom, bottom, top, bottom'
+                        product.instructions = 'Start at 280 - Build from right - Connectors: 2x 24 pin and 4 pin'
                     }
                 }
 
                 // XPROTO
                 else if (product.title === 'XTIA Xproto 24 Pin Paracord Custom Sleeved Cable') {
                     product.crimps = 'Opposite crimps'
-                    product.instructions = 'All wires 142 - Build from right'
                     if (product.senseWires === 'No') {
                         product.doubles = 'No doubles'
+                        product.instructions = 'All wires 142 - Build from right - Connectors: 2x 24 pin'
                     } else {
                         product.doubles = '6, 7, 9, 12 - 142/85, 142/85, 142/64, 142/55 - bottom, bottom, top, bottom'
+                        product.instructions = 'All wires 142 - Build from right - Connectors: 2x 24 pin and 4 pin'
                     }
                 }
 
