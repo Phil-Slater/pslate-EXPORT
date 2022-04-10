@@ -8,7 +8,7 @@ function updateUnsleeved(orders) {
             // UNSLEEVED 12 PINS - Siverstone / Cooler Master / EVGA PSUs
             if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
                 if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'EVGA 450/550/650/750/850 GM' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750') {
-                    if (product.case === 'Sliger SV series') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
                         product.instructions = '300 Silverstone 12 pin'
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
                         product.instructions = '360 Silverstone 12 pin'
@@ -30,7 +30,7 @@ function updateUnsleeved(orders) {
                 }
 
                 else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750/SX1000') {
-                    if (product.case === 'Sliger SV series') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
                         product.instructions = '300 Cooler Master 12 pin'
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
                         product.instructions = '360 Cooler Master 12 pin'
@@ -66,6 +66,8 @@ function updateUnsleeved(orders) {
                     product.instructions = "290 - Corsair Meshlicious"
                 } else if (product.title === 'XTIA Xproto 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "180 - Corsair Type 3"
+                } else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
+                    product.instructions = "295 - Corsair Type 1"
                 }
 
                 // EPS
@@ -75,6 +77,8 @@ function updateUnsleeved(orders) {
                     product.instructions = "200 - Corsair Type 2"
                 } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - Corsair Meshlicious"
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                    product.instructions = "420 - Corsair Type 1"
                 }
 
                 // 8 & 6 PCIE
@@ -92,15 +96,17 @@ function updateUnsleeved(orders) {
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.instructions = '240 - Corsair Type 1'
                     }
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
+                    product.instructions = '180 - Corsair Type 1'
                 }
 
                 // 12 PCIE
                 else if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
-                    if (product.case === 'Sliger SV series') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
                         product.instructions = '300 - Corsair 12 pin'
-                    } else if (product.case !== 'Sliger SV series' && product.gpuModel === 'RTX 3060 Ti Founders Edition') {
+                    } else if (product.gpuModel === 'RTX 3060 Ti Founders Edition') {
                         product.instructions = '360 - Corsair 12 pin'
-                    } else if (product.case !== 'Sliger SV series' && product.gpuModel === 'RTX 3070 Founders Edition') {
+                    } else if (product.gpuModel === 'RTX 3070 Founders Edition') {
                         product.instructions = '360 - Corsair 12 pin'
                     } else if (product.gpuModel === 'RTX 3080/3070 Ti/3080 Ti Founders Edition') {
                         if (uCG.unsleeved12PCIECaseGroupOne3080Corsair.includes(product.case)) {

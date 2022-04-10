@@ -18,7 +18,7 @@ const unsleevedCableGroups = {
 
     unsleevedSATAGroupOne: ['FormD T1 SATA Power Unsleeved Custom Cable', 'DAN Cases A4-SFX SATA Power Unsleeved Custom Cable', 'LOUQE Ghost S1 SATA Power Unsleeved Custom Cable', 'LOUQE RAW S1 SATA Power Unsleeved Custom Cable', 'Nouvolo Steck SATA Power Unsleeved Custom Cable'],
 
-    unsleevedSATAGroupTwo: ['Cooler Master NR200 SATA Power Unsleeved Custom Cable', 'NCASE M1 SATA Power Unsleeved Custom Cable', 'Sliger SM550/SM560/SM570/SM580 SATA Power Unsleeved Custom Cable', 'Sliger S610/S620 SATA Power Unsleeved Custom Cable'],
+    unsleevedSATAGroupTwo: ['Cooler Master NR200 SATA Power Unsleeved Custom Cable', 'NCASE M1 SATA Power Unsleeved Custom Cable', 'Sliger SM550/SM560/SM570/SM580 SATA Power Unsleeved Custom Cable', 'Sliger S610/S620 SATA Power Unsleeved Custom Cable', 'Lian Li x DAN A4-H2O SATA Power Unsleeved Custom Cable'],
 
     unsleevedDualSATAGroupOne: ['DAN Cases A4-SFX Dual SATA Power Unsleeved Custom Cable', 'LOUQE Ghost S1 Dual SATA Power Unsleeved Custom Cable'],
 

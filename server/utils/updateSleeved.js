@@ -11,7 +11,7 @@ function updateSleeved(orders) {
             // ALL SLEEVED 12 PINS
             if (product.title === 'Nvidia 12 Pin PCIE Sleeved Custom Cable') {
                 if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum') {
-                    if (product.case === 'Sliger SV series') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
                         product.instructions = 'Sleeved 12 Pin - 300 - Corsair'
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
                         product.instructions = 'Sleeved 12 Pin - 360 - Corsair'
@@ -29,7 +29,7 @@ function updateSleeved(orders) {
                 }
 
                 if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'EVGA 450/550/650/750/850 GM' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750') {
-                    if (product.case === 'Sliger SV series') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
                         product.instructions = 'Sleeved 12 Pin - 300 - Silverstone'
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
                         product.instructions = 'Sleeved 12 Pin - 360 - Silverstone'
@@ -51,7 +51,7 @@ function updateSleeved(orders) {
                 }
 
                 else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750/SX1000') {
-                    if (product.case === 'Sliger SV series') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
                         product.instructions = 'Sleeved 12 Pin - 300 - Cooler Master'
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
                         product.instructions = 'Sleeved 12 Pin - 360 - Cooler Master'
@@ -199,12 +199,12 @@ function updateSleeved(orders) {
                     product.instructions = 'Start at 304 - Build from left'
                     product.combs = "3 combs"
                     // ZABER
-                } else if (product.title === 'Dr Zaber Sentry 24 Pin Paracord Custom Sleeved Cable' && product.senseWires === 'No') {
+                } else if ((product.title === 'Dr Zaber Sentry 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 24 Pin Paracord Custom Sleeved Cable') && product.senseWires === 'No') {
                     product.crimps = 'Opposite crimps'
                     product.doubles = 'No doubles'
                     product.instructions = 'Start at 305 (chart) - Build from right'
                     product.combs = "1 comb"
-                } else if (product.title === 'Dr Zaber Sentry 24 Pin Paracord Custom Sleeved Cable') {
+                } else if (product.title === 'Dr Zaber Sentry 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 24 Pin Paracord Custom Sleeved Cable') {
                     product.crimps = 'Opposite crimps'
                     product.doubles = '3, 4, 6, 12 - 285/64, 275/64, 255/55, 195/85 - top, bottom, bottom, bottom'
                     product.instructions = 'Start at 305 (chart) - Build from right'
@@ -281,6 +281,10 @@ function updateSleeved(orders) {
                 } else if (product.title === 'Dr Zaber Sentry 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
                     product.crimps = 'Opposite crimps'
                     product.instructions = '380/374 - Colors: 4, 3, 2, 1'
+                    product.combs = "4 combs"
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = '420/414 - Colors: 4, 3, 2, 1'
                     product.combs = "4 combs"
                 }
 
@@ -392,7 +396,15 @@ function updateSleeved(orders) {
                         product.doubles = 'Top right double - #1 is double'
                         product.combs = "2 combs"
                     }
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    // confirm these measurements
+
+                    // product.crimps = 'Same crimps - Female'
+                    // product.instructions = 'All 214'
+                    // product.doubles = 'Top right double - #4 is double'
+                    // product.combs = "2 combs"
                 }
+
 
                 // SATA
                 else if (sCG.sleevedSATAGroupOne.includes(product.title)) {
