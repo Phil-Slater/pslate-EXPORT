@@ -22,6 +22,7 @@ import SignOut from './components/SignOut';
 import ProtectedRoute from './components/ProtectedRoute';
 import Order from './components/Order';
 import Guest from './components/Guest';
+import SleevedDoubles from './components/Sleeved Orders/SleevedDoubles';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -76,6 +77,10 @@ ReactDOM.render(
             <Route path='/order/:id' element={
               <ProtectedRoute>
                 <Order />
+              </ProtectedRoute>} />
+            <Route path='/sleeved-doubles' element={
+              <ProtectedRoute>
+                <SleevedDoubles />
               </ProtectedRoute>} />
 
           </Routes>
