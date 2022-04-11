@@ -32,7 +32,7 @@ function Sleeved12Pins() {
                 {order.line_items.map(product => {
                     if (product.title.includes('12 Pin PCIE Sleeved')) {
                         return <div key={product.id}>
-                            <h2>{product.instructions}</h2>
+                            <h2 style={{ fontWeight: "bold" }}>{product.instructions}</h2>
                             <Sleeved12PinColors color={product.properties[3]} />
                         </div>
                     }
