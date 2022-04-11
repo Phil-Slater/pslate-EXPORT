@@ -29,7 +29,6 @@ router.get('/unsleeved-order-numbers', authenticate, async (req, res) => {
     const ordersFinalized = reWriteDate(unsleevedFiltered)
     const lastOrders = filterRushOrders(ordersFinalized)
     res.json(lastOrders)
-    //res.render('unsleeved-orders', { allOrders: lastOrders })
 })
 
 router.get('/sleeved-order-numbers', authenticate, async (req, res) => {
@@ -38,7 +37,6 @@ router.get('/sleeved-order-numbers', authenticate, async (req, res) => {
     const ordersFinalized = reWriteDate(sleevedFiltered)
     const lastOrders = filterRushOrders(ordersFinalized)
     res.json(lastOrders)
-    // res.render('sleeved-orders', { allOrders: lastOrders })
 })
 
 router.get('/sleeved-doubles', authenticate, async (req, res) => {
@@ -47,22 +45,6 @@ router.get('/sleeved-doubles', authenticate, async (req, res) => {
     const sleevedUpdated = updateSleeved(orderKeysAdded)
     const doublesOrdersFiltered = filterSleevedDoubles(sleevedUpdated)
     res.json(doublesOrdersFiltered)
-})
-
-router.get('/unsleeved-order/:id', authenticate, async (req, res) => {
-    const order = await getOrder(req.params.id)
-    const orderKeysAdded = getSignificantKeys(order.data.orders)
-    const ordersUpdated = updateUnsleeved(orderKeysAdded)
-    const ordersFinalized = reWriteDate(ordersUpdated)
-    res.render('view-orders', { allOrders: ordersFinalized })
-})
-
-router.get('/sleeved-order/:id', authenticate, async (req, res) => {
-    const order = await getOrder(req.params.id)
-    const orderKeysAdded = getSignificantKeys(order.data.orders)
-    const ordersUpdated = updateSleeved(orderKeysAdded) // change to updateSleeved when that function is ready
-    const ordersFinalized = reWriteDate(ordersUpdated)
-    res.render('view-orders', { allOrders: ordersFinalized })
 })
 
 router.get('/order/:id', authenticate, async (req, res) => {
@@ -97,6 +79,16 @@ router.get('/sleeved-12-pins', authenticate, async (req, res) => {
     const sleeved12PinOrders = getSleeved12PinOrders(ordersFinalized)
     const lastOrders = filterRushOrders(sleeved12PinOrders)
     res.json(lastOrders)
+})
+
+router.get('/adapter-counts', authenticate, async (req, res) => {
+    const orders = await getOrders()
+    const sleevedFiltered = filterSleevedOrders(orders)
+    const rushFiltered = filterRushOrders(sleevedFiltered)
+    const orderKeysAdded = getSignificantKeys(rushFiltered)
+    const sleevedUpdated = updateSleeved(orderKeysAdded)
+    const adapterProducts = filterAdapterProducts(sleevedUpdated)
+    res.json(adapterProducts)
 })
 
 
@@ -162,7 +154,6 @@ function filterSleevedDoubles(orders) {
     let sleevedDoublesProducts = []
     orders.forEach(order => {
         order.line_items.forEach(product => {
-            // let orderNumberCheck = sleevedDoublesProducts.some(key => key.order_number === order.order_number) !orderNumberCheck && 
             if (product.doubles && product.doubles !== 'No doubles') {
                 product.orderNumber = order.order_number
                 sleevedDoublesProducts.push(product)
@@ -171,6 +162,22 @@ function filterSleevedDoubles(orders) {
     })
     console.log(sleevedDoublesProducts.length)
     return sleevedDoublesProducts
+}
+
+function filterAdapterProducts(orders) {
+    let adapterProducts = []
+    orders.forEach(order => {
+        order.line_items.forEach(product => {
+            if (!product.instructions) {
+                return
+            } else if (product.instructions.includes('Red Box')) {
+                product.orderNumber = order.order_number
+                adapterProducts.push(product)
+            }
+        })
+    })
+    console.log(adapterProducts.length)
+    return adapterProducts
 }
 
 function getPowerSwitchOrders(orders) {
