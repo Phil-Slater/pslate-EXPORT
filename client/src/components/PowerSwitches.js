@@ -37,7 +37,7 @@ function PowerSwitches() {
                         </div>
                     }
                 })}
-                {order.line_items.length === 1 ? <h2>Power Switch Only</h2> : null}
+                {order.line_items.length === 1 ? <h2 style={{ color: "yellow" }}>Power Switch Only</h2> : null}
             </div>
         </NavLink>
     })

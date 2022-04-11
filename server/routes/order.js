@@ -45,7 +45,6 @@ router.get('/sleeved-doubles', authenticate, async (req, res) => {
     const order = await getOrders()
     const orderKeysAdded = getSignificantKeys(order.data.orders)
     const sleevedUpdated = updateSleeved(orderKeysAdded)
-    console.log(sleevedUpdated)
     const doublesOrdersFiltered = filterSleevedDoubles(sleevedUpdated)
     res.json(doublesOrdersFiltered)
 })
@@ -96,7 +95,8 @@ router.get('/sleeved-12-pins', authenticate, async (req, res) => {
     const sleevedUpdated = updateSleeved(orderKeysAdded)
     const ordersFinalized = reWriteDate(sleevedUpdated)
     const sleeved12PinOrders = getSleeved12PinOrders(ordersFinalized)
-    res.json(sleeved12PinOrders)
+    const lastOrders = filterRushOrders(sleeved12PinOrders)
+    res.json(lastOrders)
 })
 
 
@@ -143,7 +143,9 @@ function filterRushOrders(orders) {
     orders.forEach(order => {
         order.line_items.forEach(product => {
             product.properties.forEach(property => {
-                if (property.value.includes('ships in')) {
+                if (!property.value) {
+                    return
+                } else if (property.value.includes('ships in')) {
                     order.rushOrder = 'RUSH ORDER'
                 }
             })

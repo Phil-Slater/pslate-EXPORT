@@ -24,7 +24,7 @@ function Sleeved12Pins() {
 
     const ordersMapped = orders.map(order => {
         return <NavLink to={`/order/${order.order_number}`} key={order.order_number}>
-            <div key={order.order_number} className="button-29">
+            <div key={order.order_number} className="button-29" style={{ height: "50vh" }}>
                 <h1>#{order.order_number}</h1>
                 <h3>Order placed on:</h3>
                 <h2>{order.created_at}</h2>
@@ -37,6 +37,7 @@ function Sleeved12Pins() {
                         </div>
                     }
                 })}
+                {order.line_items.length === 1 ? <h2 style={{ color: "yellow" }}>Sleeved 12 Pin Only</h2> : null}
             </div>
         </NavLink>
     })
