@@ -23,7 +23,7 @@ function PowerSwitches() {
 
     const ordersMapped = orders.map(order => {
         return <NavLink to={`/order/${order.order_number}`} key={order.order_number}>
-            <div key={order.order_number} className="button-29">
+            <div key={order.order_number} className="button-29" style={{ height: "50vh" }}>
                 <h1>#{order.order_number}</h1>
                 <h3>Order placed on:</h3>
                 <h3>{order.created_at}</h3>
