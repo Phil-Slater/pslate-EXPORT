@@ -64,3 +64,8 @@
 .double-div p {
     line-height: 1.5em;
 }
+
+.double-div h2 {
+    margin-bottom: 0.5em;
+    margin-top: 0;
+}

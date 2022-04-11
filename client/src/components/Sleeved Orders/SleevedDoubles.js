@@ -28,6 +28,7 @@ const SleevedDoubles = () => {
             <div key={product.id} className="double-div">
                 <div style={{ width: "200%" }}>
                     <h1>#{product.orderNumber}</h1>
+                    <h2 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h2>
                     <p>{product.instructions}</p>
                     <p><b>Doubles:</b></p>
                     <p>{product.title.includes('24 Pin') ? product.doubles : null}</p>
