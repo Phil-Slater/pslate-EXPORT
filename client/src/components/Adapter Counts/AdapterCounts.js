@@ -35,7 +35,7 @@ const AdapterCounts = () => {
         <div>
             <h1 className='text-white font-bold text-5xl p-4 text-center'>Adapters</h1>
             <div className='order-container'>
-                <div className='button-29' style={{ height: "15vh", cursor: "default", transform: "none" }}>
+                <div className='button-29' style={{ height: "20vh", cursor: "default", transform: "none" }}>
                     {products ? <AdapterLogic products={products} /> : null}
                 </div>
             </div>

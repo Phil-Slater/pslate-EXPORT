@@ -14,9 +14,9 @@ export default function AdapterLogic(props) {
     })
     return (
         <>
-            <h2>Total Corsair: {corsair}</h2>
-            <h2>Total Cooler Master: {coolerMaster}</h2>
-            <h2>Total EVGA: {evga}</h2>
+            <h2>Corsair: {corsair}</h2>
+            <h2>Cooler Master: {coolerMaster}</h2>
+            <h2>EVGA: {evga}</h2>
         </>
     )
 }
