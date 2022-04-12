@@ -282,6 +282,7 @@ function updateSleeved(orders) {
                     product.crimps = 'Opposite crimps'
                     product.instructions = '380/374 - Colors: 4, 3, 2, 1'
                     product.combs = "4 combs"
+
                 } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
                     product.crimps = 'Opposite crimps'
                     product.instructions = '420/414 - Colors: 4, 3, 2, 1'
@@ -397,12 +398,10 @@ function updateSleeved(orders) {
                         product.combs = "2 combs"
                     }
                 } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Paracord Custom Sleeved Cable') {
-                    // confirm these measurements
-
-                    // product.crimps = 'Same crimps - Female'
-                    // product.instructions = 'All 214'
-                    // product.doubles = 'Top right double - #4 is double'
-                    // product.combs = "2 combs"
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = 'All 202'
+                    product.doubles = 'Top right double - #4 is double'
+                    product.combs = "2 combs"
                 }
 
 

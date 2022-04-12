@@ -1,19 +1,11 @@
-.order-button {
-    background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
+.doubles-container {
     display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
-    color: rgb(240, 240, 240);
-    justify-content: center;
-    padding: 1em;
-    line-height: 2em;
-    position: relative;
-    text-align: left;
-    font-size: 18px;
-    width: 100%;
-    margin-bottom: 1em;
-    letter-spacing: .02em;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: .5em;
+    justify-content: space-around;
+    margin: 1vw;
 }
 
 .double-div h1 {

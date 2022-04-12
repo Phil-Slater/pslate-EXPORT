@@ -44,7 +44,7 @@ const SleevedDoubles = () => {
     return (
         <div>
             <h1 className='text-white font-bold text-5xl p-4 text-center'>Sleeved Doubles</h1>
-            <div className='order-container'>{productsMapped}</div>
+            <div className='doubles-container'>{productsMapped}</div>
         </div>
     )
 }

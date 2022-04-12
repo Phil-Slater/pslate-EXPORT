@@ -154,7 +154,7 @@ function filterSleevedDoubles(orders) {
     let sleevedDoublesProducts = []
     orders.forEach(order => {
         order.line_items.forEach(product => {
-            if (product.doubles && product.doubles !== 'No doubles') {
+            if (product.doubles && product.doubles !== 'No doubles' && !product.title.includes('6 Pin')) {
                 product.orderNumber = order.order_number
                 sleevedDoublesProducts.push(product)
             }
