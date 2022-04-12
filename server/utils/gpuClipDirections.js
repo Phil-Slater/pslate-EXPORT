@@ -21,7 +21,7 @@ const gpuClipDirections = {
         // 3070ti
         'NVIDIA GeForce RTX 3070 Ti Founders Edition', 'EVGA GeForce RTX 3070 Ti FTW3 ULTRA GAMING', 'EVGA GeForce RTX 3070 Ti XC3 ULTRA GAMING', 'Palit GeForce RTX 3070 Ti GameRock OC', 'Palit GeForce RTX 3070 Ti GamingPro', 'PNY GeForce RTX 3070 Ti XLR8 Gaming REVEL EPIC-X RGB',
         // 3070
-        'NVIDIA GeForce RTX 3070 Ti Founders Edition', 'EVGA GeForce RTX 3070 FTW3 Ultra Gaming', 'EVGA GeForce RTX 3070 XC3 Ultra Gaming', 'GALAX GeForce RTX 3070 SG', 'Inno3D GeForce RTX 3070 LHR iChill X4', 'KFA2 GeForce RTX 3070 SG', 'Palit GeForce RTX 3070 LHR GameRock OC', 'Palit GeForce RTX 3070 LHR GamingPro OC', 'Palit GeForce RTX 3070 LHR JetStream OC', 'PNY GeForce RTX 3070 Uprising', 'PNY GeForce RTX 3070 XLR8 Gaming Revel Epic-X RGB',
+        'NVIDIA GeForce RTX 3070 Founders Edition', 'EVGA GeForce RTX 3070 FTW3 Ultra Gaming', 'EVGA GeForce RTX 3070 XC3 Ultra Gaming', 'GALAX GeForce RTX 3070 SG', 'Inno3D GeForce RTX 3070 LHR iChill X4', 'KFA2 GeForce RTX 3070 SG', 'Palit GeForce RTX 3070 LHR GameRock OC', 'Palit GeForce RTX 3070 LHR GamingPro OC', 'Palit GeForce RTX 3070 LHR JetStream OC', 'PNY GeForce RTX 3070 Uprising', 'PNY GeForce RTX 3070 XLR8 Gaming Revel Epic-X RGB',
         // 3060ti
         'NVIDIA GeForce RTX 3060 Ti Founders Edition', 'EVGA GeForce RTX 3060 Ti FTW3 Ultra GAMING iCX3', 'EVGA GeForce RTX 3060 Ti XC GAMING', 'Inno3D GeForce RTX 3060 Ti Twin X2 OC', 'Palit GeForce RTX 3060 Ti LHR Dual OC', 'Palit GeForce RTX 3060 Ti LHR GamingPro', 'PNY GeForce RTX 3060 Ti UPRISING', 'PNY GeForce RTX 3060 Ti XLR8 Gaming REVEL EPIC-X',
         // 3060
@@ -66,7 +66,7 @@ const gpuClipDirections = {
         'MSI Radeon RX 570 GT OC',
 
         // others
-        'Evga 1080 ti SC2', 'Evga SC2', 'EVGA RTX 3080 XC3 Black', 'Powercolor 6600XT', 'EVGA RTX 3080 XC3 Ultra'
+        'Evga 1080 ti SC2', 'Evga SC2', 'EVGA RTX 3080 XC3 Black', 'Powercolor 6600XT', 'EVGA RTX 3080 XC3 Ultra', 'EVGA 3080 FTW3', 'Amd radeon 6900 xt'
     ],
 
     backplateClips: [
@@ -138,7 +138,7 @@ const gpuClipDirections = {
         'ASRock Radeon RX 570 Phantom Gaming D', 'ASRock Radeon RX 570 Phantom Gaming X', 'Asus Radeon RX 570 AREZ Expedition', 'Asus Radeon RX 570 AREZ STRIX OC', 'Asus Radeon RX 570 Expedition', 'Asus Radeon RX 570 ROG STRIX', 'Asus Radeon RX 570 STRIX GAMING OC', 'Gigabyte Radeon RX 570 GAMING 8G', 'Gigabyte Radeon RX 570 AORUS', 'Gigabyte Radeon RX 570 GAMING MI', 'MSI Radeon RX 570 ARMOR OC', 'MSI Radeon RX 570 GAMING X', 'PowerColor Radeon RX 570', 'PowerColor Radeon RX 570 Red Devil', 'PowerColor Radeon RX 570 Red Dragon', 'Sapphire Radeon RX 570 NITRO+', 'Sapphire Radeon RX 570 PULSE', 'Sapphire Radeon RX 570 PULSE ITX', 'Sapphire Radeon RX 570 PULSE UEFI', 'VisionTek Radeon RX 570', 'XFX Radeon RX 570 Black Edition', 'XFX Radeon RX 570 RS XXX', 'XFX Radeon RX 570', 'XFX Radeon RX 570 XXX', ~
 
         // others
-        'asus tuf 3070ti', 'asus ', 'ASUS TUF Gaming GeForce RTX 3070 8GB GDDR6', 'TUF-RTX3070TI-O8G-GAMING', "MSI GeForce RTX 3060 Ti 'VENTUS 3X OC", 'msi nvidia geforce gtx 1080', 'GIGABYTE GeForce RTX 3080', 'Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled', 'zotac GeForce RTX 3080 Trinity OC White Edition LHR', 'v850 SFX COOLERMASTER']
+        'asus tuf 3070ti', 'asus ', 'ASUS TUF Gaming GeForce RTX 3070 8GB GDDR6', 'TUF-RTX3070TI-O8G-GAMING', "MSI GeForce RTX 3060 Ti 'VENTUS 3X OC", 'msi nvidia geforce gtx 1080', 'GIGABYTE GeForce RTX 3080', 'Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled', 'zotac GeForce RTX 3080 Trinity OC White Edition LHR', 'v850 SFX COOLERMASTER', 'MSI RX580 8GB ARMOR OC']
 }
 
 module.exports = gpuClipDirections
