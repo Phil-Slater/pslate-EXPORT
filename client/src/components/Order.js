@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import PSUModel from './PSUModel';
 import Color from './Color';
 import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
+import OrderNote from './OrderNote';
 
 function Order() {
 
@@ -72,9 +73,9 @@ function Order() {
             <div className='order-button'>
                 <h1>{order ? <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a> : `Loading...`}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
-                <h2>{order ? order.created_at : null}</h2>
+                <h2 style={{ marginBottom: '1em' }}>{order ? order.created_at : null}</h2>
                 <h3 className='rush'>{order ? order.rushOrder ? order.rushOrder : null : null}</h3>
-                <h4 className='order-note'>{order ? order.note ? `Customer order note: ${order.note}` : null : null}</h4>
+                {order ? order.note ? <OrderNote note={order.note} /> : null : null}
                 <h3>{order ? `Total items: ${order.total_items}` : null}</h3>
                 <h3>{order ?
                     order.shipping_lines[0].title === 'Economy' ? 'Shipping method: First Class Package' :
