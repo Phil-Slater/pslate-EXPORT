@@ -840,22 +840,18 @@ function updateSleeved(orders) {
 
             // COOLER MASTER
             else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
+
                 // 24 PIN - Sandwich
-                // still calculating lengths needed for Cooler Master sandwich 24 pins
                 if (sCG.sleeved24GroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
 
                     if (m24H.cornerHeaders.includes(product.moboModel)) {
-                        // product.instructions = "Start at 178 - Build from right"
-                        // product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
+                        product.instructions = "All 124 - Build from right"
+                        product.doubles = '1, 2, 3, 12 - 124/55, 124/55, 124/64, 124/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
-                    } else if (m24H.offsetHeaders.includes(product.moboModel)) {
-                        // product.instructions = "Start at 190 - Build from right"
-                        // product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
-                        product.combs = "1 comb"
-                    } else if (m24H.middleHeaders.includes(product.moboModel)) {
-                        // product.instructions = "Start at 214 - Build from right"
-                        // product.doubles = '6, 7, 9, 12 - 178/85, 172/85, 166/64, 142/55 - bottom, bottom, top, bottom'
+                    } else if (m24H.offsetHeaders.includes(product.moboModel) || m24H.middleHeaders.includes(product.moboModel)) {
+                        product.instructions = "Start at 148 - Build from right"
+                        product.doubles = '1, 2, 3, 12 - 148/55, 148/55, 148/64, 148/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
                     }
                 }
