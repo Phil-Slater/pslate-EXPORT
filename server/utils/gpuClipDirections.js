@@ -4,6 +4,8 @@
 const gpuClipDirections = {
 
     fanClips: [
+        // 3090ti
+        'NVIDIA GeForce RTX 3090 Ti Founders Edition', 'Asus GeForce RTX 3090 Ti STRIX LC GAMING OC', 'EVGA GeForce RTX 3090 Ti FTW3 ULTRA GAMING', 'GALAX GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'Gigabyte GeForce RTX 3090 Ti AORUS XTREME WATERFORCE', 'Gigabyte GeForce RTX 3090 Ti GAMING OC', 'Inno3D GeForce RTX 3090 Ti X3 OC', 'KFA2 GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'MSI GeForce RTX 3090 Ti GAMING X TRIO', 'MSI GeForce RTX 3090 Ti  SUPRIM X', 'Palit GeForce RTX 3090 Ti GameRock OC', 'PNY GeForce RTX 3090 Ti XLR8 Gaming UPRISING EPIC-X RGB OC', 'Zotac GeForce RTX 3090 Ti AMP Extreme Holo',
         // 3090
         'NVIDIA GeForce RTX 3090 Founders Edition', 'Asus GeForce RTX 3090 Turbo', 'Asus GeForce RTX 3090 Turbo', 'EVGA GeForce RTX 3090 XC3 Ultra Gaming', 'Gainward GeForce RTX 3090 Phoenix GS', 'GALAX GeForce RTX 3090 EX', 'GALAX GeForce RTX 3090 SG', 'KFA2 GeForce RTX 3090 SG', 'KFA2 GeForce RTX 3090 EX', 'Palit GeForce RTX 3090 GamingPro OC', 'PNY GeForce RTX 3090 XLR8 Gaming EPIC-X RGB', 'PNY GeForce RTX 3090 XLR8 Gaming EPIC-X RGB',
         // 3080ti
