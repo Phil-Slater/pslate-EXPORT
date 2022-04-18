@@ -17,7 +17,7 @@ const gpuClipDirections = {
         // 6800
         'ASRock Radeon RX 6800', 'Asus Radeon RX 6800', 'XFX Radeon RX 6800', 'Gigabyte Radeon RX 6800', 'MSI Radeon RX 6800', 'PowerColor Radeon RX 6800 Fighter OC', 'PowerColor Radeon RX 6800 Red Devil LE OC', 'PowerColor Radeon RX 6800 Red Dragon OC', 'Sapphire Radeon RX 6800', 'Sapphire Radeon RX 6800 Pulse',
         // 3080
-        'NVIDIA GeForce RTX 3080 Founders Edition', 'EVGA GeForce RTX 3080 FTW3 Ultra Hybrid', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra Hybrid', 'GALAX GeForce RTX 3080 SG', 'GALAX GeForce RTX 3080 EX', 'KFA2 GeForce RTX 3080 EX Gamer', 'KFA2 GeForce RTX 3080 SG (1-Click OC)', 'Palit GeForce RTX 3080 GamingPro OC', 'PNY GeForce RTX 3080 XLR8 Gaming REVEL EPIC-X RGB',
+        'NVIDIA GeForce RTX 3080 Founders Edition', 'EVGA GeForce RTX 3080 FTW3 Ultra Hybrid', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra Hybrid', 'GALAX GeForce RTX 3080 SG', 'GALAX GeForce RTX 3080 EX', 'KFA2 GeForce RTX 3080 EX Gamer', 'KFA2 GeForce RTX 3080 SG (1-Click OC)', 'Palit GeForce RTX 3080 GamingPro OC', 'PNY GeForce RTX 3080 XLR8 Gaming REVEL EPIC-X RGB', 'EVGA GeForce RTX 3080 FTW3 Ultra', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra',
         // 6700 XT
         'Gigabyte Radeon RX 6700 XT',
         // 3070ti
