@@ -140,7 +140,7 @@ const gpuClipDirections = {
         'ASRock Radeon RX 570 Phantom Gaming D', 'ASRock Radeon RX 570 Phantom Gaming X', 'Asus Radeon RX 570 AREZ Expedition', 'Asus Radeon RX 570 AREZ STRIX OC', 'Asus Radeon RX 570 Expedition', 'Asus Radeon RX 570 ROG STRIX', 'Asus Radeon RX 570 STRIX GAMING OC', 'Gigabyte Radeon RX 570 GAMING 8G', 'Gigabyte Radeon RX 570 AORUS', 'Gigabyte Radeon RX 570 GAMING MI', 'MSI Radeon RX 570 ARMOR OC', 'MSI Radeon RX 570 GAMING X', 'PowerColor Radeon RX 570', 'PowerColor Radeon RX 570 Red Devil', 'PowerColor Radeon RX 570 Red Dragon', 'Sapphire Radeon RX 570 NITRO+', 'Sapphire Radeon RX 570 PULSE', 'Sapphire Radeon RX 570 PULSE ITX', 'Sapphire Radeon RX 570 PULSE UEFI', 'VisionTek Radeon RX 570', 'XFX Radeon RX 570 Black Edition', 'XFX Radeon RX 570 RS XXX', 'XFX Radeon RX 570', 'XFX Radeon RX 570 XXX', ~
 
         // others
-        'asus tuf 3070ti', 'asus ', 'ASUS TUF Gaming GeForce RTX 3070 8GB GDDR6', 'TUF-RTX3070TI-O8G-GAMING', "MSI GeForce RTX 3060 Ti 'VENTUS 3X OC", 'msi nvidia geforce gtx 1080', 'GIGABYTE GeForce RTX 3080', 'Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled', 'zotac GeForce RTX 3080 Trinity OC White Edition LHR', 'v850 SFX COOLERMASTER', 'MSI RX580 8GB ARMOR OC']
+        'asus tuf 3070ti', 'asus ', 'ASUS TUF Gaming GeForce RTX 3070 8GB GDDR6', 'TUF-RTX3070TI-O8G-GAMING', "MSI GeForce RTX 3060 Ti 'VENTUS 3X OC", 'msi nvidia geforce gtx 1080', 'GIGABYTE GeForce RTX 3080', 'Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled', 'zotac GeForce RTX 3080 Trinity OC White Edition LHR', 'v850 SFX COOLERMASTER', 'MSI RX580 8GB ARMOR OC', 'Gigabyte GeForce RTX 3060 GAMING OC ']
 }
 
 module.exports = gpuClipDirections
