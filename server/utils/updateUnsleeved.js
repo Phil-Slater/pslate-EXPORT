@@ -199,11 +199,19 @@ function updateUnsleeved(orders) {
                     product.instructions = "200 - Cooler Master Type 2"
                 }
 
+                else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
+                    product.instructions = 'Cooler Master build - all wires 270 except for top wire in box 11 and both wires in box 12 (260)'
+                }
+
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
                     product.instructions = "280 - Silverstone Type 1"
                 } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - Silverstone Type 2/3"
+                }
+
+                else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                    product.instructions = '420 - Silverstone Type 1 (double outside, no cross)'
                 }
 
                 // 8 & 6 PCIE
@@ -222,6 +230,11 @@ function updateUnsleeved(orders) {
                         product.instructions = '220 - Cooler Master Type 1'
                     }
                 }
+
+                else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
+                    product.instructions = "150 - Cooler Master Type 1 (opposite, bottom left double, no cross)"
+                }
+
 
                 // SATA
                 else if (uCG.unsleevedSATAGroupOne.includes(product.title)) {
@@ -246,14 +259,26 @@ function updateUnsleeved(orders) {
                     product.instructions = "170 - EVGA Type 1"
                 }
 
+                else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
+                    product.instructions = 'All 250 - EVGA Build'
+                }
+
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
                     product.instructions = "280 - Silverstone Type 1"
                 }
 
+                else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                    product.instructions = '420 Silverstone Type 1 (double outside, no cross)'
+                }
+
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     product.instructions = "300 - Silverstone Type 1"
+                }
+
+                else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
+                    product.instructions = "150 - Silverstone Type 1 (double outside, Silverstone build)"
                 }
 
                 // SATA

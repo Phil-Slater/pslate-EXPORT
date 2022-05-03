@@ -73,7 +73,7 @@ const gpuClipDirections = {
 
     backplateClips: [
         // 3090
-        'Asus GeForce RTX 3090 Strix Gaming OC', 'Asus GeForce RTX 3090 TUF Gaming OC', 'Gainward GeForce RTX 3090 Phantom GS', 'Gigabyte GeForce RTX 3090 Aorus Master Xtreme', 'MSI GeForce RTX 3090 Gaming X Trio Suprim', 'MSI GeForce RTX 3090 Ventus 3X OC', 'Palit GeForce RTX 3090 GameRock', 'Zotac GeForce RTX 3090 Gaming Trinity', 'Zotac GeForce RTX 3090 GAMING AMP Extreme Holo', 'ZOTAC GAMING GeForce RTX 3090 ArcticStorm', 'Gigabyte GeForce RTX 3090 Aorus Xtreme',
+        'Asus GeForce RTX 3090 Strix Gaming OC', 'Asus GeForce RTX 3090 TUF Gaming OC', 'Gainward GeForce RTX 3090 Phantom GS', 'Gigabyte GeForce RTX 3090 Aorus Master Xtreme', 'Gigabyte GeForce RTX 3090 GAMING OC', 'MSI GeForce RTX 3090 Gaming X Trio Suprim', 'MSI GeForce RTX 3090 Ventus 3X OC', 'Palit GeForce RTX 3090 GameRock', 'Zotac GeForce RTX 3090 Gaming Trinity', 'Zotac GeForce RTX 3090 GAMING AMP Extreme Holo', 'ZOTAC GAMING GeForce RTX 3090 ArcticStorm', 'Gigabyte GeForce RTX 3090 Aorus Xtreme',
         // 3080ti
         'Asus GeForce RTX 3080 Ti ROG Strix Gaming LC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC',
         // 6900xt

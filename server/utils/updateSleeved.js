@@ -741,6 +741,13 @@ function updateSleeved(orders) {
                     }
                 }
 
+                // H2O EPS
+                else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '420/414 - Colors: 4, 3, 2, 1 - No cross'
+                    product.combs = "4 combs"
+                }
+
                 //8&6 PCIE
                 else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Female'
@@ -888,6 +895,14 @@ function updateSleeved(orders) {
                     product.combs = "4 combs"
                 }
 
+                // H2O 24
+                else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.doubles = '1, 2, 3, 12 - 280/55, 280/55, 280/64, 270/55 - bottom, bottom, top, bottom'
+                    product.instructions = 'All 280 except for top wire in box 11 and both wires in box 12 (270) - Build from right - Cooler Master build'
+                    product.combs = "1 comb"
+                }
+
                 // EPS
 
                 // sandwich EPS
@@ -939,6 +954,13 @@ function updateSleeved(orders) {
                 else if (product.title === 'SSUPD Meshlicious 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '380/374 - Colors: 4, 3, 2, 1 - No cross'
+                    product.combs = "4 combs"
+                }
+
+                // H2O EPS
+                else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '420/414 - Colors: 4, 3, 2, 1 - No cross'
                     product.combs = "4 combs"
                 }
 
@@ -1010,6 +1032,13 @@ function updateSleeved(orders) {
                         product.doubles = 'Bottom left double - #1 is double'
                         product.combs = "2 combs"
                     }
+                }
+
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = 'All 148'
+                    product.doubles = 'Bottom left double - #1 is double'
+                    product.combs = "2 combs"
                 }
 
                 // SATA
