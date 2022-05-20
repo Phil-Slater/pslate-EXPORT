@@ -42,6 +42,15 @@ function Order() {
         //alert(id)
     }
 
+    const handleOrderReadyToShip = async (id) => {
+        console.log(id)
+        try {
+            await axios.put(`/order/${id}`)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const products = order && order.line_items.map((product, index) => {
         return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }} onDoubleClick={() => { addToMissing(product.id) }}>
             <h2><b>{product.title}</b></h2>
@@ -80,6 +89,7 @@ function Order() {
                 <h3>{order ?
                     order.shipping_lines[0].title === 'Economy' ? 'Shipping method: First Class Package' :
                         `Shipping method: ${order.shipping_lines[0].title}` : null}</h3>
+                <button onClick={() => { handleOrderReadyToShip(order.id) }}>Mark as Ready to Ship</button>
             </div>
             {products}
         </div>

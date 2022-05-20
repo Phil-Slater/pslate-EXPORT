@@ -91,6 +91,11 @@ router.get('/adapter-counts', authenticate, async (req, res) => {
     res.json(adapterProducts)
 })
 
+router.put('/order/:id', authenticate, async (req, res) => {
+    const id = req.params.id
+    console.log(id)
+})
+
 
 // FUNCTIONS
 async function getOrder(id) {
