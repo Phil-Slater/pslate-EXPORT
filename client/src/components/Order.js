@@ -43,9 +43,16 @@ function Order() {
     }
 
     const handleOrderReadyToShip = async (id) => {
-        console.log(id)
+        // if (!order.tags) {
+        //     order.tags = "Ready to Ship"
+        // } else {
+        //     order.tags = ""
+        // }
+        console.log(order)
         try {
-            await axios.put(`/order/${id}`)
+            const order = await axios.put(`/order/${id}`)
+            console.log(order)
+            setOrder(order.data)
         } catch (error) {
             console.log(error)
         }
@@ -80,6 +87,7 @@ function Order() {
 
         <div className='order-container'>
             <div className='order-button'>
+                {order ? order.tags === "Ready to Ship" ? <h2 className='order-note' style={{ textAlign: "center" }}>Ready to Ship!</h2> : null : null}
                 <h1>{order ? <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a> : `Loading...`}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
                 <h2 style={{ marginBottom: '1em' }}>{order ? order.created_at : null}</h2>

@@ -200,7 +200,7 @@ function updateUnsleeved(orders) {
                 }
 
                 else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = 'Cooler Master build - all wires 270 except for top wire in box 11 and both wires in box 12 (260)'
+                    product.instructions = 'Cooler Master 270/260 24 pin - Cooler Master build - all wires 270 except for top wire in box 11 and both wires in box 12 (260)'
                 }
 
                 // EPS

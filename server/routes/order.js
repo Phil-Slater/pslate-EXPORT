@@ -5,7 +5,7 @@ const getSignificantKeys = require('../utils/getSignificantKeys')
 const updateUnsleeved = require('../utils/updateUnsleeved')
 const updateSleeved = require('../utils/updateSleeved')
 const reWriteDate = require('../utils/reWriteDate')
-const urlFields = 'fields=order_number,line_items,created_at,order_status_url,note,id,shipping_lines'
+const urlFields = 'fields=order_number,line_items,created_at,order_status_url,note,id,shipping_lines,tags'
 const getOrdersOld = require('../utils/oldGetOrdersFunction')
 const cors = require('cors')
 router.use(cors())
@@ -91,9 +91,23 @@ router.get('/adapter-counts', authenticate, async (req, res) => {
     res.json(adapterProducts)
 })
 
-router.put('/order/:id', authenticate, async (req, res) => {
+router.put('/order/:id', async (req, res) => {
     const id = req.params.id
-    console.log(id)
+    try {
+        const order = await updateOrder(id)
+        if (order) {
+            res.json(order.data.order)
+        }
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: error })
+    }
+
+    // if (order) {
+    //     res.json({ success: true })
+    // } else {
+    //     res.json({ success: false })
+    // }
 })
 
 
@@ -106,6 +120,37 @@ async function getOrder(id) {
 
 async function getOrders() {
     return await instance.get(`/orders.json?status=unfilfilled&limit=250&${urlFields}`)
+}
+
+async function updateOrder(id) {
+    console.log('updating order...', id)
+    const order = await instance.get(`/orders/${id}.json`)
+    console.log(order.data.order.tags)
+    if (order.data.order.tags === 'Ready to Ship') {
+        try {
+            const orderUpdated = await instance.put(`/orders/${id}.json`, {
+                order: {
+                    id: id,
+                    tags: ''
+                }
+            })
+            return orderUpdated
+        } catch (error) {
+            console.log(error)
+        }
+    } else {
+        try {
+            const orderUpdated = await instance.put(`/orders/${id}.json`, {
+                order: {
+                    id: id,
+                    tags: 'Ready to Ship'
+                }
+            })
+            return orderUpdated
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 function filterSleevedOrders(orders) {
