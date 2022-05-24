@@ -50,6 +50,7 @@ mongoose.connect(MONGO_URL, {
 // ROUTES
 app.use('/', require('./routes/order.js'));
 app.use('/user', require('./routes/user.js'))
+app.use('/cable', require('./routes/cable.js'))
 
 // error handler
 function onError(error) {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import '../css/styles.css'
-import { NavLink } from 'react-router-dom'
+import '../css/styles.css';
+import { NavLink } from 'react-router-dom';
 import OrderNotReady from './OrderNotReady';
 import OrderReadyToShip from './OrderReadyToShip';
 
@@ -26,7 +26,6 @@ function UnsleevedOrders() {
     const ordersMapped = orders.map(order => {
         return <NavLink to={`/order/${order.order_number}`} key={order.order_number}>
             {order.tags === "Ready to Ship" ? <OrderReadyToShip order={order} /> : <OrderNotReady order={order} />}
-
         </NavLink>
     })
 
