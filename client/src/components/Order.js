@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import PSUModel from './PSUModel';
 import Color from './Color';
-import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
+//import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
 import OrderNote from './OrderNote';
 
 function Order() {
@@ -11,12 +11,10 @@ function Order() {
     const [order, setOrder] = useState()
     const [style, setStyle] = useState([])
 
-    const location = useLocation()
-    const splitPath = location.pathname.split('/')
-    const orderNumber = splitPath[2]
+    const params = useParams()
 
     useEffect(() => {
-        fetchOrder(orderNumber)
+        fetchOrder(params.id)
     }, [])
 
     const fetchOrder = async (orderNumber) => {
@@ -38,21 +36,14 @@ function Order() {
     }
 
     const addToMissing = (id) => {
-        console.log('double clicked!')
-        //alert(id)
+        // console.log('double clicked!')
+        // alert(id)
     }
 
     const handleOrderReadyToShip = async (id) => {
-        // if (!order.tags) {
-        //     order.tags = "Ready to Ship"
-        // } else {
-        //     order.tags = ""
-        // }
-        console.log(order)
         try {
             const order = await axios.put(`/order/${id}`)
-            console.log(order)
-            setOrder(order.data)
+            fetchOrder(order.data.order_number)
         } catch (error) {
             console.log(error)
         }
