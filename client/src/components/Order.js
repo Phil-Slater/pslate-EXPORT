@@ -44,12 +44,12 @@ function Order() {
         }
     }
 
-    const handleAddMissingCable = async (product, orderNumber) => {
+    const handleAddMissingCable = async (product, order) => {
         console.log('double clicked!')
         try {
             const cable = await axios.post('/cable/missing', {
                 product: product,
-                orderNumber: orderNumber
+                order: order
             })
             if (cable.data.success) {
                 alert(cable.data.message)
@@ -60,7 +60,7 @@ function Order() {
     }
 
     const products = order && order.line_items.map((product, index) => {
-        return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }} onDoubleClick={() => { handleAddMissingCable(product, order.order_number) }}>
+        return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }} onDoubleClick={() => { handleAddMissingCable(product, order) }}>
             <h2><b>{product.title}</b></h2>
             <h3 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h3>
             <p><b>Build instructions:</b></p> <p>{product.instructions}</p>

@@ -5,14 +5,15 @@ const Cable = require('../schemas/cable')
 router.post('/missing', async (req, res) => {
 
     const { id, quantity, psuModel, instructions, properties } = req.body.product
-    const orderNumber = req.body.orderNumber
+    const { order_number, rushOrder } = req.body.order
 
     const cable = await Cable.findOne({ id: id })
 
     if (!cable) {
         try {
             const cableAdded = await Cable.create({
-                orderNumber: orderNumber,
+                orderNumber: order_number,
+                rushOrder: rushOrder,
                 quantity: quantity,
                 buildInstructions: instructions,
                 psuModel: psuModel,
@@ -38,6 +39,15 @@ router.post('/missing', async (req, res) => {
             console.log(error)
         }
     }
+})
+
+router.get('/missing', async (req, res) => {
+    const missingCables = await Cable.find({})
+    missingCables.sort((a, b) => (a.orderNumber < b.orderNumber) ? 1 : -1)
+    // missingCables.sort((a, b) => {
+    //     return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
+    // })
+    res.json(missingCables)
 })
 
 module.exports = router;

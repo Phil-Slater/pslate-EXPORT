@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cableSchema = new mongoose.Schema({
 
     orderNumber: Number,
+    rushOrder: String,
     quantity: Number,
     buildInstructions: String,
     // length: String,

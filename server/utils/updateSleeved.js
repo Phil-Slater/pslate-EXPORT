@@ -673,16 +673,12 @@ function updateSleeved(orders) {
                     product.crimps = 'Opposite crimps'
 
                     if (m24H.cornerHeaders.includes(product.moboModel)) {
-                        // product.instructions = "Start at 178 - Build from right"
-                        // product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
+                        product.instructions = "All 172 - Build from right"
+                        product.doubles = '3, 4, 8, 10, 12 - 172/64, 172/55, 172/55, 172/55, 172/64, top, bottom, bottom, bottom, bottom - EVGA Build'
                         product.combs = "1 comb"
-                    } else if (m24H.offsetHeaders.includes(product.moboModel)) {
-                        // product.instructions = "Start at 190 - Build from right"
-                        // product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
-                        product.combs = "1 comb"
-                    } else if (m24H.middleHeaders.includes(product.moboModel)) {
-                        // product.instructions = "Start at 214 - Build from right"
-                        // product.doubles = '6, 7, 9, 12 - 178/85, 172/85, 166/64, 142/55 - bottom, bottom, top, bottom'
+                    } else if (m24H.offsetHeaders.includes(product.moboModel) || (m24H.middleHeaders.includes(product.moboModel))) {
+                        product.instructions = "All 184 - Build from right"
+                        product.doubles = '3, 4, 8, 10, 12 - 184/64, 184/55, 184/55, 184/55, 184/64, top, bottom, bottom, bottom, bottom - EVGA Build'
                         product.combs = "1 comb"
                     }
                 }
