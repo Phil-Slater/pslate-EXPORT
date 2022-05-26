@@ -43,7 +43,13 @@ router.post('/missing', async (req, res) => {
 
 router.get('/missing', async (req, res) => {
     const missingCables = await Cable.find({})
-    missingCables.sort((a, b) => (a.orderNumber < b.orderNumber) ? 1 : -1)
+    missingCables.sort((a, b) => {
+        if (a.rushOrder !== b.rushOrder) {
+            return a.rushOrder ? 1 : -1
+        }
+        return (a.orderNumber < b.orderNumber) ? 1 : -1
+    })
+
     // missingCables.sort((a, b) => {
     //     return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
     // })

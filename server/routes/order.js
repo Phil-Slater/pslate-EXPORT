@@ -194,9 +194,17 @@ function filterRushOrders(orders) {
         })
     })
 
+    // orders.sort((a, b) => {
+    //     return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
+    // })
+
     orders.sort((a, b) => {
-        return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
+        if (a.rushOrder !== b.rushOrder) {
+            return a.rushOrder ? -1 : 1
+        }
+        return (a.order_number > b.order_number) ? 1 : -1
     })
+
     return orders
 }
 
