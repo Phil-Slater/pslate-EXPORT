@@ -57,4 +57,19 @@ router.get('/missing', async (req, res) => {
     res.json(missingCables)
 })
 
+router.delete('/missing', async (req, res) => {
+    const id = req.body.id
+    try {
+        const cableRemoved = await Cable.deleteOne({
+            id: id
+        })
+        if (cableRemoved) {
+            res.json({ success: true, message: 'Cable removed from missing list.' })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+
+})
+
 module.exports = router;
