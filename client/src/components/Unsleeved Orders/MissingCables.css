@@ -8,13 +8,7 @@
     margin: 1vw;
 }
 
-.double-div h1 {
-    font-size: 3em;
-    font-family: "Calibri";
-    line-height: 1.25em;
-}
-
-.double-div {
+/* .double-div {
     display: flex;
     margin-bottom: 2em;
     appearance: none;
@@ -36,7 +30,6 @@
     transition: box-shadow .15s, transform .15s;
     touch-action: manipulation;
     width: 90vw;
-    height: 40vh;
     font-family: "Calibri";
     letter-spacing: .02em;
     line-height: 2em;
@@ -44,6 +37,30 @@
     text-align: left;
     font-size: 18px;
     margin-bottom: 1em;
+} */
+
+.double-div {
+    background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    color: rgb(240, 240, 240);
+    justify-content: center;
+    padding: 1em;
+    line-height: 2em;
+    position: relative;
+    text-align: left;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 1em;
+    letter-spacing: .02em;
+}
+
+.double-div h1 {
+    font-size: 2em;
+    font-family: "Calibri";
+    line-height: 1.25em;
 }
 
 .double-div img {
@@ -60,9 +77,9 @@
 .double-div h2 {
     margin-bottom: 0.5em;
     margin-top: 0.5em;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .double-div h3 {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
