@@ -1,10 +1,6 @@
 .doubles-container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column-reverse;
-    align-items: center;
-    padding: .5em;
-    justify-content: space-around;
     margin: 1vw;
 }
 
@@ -47,11 +43,11 @@
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
     color: rgb(240, 240, 240);
     justify-content: center;
-    padding: 1em;
+    padding: 1.5em, 0em;
     line-height: 2em;
-    position: relative;
     text-align: left;
     font-size: 18px;
+    height: 100%;
     width: 100%;
     margin-bottom: 1em;
     letter-spacing: .02em;
@@ -63,12 +59,12 @@
     line-height: 1.25em;
 }
 
-.double-div img {
+/* .double-div img {
     margin: 1em 0em 0em 1em;
     padding: 0.5em;
     justify-content: center;
     width: 100%;
-}
+} */
 
 .double-div p {
     line-height: 2em;
