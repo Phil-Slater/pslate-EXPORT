@@ -198,6 +198,7 @@ function filterRushOrders(orders) {
     //     return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
     // })
 
+    // sorts orders; prioritizes rush orders
     orders.sort((a, b) => {
         if (a.rushOrder !== b.rushOrder) {
             return a.rushOrder ? -1 : 1

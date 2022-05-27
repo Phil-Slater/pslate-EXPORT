@@ -3,8 +3,8 @@ const router = express.Router();
 const Cable = require('../schemas/cable')
 
 router.post('/missing', async (req, res) => {
-
-    const { id, quantity, psuModel, instructions, properties } = req.body.product
+    console.log(req.body.product)
+    const { id, quantity, psuModel, instructions, properties, title } = req.body.product
     const { order_number, rushOrder } = req.body.order
 
     const cable = await Cable.findOne({ id: id })
@@ -19,6 +19,7 @@ router.post('/missing', async (req, res) => {
                 psuModel: psuModel,
                 id: id,
                 properties: properties,
+                title: title,
 
             })
             if (cableAdded) {

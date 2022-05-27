@@ -6,12 +6,10 @@ const cableSchema = new mongoose.Schema({
     rushOrder: String,
     quantity: Number,
     buildInstructions: String,
-    // length: String,
-    // wireColor: String,
-    // connectorColor: String,
     psuModel: String,
     id: Number,
-    properties: []
+    properties: [],
+    title: String,
 
 });
 
