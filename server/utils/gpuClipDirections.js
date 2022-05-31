@@ -13,7 +13,7 @@ const gpuClipDirections = {
         // 6900xt
         'Radeon RX 6900 XT - Reference Model', 'PowerColor Radeon RX 6900 XT Red Devil Limited Edition',
         // 6800xt
-        'AMD Radeon RX 6800 XT - Reference Model', 'ASRock Radeon RX 6800 XT Phantom Gaming D OC', 'PowerColor Radeon RX 6800 XT Red Devil LE', 'PowerColor Radeon RX 6800 XT Red Devil OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC ',
+        'AMD Radeon RX 6800 XT - Reference Model', 'ASRock Radeon RX 6800 XT Phantom Gaming D OC', 'PowerColor Radeon RX 6800 XT Red Devil LE', 'PowerColor Radeon RX 6800 XT Red Devil OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Liquid Devil',
         // 6800
         'ASRock Radeon RX 6800', 'Asus Radeon RX 6800', 'XFX Radeon RX 6800', 'Gigabyte Radeon RX 6800', 'MSI Radeon RX 6800', 'PowerColor Radeon RX 6800 Fighter OC', 'PowerColor Radeon RX 6800 Red Devil LE OC', 'PowerColor Radeon RX 6800 Red Dragon OC', 'Sapphire Radeon RX 6800', 'Sapphire Radeon RX 6800 Pulse',
         // 3080
