@@ -1,8 +1,8 @@
-.doubles-container {
+/* .doubles-container {
     display: flex;
     flex-direction: column-reverse;
     margin: 1vw;
-}
+} */
 
 /* .double-div {
     display: flex;
@@ -34,7 +34,7 @@
     font-size: 18px;
     margin-bottom: 1em;
 } */
-
+/* 
 .double-div {
     background-image: radial-gradient(100% 100% at 100% 0, #269bbb 0, #6d0aa7 100%);
     display: flex;
@@ -57,7 +57,7 @@
     font-size: 2em;
     font-family: "Calibri";
     line-height: 1.25em;
-}
+} */
 
 /* .double-div img {
     margin: 1em 0em 0em 1em;
@@ -66,7 +66,7 @@
     width: 100%;
 } */
 
-.double-div p {
+/* .double-div p {
     line-height: 2em;
 }
 
@@ -78,4 +78,4 @@
 
 .double-div h3 {
     font-size: 1.25em;
-}
+} */
