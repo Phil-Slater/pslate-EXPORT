@@ -38,7 +38,7 @@ const MissingCables = () => {
     }
 
     const productsMapped = products.map((product) => {
-        return <div key={product.id} className="double-div">
+        return <div key={product.id} className="missing-div">
             <div style={{ width: "200%" }}>
                 <NavLink to={`/order/${product.orderNumber}`} key={product.id}><h1>#{product.orderNumber}</h1></NavLink>
                 <h3 className='rush'>{product.rushOrder ? product.rushOrder : null}</h3>
@@ -66,7 +66,7 @@ const MissingCables = () => {
     return (
         <div>
             <h1 className='text-white font-bold text-5xl p-4 text-center'>Missing Cables</h1>
-            <div className='doubles-container'>{productsMapped}</div>
+            <div className='missing-container'>{productsMapped}</div>
         </div>
     )
 }
