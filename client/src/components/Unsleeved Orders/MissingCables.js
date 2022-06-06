@@ -39,7 +39,7 @@ const MissingCables = () => {
 
     const productsMapped = products.map((product) => {
         return <div key={product.id} className="missing-div">
-            <div style={{ width: "200%" }}>
+            <div>
                 <NavLink to={`/order/${product.orderNumber}`} key={product.id}><h1>#{product.orderNumber}</h1></NavLink>
                 <h3 className='rush'>{product.rushOrder ? product.rushOrder : null}</h3>
                 <h2><b>{product.title}</b></h2>
@@ -57,7 +57,7 @@ const MissingCables = () => {
                 }
 
                 <p>{product.psuModel ? <PSUModel psuModel={product.psuModel} /> : null}</p>
-                <button onClick={() => handleDeleteCable(product.id)}>DELETE FROM MISSING LIST</button>
+                <button onClick={() => handleDeleteCable(product.id)} className="gold">Delete from missing list</button>
             </div>
         </div>
 
