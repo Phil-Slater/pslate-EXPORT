@@ -24,21 +24,26 @@ const SleevedDoubles = () => {
     }
 
     const productsMapped = products.map(product => {
-        return <NavLink to={`/order/${product.orderNumber}`} key={product.id}>
-            <div key={product.id} className="double-div">
-                <div style={{ width: "200%" }}>
-                    <h1>#{product.orderNumber}</h1>
-                    <h2 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h2>
-                    <p>{product.instructions}</p>
-                    <p><b>Doubles:</b></p>
-                    <p>{product.title.includes('24 Pin') ? product.doubles : null}</p>
-                    <p>{product.title.includes('24 Pin') ? <DoublesCalculations product={product} /> : <PCIEDoublesCalculations product={product} />}</p>
-                </div>
-                <div>
-                    {product.design ? <img src={product.design} /> : null}
-                </div>
+        return <div key={product.id} className="double-div">
+            <div style={{ width: "200%" }}>
+                <NavLink to={`/order/${product.orderNumber}`} key={product.id}> <h1>#{product.orderNumber}</h1></NavLink>
+                <h2 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h2>
+                <p>{product.instructions}</p>
+                <p><b>Doubles:</b></p>
+                <p>{product.title.includes('24 Pin') ? product.doubles : null}</p>
+                <p>{product.title.includes('24 Pin') ? <DoublesCalculations product={product} /> : <PCIEDoublesCalculations product={product} />}</p>
+                {product.orderNote ?
+                    <>
+                        <p style={{ marginTop: "2em" }}><b>Order Note:</b></p>
+                        <p>{product.orderNote}</p>
+                    </>
+                    : null}
             </div>
-        </NavLink>
+            <div>
+                {product.design ? <img src={product.design} /> : null}
+            </div>
+        </div>
+
     })
 
     return (

@@ -102,12 +102,6 @@ router.put('/order/:id', async (req, res) => {
         console.log(error)
         res.json({ success: false, message: error })
     }
-
-    // if (order) {
-    //     res.json({ success: true })
-    // } else {
-    //     res.json({ success: false })
-    // }
 })
 
 
@@ -216,6 +210,9 @@ function filterSleevedDoubles(orders) {
             if (product.doubles && product.doubles !== 'No doubles' && !product.title.includes('6 Pin')) {
                 product.orderNumber = order.order_number
                 sleevedDoublesProducts.push(product)
+            }
+            if (order.note) {
+                product.orderNote = order.note
             }
         })
     })

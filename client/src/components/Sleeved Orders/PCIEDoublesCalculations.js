@@ -4,7 +4,6 @@ export default function PCIEDoublesCalculations(props) {
         const double = props.product.properties.find(property => property.name === 'Color 1')
         return <>#1 is double - {double.value}</>
     } else if (props.product.doubles.includes('#4')) {
-        console.log(props.product.orderNumber)
         const double = props.product.properties.find(property => property.name === 'Color 4')
         return <>#4 is double - {double.value}</>
     } else {
