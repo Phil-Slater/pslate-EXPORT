@@ -8,9 +8,11 @@ import OrderReadyToShip from './OrderReadyToShip';
 function UnsleevedOrders() {
 
     const [orders, setOrders] = useState([])
+    const [missing, setMissing] = useState([])
 
     useEffect(() => {
         fetchUnsleevedOrders()
+        fetchMissingCables()
     }, [])
 
     const fetchUnsleevedOrders = async () => {
@@ -23,7 +25,25 @@ function UnsleevedOrders() {
         }
     }
 
-    const ordersMapped = orders.map(order => {
+    const fetchMissingCables = async () => {
+        try {
+            const cables = await axios.get('/cable/missing')
+            console.log(cables.data)
+            setMissing(cables.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const missingMapped = missing.map(product => product.orderNumber)
+
+    const ordersMapped = orders && missing && orders.map(order => {
+        missingMapped.forEach(orderNumber => {
+            console.log(order)
+            if (order.order_number === orderNumber) {
+                order.missingItems = true
+            }
+        })
         return <NavLink to={`/order/${order.order_number}`} key={order.order_number}>
             {order.tags === "Ready to Ship" ? <OrderReadyToShip order={order} /> : <OrderNotReady order={order} />}
         </NavLink>
