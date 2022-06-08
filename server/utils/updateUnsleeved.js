@@ -57,47 +57,47 @@ function updateUnsleeved(orders) {
 
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
-                    product.instructions = "160 - Corsair Type 1"
+                    product.instructions = "160 - 24 pin - Corsair Type 1"
                 } else if (product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "170 - Corsair Type 2"
+                    product.instructions = "170 - 24 pin - Corsair Type 2"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title)) {
-                    product.instructions = "200 - Corsair Type 2"
+                    product.instructions = "200 - 24 pin - Corsair Type 2"
                 } else if (product.title === 'SSUPD Meshlicious 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "290 - Corsair Meshlicious"
+                    product.instructions = "290 - 24 pin - Corsair Meshlicious"
                 } else if (product.title === 'XTIA Xproto 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "180 - Corsair Type 3"
+                    product.instructions = "180 - 24 pin - Corsair Type 3"
                 } else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "295 - Corsair Type 1"
+                    product.instructions = "295 - 24 pin - Corsair Type 1"
                 }
 
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
-                    product.instructions = "265 - Corsair Type 1"
+                    product.instructions = "265 - EPS - Corsair Type 1"
                 } else if (product.moboModel == 'Asus ROG Crosshair VIII Impact' && uCG.unsleevedEPSImpactGroup.includes(product.title)) {
-                    product.instructions = "200 - Corsair Type 2"
+                    product.instructions = "200 - EPS - Corsair Type 2"
                 } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
-                    product.instructions = "360 - Corsair Meshlicious"
+                    product.instructions = "360 - EPS - Corsair Meshlicious"
                 } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
-                    product.instructions = "420 - Corsair Type 1"
+                    product.instructions = "420 - EPS - Corsair Type 1"
                 }
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
-                    product.instructions = "300 - Corsair Type 1"
+                    product.instructions = "300 - PCIE - Corsair Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '180/165 - Corsair Type 2'
+                        product.instructions = '180/165 - PCIE - Corsair Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '180/175 - Corsair Type 2'
+                        product.instructions = '180/175 - PCIE - Corsair Type 2'
                     }
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '240/215 - Corsair Type 1'
+                        product.instructions = '240/215 - PCIE - Corsair Type 1'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '240 - Corsair Type 1'
+                        product.instructions = '240 - PCIE - Corsair Type 1'
                     }
                 } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
-                    product.instructions = '180 - Corsair Type 1'
+                    product.instructions = '150 - PCIE - Corsair Type 1'
                 }
 
                 // 12 PCIE
@@ -143,32 +143,32 @@ function updateUnsleeved(orders) {
 
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
-                    product.instructions = "160 - Silverstone Type 1"
+                    product.instructions = "160 - 24 pin - Silverstone Type 1"
                 } else if (product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "230 - Silverstone Type 2"
+                    product.instructions = "230 - 24 pin - Silverstone Type 2"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title)) {
-                    product.instructions = "260 - Silverstone Type 2"
+                    product.instructions = "260 - 24 pin - Silverstone Type 2"
                 } else if (product.title === 'XTIA Xproto 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "130 - Silverstone Type 3"
+                    product.instructions = "130 - 24 pin - Silverstone Type 3"
                 }
 
                 //EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
-                    product.instructions = "280 - Silverstone Type 1"
+                    product.instructions = "280 - EPS - Silverstone Type 1"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title)) {
-                    product.instructions = "360 - Silverstone Type 2/3"
+                    product.instructions = "360 - EPS - Silverstone Type 2/3"
                 } else if (product.moboModel == 'Asus ROG Crosshair VIII Impact' && uCG.unsleevedEPSImpactGroup.includes(product.title)) {
-                    product.instructions = "210 - Silverstone Type 2"
+                    product.instructions = "210 - EPS - Silverstone Type 2"
                 }
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
-                    product.instructions = "300 - Silverstone Type 1"
+                    product.instructions = "300 - PCIE - Silverstone Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '155/150 - Silverstone Type 2'
+                        product.instructions = '155/150 - PCIE - Silverstone Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '170/155 - Silverstone Type 2'
+                        product.instructions = '170/155 - PCIE - Silverstone Type 2'
                     }
                 }
 
@@ -192,47 +192,43 @@ function updateUnsleeved(orders) {
 
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
-                    product.instructions = "140 - Cooler Master Type 1"
+                    product.instructions = "140 - 24 pin - Cooler Master Type 1"
                 } else if (product.title === 'SSUPD Meshlicious 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "280/290 - Cooler Master Meshlicious"
+                    product.instructions = "280/290 - 24 pin - Cooler Master Meshlicious"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title) || product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "200 - Cooler Master Type 2"
-                }
-
-                else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = 'Cooler Master 270/260 24 pin - Cooler Master build - all wires 270 except for top wire in box 11 and both wires in box 12 (260)'
+                    product.instructions = "200 - 24 pin - Cooler Master Type 2"
+                } else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
+                    product.instructions = 'Cooler Master 270/260 - 24 pin - Cooler Master build - all wires 270 except for top wire in box 11 and both wires in box 12 (260)'
                 }
 
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
-                    product.instructions = "280 - Silverstone Type 1"
+                    product.instructions = "280 - EPS - Silverstone Type 1"
                 } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
-                    product.instructions = "360 - Silverstone Type 2/3"
-                }
-
-                else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
-                    product.instructions = '420 - Silverstone Type 1 (double outside, no cross)'
+                    product.instructions = "360 - EPS - Silverstone Type 2/3"
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                    product.instructions = '420 - EPS - Silverstone Type 1 (double outside, no cross)'
                 }
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
-                    product.instructions = "300 - Cooler Master Type 1"
+                    product.instructions = "300 - PCIE - Cooler Master Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '170/155 - Cooler Master Type 2'
+                        product.instructions = '170/155 - PCIE - Cooler Master Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '160/155 - Cooler Master Type 2'
+                        product.instructions = '160/155 - PCIE - Cooler Master Type 2'
                     }
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '230/205 - Cooler Master Type 1'
+                        product.instructions = '230/205 - PCIE - Cooler Master Type 1'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '220 - Cooler Master Type 1'
+                        product.instructions = '220 - PCIE - Cooler Master Type 1'
                     }
                 }
 
                 else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
-                    product.instructions = "150 - Cooler Master Type 1 (opposite, bottom left double, no cross)"
+                    product.instructions = "150 - PCIE - Cooler Master Type 1 (opposite, bottom left double, no cross)"
                 }
 
 
@@ -256,29 +252,29 @@ function updateUnsleeved(orders) {
 
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
-                    product.instructions = "170 - EVGA Type 1"
+                    product.instructions = "170 - 24 pin - EVGA Type 1"
                 }
 
                 else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = 'All 250 - EVGA Build'
+                    product.instructions = 'All 250 - 24 pin - EVGA Build'
                 }
 
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
-                    product.instructions = "280 - Silverstone Type 1"
+                    product.instructions = "280 - EPS - Silverstone Type 1"
                 }
 
                 else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
-                    product.instructions = '420 Silverstone Type 1 (double outside, no cross)'
+                    product.instructions = '420 - EPS - Silverstone Type 1 (double outside, no cross)'
                 }
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
-                    product.instructions = "300 - Silverstone Type 1"
+                    product.instructions = "300 - PCIE - Silverstone Type 1"
                 }
 
                 else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
-                    product.instructions = "150 - Silverstone Type 1 (double outside, Silverstone build)"
+                    product.instructions = "150 - PCIE - Silverstone Type 1 (double outside, Silverstone build)"
                 }
 
                 // SATA
@@ -298,17 +294,17 @@ function updateUnsleeved(orders) {
 
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
-                    product.instructions = "180 - Lian Li Type 1"
+                    product.instructions = "180 - 24 pin - Lian Li Type 1"
                 }
 
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
-                    product.instructions = "310 - Silverstone Type 1 (like 280 Silverstone - Type 1 but longer"
+                    product.instructions = "310 - EPS - Silverstone Type 1 (like 280 Silverstone - Type 1 but longer"
                 }
 
                 // 8 & 6 PCIE
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
-                    product.instructions = "300 - Silverstone Type 1"
+                    product.instructions = "300 - PCIE - Silverstone Type 1"
                 }
 
                 // SATA

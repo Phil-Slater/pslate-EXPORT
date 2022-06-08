@@ -5,6 +5,7 @@ import PSUModel from './PSUModel';
 import Color from './Color';
 //import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
 import OrderNote from './OrderNote';
+import Sleeved12PinHighlight from './Sleeved12PinHighlight';
 
 function Order() {
 
@@ -63,7 +64,12 @@ function Order() {
         return <div className={!style.includes(product.id) ? 'order-button' : 'order-button-grey'} key={product.id} onClick={() => { updateStyle(product.id) }} onDoubleClick={() => { handleAddMissingCable(product, order) }}>
             <h2><b>{product.title}</b></h2>
             <h3 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h3>
-            <p><b>Build instructions:</b></p> <p>{product.instructions}</p>
+            <p><b>Build instructions:</b></p>
+            <p>
+                {product.instructions?.includes('SLEEVED')
+                    ? <Sleeved12PinHighlight instructions={product.instructions} />
+                    : product.instructions}
+            </p>
             <p>{product.doubles ? product.doubles : null}</p>
             <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
             <p>{product.combs ? <span className='combs'>{product.combs}</span> : null}</p>

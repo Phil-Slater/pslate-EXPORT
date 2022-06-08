@@ -23,6 +23,8 @@ export default function Color(props) {
                 return <p><b>{props.color.name}:</b> <span className="copper">{props.color.value}</span></p>
             case 'Gold':
                 return <p><b>{props.color.name}:</b> <span className="gold">{props.color.value}</span></p>
+            case 'Light Gray':
+                return <p><b>{props.color.name}:</b> <span className="graphite">{props.color.value}</span></p>
             default:
                 return null
         }
