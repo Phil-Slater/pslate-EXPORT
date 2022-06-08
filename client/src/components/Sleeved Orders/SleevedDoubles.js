@@ -4,6 +4,7 @@ import axios from 'axios';
 import './SleevedDoubles.css'
 import DoublesCalculations from './24DoublesCalculations';
 import PCIEDoublesCalculations from './PCIEDoublesCalculations';
+import OrderNote from '../OrderNote';
 
 const SleevedDoubles = () => {
 
@@ -33,10 +34,13 @@ const SleevedDoubles = () => {
                 <p>{product.title.includes('24 Pin') ? product.doubles : null}</p>
                 <p>{product.title.includes('24 Pin') ? <DoublesCalculations product={product} /> : <PCIEDoublesCalculations product={product} />}</p>
                 {product.orderNote ?
-                    <>
-                        <p style={{ marginTop: "2em" }}><b>Order Note:</b></p>
-                        <p>{product.orderNote}</p>
-                    </>
+                    // <>
+                    //     <p className="order-note" style={{ marginTop: "2em" }}><b>Order Note:</b>
+                    //         {product.orderNote}</p>
+                    // </>
+                    <div style={{ marginTop: "2em", width: "100%", wordWrap: "break-word" }}>
+                        <OrderNote note={product.orderNote} />
+                    </div>
                     : null}
             </div>
             <div>
