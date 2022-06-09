@@ -5,6 +5,7 @@ import './SleevedDoubles.css'
 import DoublesCalculations from './24DoublesCalculations';
 import PCIEDoublesCalculations from './PCIEDoublesCalculations';
 import OrderNote from '../OrderNote';
+import DualSATADoubles from './DualSATADoubles';
 
 const SleevedDoubles = () => {
 
@@ -32,12 +33,12 @@ const SleevedDoubles = () => {
                 <p>{product.instructions}</p>
                 <p><b>Doubles:</b></p>
                 <p>{product.title.includes('24 Pin') ? product.doubles : null}</p>
-                <p>{product.title.includes('24 Pin') ? <DoublesCalculations product={product} /> : <PCIEDoublesCalculations product={product} />}</p>
+                <p>{product.title.includes('24 Pin')
+                    ? <DoublesCalculations product={product} />
+                    : product.title.includes('PCIE')
+                        ? <PCIEDoublesCalculations product={product} />
+                        : <DualSATADoubles product={product} />}</p>
                 {product.orderNote ?
-                    // <>
-                    //     <p className="order-note" style={{ marginTop: "2em" }}><b>Order Note:</b>
-                    //         {product.orderNote}</p>
-                    // </>
                     <div style={{ marginTop: "2em", width: "100%", wordWrap: "break-word" }}>
                         <OrderNote note={product.orderNote} />
                     </div>

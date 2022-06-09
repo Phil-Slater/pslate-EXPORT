@@ -442,12 +442,14 @@ function updateSleeved(orders) {
                 // DUAL SATA
                 else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '80 - Corsair (5 doubles)'
+                    product.instructions = 'Dual SATA - 80 - Corsair'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '148 - Corsair (5 doubles)'
+                    product.instructions = 'Dual SATA - 148 - Corsair'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 }
             }
 
@@ -655,12 +657,14 @@ function updateSleeved(orders) {
                 // DUAL SATA
                 else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '80 - Silverstone (5 doubles)'
+                    product.instructions = 'Dual SATA - 80 - Silverstone'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '148 - Silverstone (5 doubles)'
+                    product.instructions = 'Dual SATA - 148 - Silverstone'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 }
             }
 
@@ -844,12 +848,14 @@ function updateSleeved(orders) {
                 // DUAL SATA
                 else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-                    product.instructions = '148 - Silverstone (5 doubles)'
+                    product.instructions = 'Dual SATA - 148 - Silverstone'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-                    product.instructions = '178 - Silverstone (5 doubles)'
+                    product.instructions = 'Dual SATA - 178 - Silverstone'
                     product.combs = "2 comb"
+                    product.doubles = '5 doubles'
                 }
             }
 
@@ -1068,12 +1074,14 @@ function updateSleeved(orders) {
                 // DUAL SATA
                 else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '100 - Cooler Master (5 doubles)'
+                    product.instructions = 'Dual SATA - 100 - Cooler Master'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
-                    product.instructions = '148 - Cooler Master (5 doubles)'
+                    product.instructions = 'Dual SATA - 148 - Cooler Master'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
                 }
             }
 

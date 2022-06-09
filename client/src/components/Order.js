@@ -66,9 +66,12 @@ function Order() {
             <h3 className='quantity'><b>Quantity:</b> {product.quantity !== 1 ? <b className='quantity-num'>{product.quantity}</b> : product.quantity}</h3>
             <p><b>Build instructions:</b></p>
             <p>
-                {product.instructions?.includes('SLEEVED')
+                {product.instructions?.includes('SLEEVED') // 12 pin
                     ? <Sleeved12PinHighlight instructions={product.instructions} />
-                    : product.instructions}
+                    : product.instructions?.includes('Dual SATA')
+                        ? <span className='green'>{product.instructions}</span>
+                        : product.instructions
+                }
             </p>
             <p>{product.doubles ? product.doubles : null}</p>
             <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
