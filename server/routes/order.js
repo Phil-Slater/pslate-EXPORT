@@ -10,6 +10,7 @@ const getOrdersOld = require('../utils/oldGetOrdersFunction')
 const cors = require('cors')
 router.use(cors())
 const authenticate = require('../utils/authenticationMiddleware')
+const Cable = require('../schemas/cable')
 
 // PAGES
 router.get('/', (req, res) => {
@@ -140,7 +141,24 @@ async function updateOrder(id) {
                     tags: 'Ready to Ship'
                 }
             })
-            return orderUpdated
+            if (orderUpdated) {
+                // call DB, delete all products in missing cables list - delete by product ID
+                sanitizeMissingDB(orderUpdated)
+                return orderUpdated
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+async function sanitizeMissingDB(order) {
+    for (const product of order.data.order.line_items) {
+        try {
+            await Cable.deleteOne({
+                id: product.id
+            })
         } catch (error) {
             console.log(error)
         }
