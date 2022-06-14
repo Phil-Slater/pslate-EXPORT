@@ -68,7 +68,7 @@ const gpuClipDirections = {
         'MSI Radeon RX 570 GT OC',
 
         // others
-        'Evga 1080 ti SC2', 'Evga SC2', 'EVGA RTX 3080 XC3 Black', 'Powercolor 6600XT', 'EVGA RTX 3080 XC3 Ultra', 'EVGA 3080 FTW3', 'Amd radeon 6900 xt', 'PNY XLR8 Gaming REVEL EPIC-X RGB'
+        'Evga 1080 ti SC2', 'Evga SC2', 'EVGA RTX 3080 XC3 Black', 'Powercolor 6600XT', 'EVGA RTX 3080 XC3 Ultra', 'EVGA 3080 FTW3', 'Amd radeon 6900 xt', 'PNY XLR8 Gaming REVEL EPIC-X RGB', "NVIDIA GeForce RTX 2080 SUPER Founders Edition"
     ],
 
     backplateClips: [
