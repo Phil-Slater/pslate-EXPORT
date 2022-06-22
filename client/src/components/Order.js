@@ -36,9 +36,9 @@ function Order() {
         }
     }
 
-    const handleOrderReadyToShip = async (id) => {
+    const handleUpdateOrderTags = async (id, tag) => {
         try {
-            const order = await axios.put(`/order/${id}`)
+            const order = await axios.put(`/order/${id}`, { tag: tag })
             fetchOrder(order.data.order_number)
         } catch (error) {
             console.log(error)
@@ -97,7 +97,7 @@ function Order() {
 
         <div className='order-container'>
             <div className='order-button'>
-                {order ? order.tags === "Ready to Ship" ? <h2 className='order-note' style={{ textAlign: "center" }}>Ready to Ship!</h2> : null : null}
+                {order ? order.tags ? <h2 className='order-note' style={{ textAlign: "center" }}>{order.tags}</h2> : null : null}
                 <h1>{order ? <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a> : `Loading...`}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
                 <h2 style={{ marginBottom: '1em' }}>{order ? order.created_at : null}</h2>
@@ -107,7 +107,8 @@ function Order() {
                 <h3>{order ?
                     order.shipping_lines[0].title === 'Economy' ? 'Shipping method: First Class Package' :
                         `Shipping method: ${order.shipping_lines[0].title}` : null}</h3>
-                <button onClick={() => { handleOrderReadyToShip(order.id) }}>Mark as Ready to Ship</button>
+                <button onClick={() => { handleUpdateOrderTags(order.id, "Ready to Ship") }}>Mark as Ready to Ship</button>
+                <button onClick={() => { handleUpdateOrderTags(order.id, "Unsleeved Done; Missing Sleeved") }} style={{ marginTop: "2em" }}>Mark as Unsleeved Items Complete</button>
             </div>
             {products}
         </div>

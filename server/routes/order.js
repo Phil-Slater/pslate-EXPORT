@@ -94,8 +94,9 @@ router.get('/adapter-counts', authenticate, async (req, res) => {
 
 router.put('/order/:id', async (req, res) => {
     const id = req.params.id
+    const tag = req.body.tag
     try {
-        const order = await updateOrder(id)
+        const order = await updateOrder(id, tag)
         if (order) {
             res.json(order.data.order)
         }
@@ -117,11 +118,11 @@ async function getOrders() {
     return await instance.get(`/orders.json?status=unfilfilled&limit=250&${urlFields}`)
 }
 
-async function updateOrder(id) {
+async function updateOrder(id, tag) {
     console.log('updating order...', id)
     const order = await instance.get(`/orders/${id}.json`)
     console.log(order.data.order.tags)
-    if (order.data.order.tags === 'Ready to Ship') {
+    if (order.data.order.tags === tag) {
         try {
             const orderUpdated = await instance.put(`/orders/${id}.json`, {
                 order: {
@@ -138,7 +139,7 @@ async function updateOrder(id) {
             const orderUpdated = await instance.put(`/orders/${id}.json`, {
                 order: {
                     id: id,
-                    tags: 'Ready to Ship'
+                    tags: tag
                 }
             })
             if (orderUpdated) {

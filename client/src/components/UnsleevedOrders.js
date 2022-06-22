@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import '../css/styles.css';
 import { NavLink } from 'react-router-dom';
 import OrderNotReady from './OrderNotReady';
-import OrderReadyToShip from './OrderReadyToShip';
+import OrderTags from './OrderTags';
 
 function UnsleevedOrders() {
 
@@ -45,7 +45,7 @@ function UnsleevedOrders() {
             }
         })
         return <NavLink to={`/order/${order.order_number}`} key={order.order_number}>
-            {order.tags === "Ready to Ship" ? <OrderReadyToShip order={order} /> : <OrderNotReady order={order} />}
+            {order.tags ? <OrderTags order={order} /> : <OrderNotReady order={order} />}
         </NavLink>
     })
 
