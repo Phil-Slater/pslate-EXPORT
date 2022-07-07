@@ -52,8 +52,87 @@ function updateUnsleeved(orders) {
                 }
             }
 
+            // CYOL
+            if (product.title === '24 Pin ATX Unsleeved Custom Cable - Choose Your Length') {
+                if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum') {
+                    product.instructions = 'Corsair pinout - 19 single wires; 8 wires for doubles - 24, 10, and 18 connectors'
+                } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
+                    product.instructions = 'Cooler Master pinout - 19 single wires; 8 wires for doubles - 24, 10, and 18 connectors'
+                } else if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT') {
+                    product.instructions = 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT pinout - 19 single wires; 8 wires for doubles - 2x 24 and 4 pin connectors'
+                } else if (product.psuModel === 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550') {
+                    product.instructions = 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550 pinout - 23 single wires; no doubles - 2x 24 pin connectors'
+                } else if (product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750') {
+                    product.instructions = 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750 pinout - 19 single wires; 8 wires for doubles - 2x 24 and 4 pin connectors'
+                } else if (product.psuModel === 'Silverstone SX750') {
+                    product.instructions = 'Silverstone SX750 pinout - 20 single wires; 6 wires for doubles - 2x 24 and 4 pin connectors'
+                } else if (product.psuModel === 'Silverstone SX1000') {
+                    product.instructions = 'Silverstone SX1000 pinout - 20 single wires; 6 wires for doubles - 2x 24 and 4 pin connectors'
+                } else if (product.psuModel === 'EVGA 450/550/650/750/850 GM') {
+                    product.instructions = 'EVGA pinout - 18 single wires; 10 wires for doubles - 24, 10, and 18 connectors'
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                    product.instructions = 'Seasonic pinout - 19 single wires; 8 wires for doubles - 24, 10, and 18 connectors'
+                } else if (product.psuModel === 'Lian-Li SP750') {
+                    product.instructions = 'Lian-Li SP750 pinout - 20 single wires; 6 wires for doubles - 24, 10, and 18 connectors'
+                }
+            }
+
+            else if (product.title === '8 (4+4) Pin CPU/EPS Unsleeved Custom Cable - Choose Your Length') {
+                if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum' || product.psuModel === 'Lian-Li SP750') {
+                    product.instructions = 'Opposite crimps - No cross - 4+4 and 8 EPS connectors'
+                } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750' || product.psuModel === 'Silverstone SX750' || product.psuModel === 'Silverstone SX1000' || product.psuModel === 'EVGA 450/550/650/750/850 GM') {
+                    product.instructions = 'Double outside crimps - No cross - 4+4 and 8 EPS connectors'
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                    product.instructions = 'Opposite crimps - No cross - 4+4 and FULL 8 PCIE connectors'
+                }
+            }
+
+            else if (product.title === '8 (6+2) Pin PCIE Unsleeved Custom Cable - Choose Your Length' || product.title === '6 Pin PCIE Unsleeved Custom Cable - Choose Your Length') {
+                if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum' || product.psuModel === 'Lian-Li SP750') {
+                    product.instructions = 'Double outside crimps - Top right double - 6+2 and 8 pin EPS connectors - Corsair Type 1 PCIE build'
+                } else if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750' || product.psuModel === 'EVGA 450/550/650/750/850 GM') {
+                    product.instructions = 'Double outside crimps - No double - 6+2 and FULL 8 PCIE connectors - Silverstone Type 1 PCIE build'
+                } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750' || product.psuModel === 'Silverstone SX1000') {
+                    product.instructions = 'Opposite crimps - Bottom left double - 6+2 and 8 EPS connectors - Cooler Master Type 1 PCIE build'
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                    product.instructions = 'Double outside crimps - Top right double - 6+2 and FULL 8 PCIE connectors - Corsair Type 1 PCIE build (with full 8 PCIE connector instead of EPS)'
+                }
+            }
+
+            else if (product.title === 'Single SATA Power Unsleeved Custom Cable - Choose Your Length') {
+                const splitPsuModel = product.psuModel.split(" ")
+                product.instructions = `${splitPsuModel[0]} SATA build`
+                if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
+                    product.instructions = 'Cooler Master SATA build'
+                } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                    product.instructions = 'Seasonic SATA build'
+                }
+            }
+
+            else if (product.title === 'Molex Power Unsleeved Custom Cable - Choose Your Length') {
+                const splitPsuModel = product.psuModel.split(" ")
+                product.instructions = `${splitPsuModel[0]} Molex build`
+                if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
+                    product.instructions = 'Cooler Master Molex build'
+                } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                    product.instructions = 'Seasonic Molex build'
+                }
+            }
+
+            else if (product.title === '12 Pin PCIE Unsleeved Custom Cable - Choose Your Length') {
+                if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum' || product.psuModel === 'Lian-Li SP750') {
+                    product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - Corsair Type 1 6 pin build'
+                } else if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750' || product.psuModel === 'EVGA 450/550/650/750/850 GM') {
+                    product.instructions = 'Double outside crimps - 12 pin and 2x FULL 8 PCIE connectors - Silverstone Type 1 6 pin build'
+                } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750' || product.psuModel === 'Silverstone SX1000') {
+                    product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - 1:1 with cross (top left and bottom left ports on EPS left open)'
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                    product.instructions = 'Double outside crimps - 12 pin and 2x FULL 8 PCIE connectors - Corsair Type 1 6 pin build (with full 8 PCIE connector instead of EPS)'
+                }
+            }
+
             // CORSAIR
-            if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum') {
+            else if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum') {
 
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
