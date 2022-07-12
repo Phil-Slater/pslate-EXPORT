@@ -10,6 +10,8 @@ const gpuClipDirections = {
         'NVIDIA GeForce RTX 3090 Founders Edition', 'Asus GeForce RTX 3090 Turbo', 'Asus GeForce RTX 3090 Turbo', 'EVGA GeForce RTX 3090 XC3 Ultra Gaming', 'EVGA GeForce RTX 3090 FTW3 Ultra', 'Gainward GeForce RTX 3090 Phoenix GS', 'GALAX GeForce RTX 3090 EX', 'GALAX GeForce RTX 3090 SG', 'KFA2 GeForce RTX 3090 SG', 'KFA2 GeForce RTX 3090 EX', 'Palit GeForce RTX 3090 GamingPro OC', 'PNY GeForce RTX 3090 XLR8 Gaming EPIC-X RGB', 'PNY GeForce RTX 3090 XLR8 Gaming EPIC-X RGB',
         // 3080ti
         'NVIDIA GeForce RTX 3080 Ti Founders Edition', 'EVGA GeForce RTX 3080 Ti FTW3 Ultra Gaming', 'EVGA GeForce RTX 3080 Ti XC3 GAMING', 'GALAX GeForce RTX 3080 Ti SG (1-Click OC)', 'GALAX GeForce RTX 3080 Ti EXG (1-Click OC)', 'Inno3D GeForce RTX 3080 Ti iChill X4', 'PNY GeForce RTX 3080 Ti XLR8 Gaming UPRISING EPIC-X RGB',
+        // 6950xt
+        'ASRock Radeon RX 6950 XT OC',
         // 6900xt
         'Radeon RX 6900 XT - Reference Model', 'PowerColor Radeon RX 6900 XT Red Devil Limited Edition',
         // 6800xt
@@ -80,6 +82,8 @@ const gpuClipDirections = {
         'Asus GeForce RTX 3090 Strix Gaming OC', 'Asus GeForce RTX 3090 TUF Gaming OC', 'Gainward GeForce RTX 3090 Phantom GS', 'Gigabyte GeForce RTX 3090 Aorus Master Xtreme', 'Gigabyte GeForce RTX 3090 GAMING OC', 'MSI GeForce RTX 3090 Gaming X Trio Suprim', 'MSI GeForce RTX 3090 Ventus 3X OC', 'Palit GeForce RTX 3090 GameRock', 'Zotac GeForce RTX 3090 Gaming Trinity', 'Zotac GeForce RTX 3090 GAMING AMP Extreme Holo', 'ZOTAC GAMING GeForce RTX 3090 ArcticStorm', 'Gigabyte GeForce RTX 3090 Aorus Xtreme',
         // 3080ti
         'Asus GeForce RTX 3080 Ti ROG Strix Gaming OC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC',
+        // 6950xt
+        'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Gigabyte Radeon RX 6950 XT GAMING OC', 'MSI Radeon RX 6950 XT GAMING X TRIO', 'Sapphire Radeon RX 6950 XT NITRO+', 'Sapphire Radeon RX 6950 XT TOXIC Limited Edition',
         // 6900xt
         'Asus RX 6900 XT STRIX LC GAMING OC', 'Asus Radeon RX 6900 XT TUF GAMING OC', 'Sapphire Radeon RX 6900 XT NITRO+', 'XFX Radeon RX 6900 XT Speedster MERC 319 Ultra',
         // 6800xt
