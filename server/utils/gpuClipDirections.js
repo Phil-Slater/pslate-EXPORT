@@ -18,6 +18,8 @@ const gpuClipDirections = {
         'ASRock Radeon RX 6800', 'Asus Radeon RX 6800', 'XFX Radeon RX 6800', 'Gigabyte Radeon RX 6800', 'MSI Radeon RX 6800', 'PowerColor Radeon RX 6800 Fighter OC', 'PowerColor Radeon RX 6800 Red Devil LE OC', 'PowerColor Radeon RX 6800 Red Dragon OC', 'Sapphire Radeon RX 6800', 'Sapphire Radeon RX 6800 Pulse',
         // 3080
         'NVIDIA GeForce RTX 3080 Founders Edition', 'EVGA GeForce RTX 3080 FTW3 Ultra Hybrid', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra Hybrid', 'GALAX GeForce RTX 3080 SG', 'GALAX GeForce RTX 3080 EX', 'KFA2 GeForce RTX 3080 EX Gamer', 'KFA2 GeForce RTX 3080 SG (1-Click OC)', 'Palit GeForce RTX 3080 GamingPro OC', 'PNY GeForce RTX 3080 XLR8 Gaming REVEL EPIC-X RGB', 'EVGA GeForce RTX 3080 FTW3 Ultra', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra', 'Gainward GeForce RTX 3080 Phoenix',
+        //6750xt
+        'Biostar Radeon RX 6750 XT', 'PowerColor Radeon RX 6750 XT Red Devil OC', 
         // 6700 XT
         'Gigabyte Radeon RX 6700 XT',
         // 3070ti
@@ -28,6 +30,8 @@ const gpuClipDirections = {
         'NVIDIA GeForce RTX 3060 Ti Founders Edition', 'EVGA GeForce RTX 3060 Ti FTW3 Ultra GAMING iCX3', 'EVGA GeForce RTX 3060 Ti XC GAMING', 'Inno3D GeForce RTX 3060 Ti Twin X2 OC', 'Palit GeForce RTX 3060 Ti LHR Dual OC', 'Palit GeForce RTX 3060 Ti LHR GamingPro', 'PNY GeForce RTX 3060 Ti UPRISING', 'PNY GeForce RTX 3060 Ti XLR8 Gaming REVEL EPIC-X',
         // 3060
         'EVGA GeForce RTX 3060 XC GAMING', 'Gainward GeForce RTX 3060 Ghost', 'GALAX GeForce RTX 3060 (1-click OC)', 'Inno3D GeForce RTX 3060 iChill X3 RED', 'KFA2 GeForce RTX 3060 (1-Click OC)', 'Palit GeForce RTX 3060 Dual OC', 'Palit GeForce RTX 3060 StormX OC', 'PNY GeForce RTX 3060 UPRISING', 'PNY GeForce RTX 3060 XLR8 Gaming REVEL EPIC-X RGB',
+        // 6650xt
+        'Biostar Radeon RX 6650 XT', ',PowerColor Radeon RX 6650 XT Red Devil OC',
         // 6600xt
         'PowerColor Radeon RX 6600 XT Red Devil',
         // vega64
@@ -84,6 +88,8 @@ const gpuClipDirections = {
         'ASRock Radeon RX 6800 Challenger Pro OC', 'ASRock Radeon RX 6800 Phantom Gaming D OC', 'Asus Radeon RX 6800 Strix Gaming OC', 'Asus Radeon RX 6800 TUF Gaming OC', 'Gigabyte Radeon RX 6800 Gaming OC', 'PowerColor Radeon RX 6800', 'Sapphire Radeon RX 6800 NITRO+',
         // 3080
         'Asus GeForce RTX 3080 Strix Gaming OC', 'Asus GeForce RTX 3080 TUF Gaming OC', 'Gigabyte GeForce RTX 3080 Aorus Master', 'Gigabyte GeForce RTX 3080 Aorus Xtreme', 'Gigabyte GeForce RTX 3080 Aorus Xtreme Waterforce', 'Gigabyte GeForce RTX 3080 Eagle OC', 'Gigabyte GeForce RTX 3080 Gaming OC', 'Gigabyte GeForce RTX 3080 Vision OC', 'MSI GeForce RTX 3080 Gaming X Trio', 'MSI GeForce RTX 3080 Suprim X', 'MSI GeForce RTX 3080 Ventus 3X OC', 'Palit GeForce RTX 3080 GameRock', 'Zotac GeForce RTX 3080 Gaming Amp Holo', 'Zotac GeForce RTX 3080 Trinity OC',
+        // 6750xt
+        'ASRock Radeon RX 6750 XT Challenger Pro OC', 'ASRock Radeon RX 6750 XT Phantom Gaming D OC', 'Asus Radeon RX 6750 XT DUAL OC', 'Asus Radeon RX 6750 XT ROG STRIX GAMING OC', 'Gigabyte Radeon RX 6750 XT AORUS ELITE', 'Gigabyte Radeon RX 6750 XT GAMING OC', 'MSI Radeon RX 6750 XT GAMING X TRIO', 'MSI Radeon RX 6750 XT MECH 2X OC', 'Sapphire Radeon RX 6750 XT NITRO+', 'Sapphire Radeon RX 6750 XT NITRO+', 'XFX Radeon RX 6750 XT Speedster MERC 319 Black', 'XFX Radeon RX 6750 XT Speedster QICK 319 Ultra',
         // 6700xt 
         'Asus Radeon RX 6700 XT Dual', 'Asus Radeon RX 6700 XT ROG Strix Gaming OC', 'Asus Radeon RX 6700 XT TUF Gaming OC', 'Gigabyte Radeon RX 6700 XT Aorus Elite', 'Gigabyte Radeon RX 6700 XT Eagle', 'Gigabyte Radeon RX 6700 XT Gaming OC', 'MSI Radeon RX 6700 XT Gaming X', 'MSI Radeon RX 6700 XT Mech 2X OC', 'Sapphire Radeon RX 6700 XT PULSE', 'XFX Radeon RX 6700 XT Speedster MERC 319',
         // 3070ti
@@ -94,6 +100,8 @@ const gpuClipDirections = {
         'Asus GeForce RTX 3060 Ti DUAL OC', 'Asus GeForce RTX 3060 Ti KO OC', 'Asus GeForce RTX 3060 Ti OG STRIX GAMING OC', 'Asus GeForce RTX 3060 Ti TUF GAMING OC', 'GALAX GeForce RTX 3060 Ti (1-click OC)', 'GALAX GeForce RTX 3060 Ti EX', 'Gigabyte GeForce RTX 3060 Ti AORUS MASTER', 'Gigabyte GeForce RTX 3060 Ti EAGLE OC', 'Inno3D GeForce RTX 3060 Ti iChill X3', 'KFA2 GeForce RTX 3060 Ti (1-Click OC)', 'KFA2 GeForce RTX 3060 Ti EX', 'MSI GeForce RTX 3060 Ti GAMING X TRIO', 'MSI GeForce RTX 3060 Ti TWIN FAN OC', 'MSI GeForce RTX 3060 Ti VENTUS 2X OC', 'MSI GeForce RTX 3060 Ti', 'VENTUS 3X OC', 'Zotac GeForce RTX 3060 Ti Twin Edge',
         // 3060
         'Asus GeForce RTX 3060 DUAL OC', 'Asus GeForce RTX 3060 Phoenix ', 'Asus GeForce RTX 3060 ROG STRIX GAMING OC', 'Asus GeForce RTX 3060 TUF GAMING OC', 'GALAX GeForce RTX 3060  EX (1-Click OC)', 'Gigabyte GeForce RTX 3060 AORUS ELITE', 'Gigabyte GeForce RTX 3060 Eagle OC', 'Gigabyte GeForce RTX 3060 GAMING OC', 'Gigabyte GeForce RTX 3060 Vision OC', 'KFA2 GeForce RTX 3060 EX (1-Click OC)', 'MSI GeForce RTX 3060 AERO ITX OC', 'MSI GeForce RTX 3060 GAMING X', 'MSI GeForce RTX 3060 GAMING X TRIO', 'MSI GeForce RTX 3060 VENTUS 2X OC', 'MSI GeForce RTX 3060 VENTUS 3X OC', 'Zotac GeForce RTX 3060 GAMING AMP', 'Zotac GeForce RTX 3060 GAMING Twin Edge OC',
+        // 6650xt
+        'ASRock Radeon RX 6650 XT Challenger D OC', 'ASRock Radeon RX 6650 XT Phantom Gaming D OC', 'Asus Radeon RX 6650 XT 8 GB DUAL', 'Asus Radeon RX 6650 XT ROG STRIX GAMING OC', 'Gigabyte Radeon RX 6650 XT EAGLE', 'Gigabyte Radeon RX 6650 XT GAMING OC', 'MSI Radeon RX 6650 XT GAMING X', 'MSI Radeon RX 6650 XT MECH 2X OC', 'PowerColor Radeon RX 6650 XT Hellhound', 'Sapphire Radeon RX 6650 XT NITRO+', 'Sapphire Radeon RX 6650 XT PULSE', 'XFX Radeon RX 6650 XT Speedster MERC 308 Black', 'XFX Radeon RX 6650 XT Speedster QICK 308 ULTRA', 'XFX Radeon RX 6650 XT Speedster SWFT 210 Core',
         // 6600xt
         'ASRock Radeon RX 6600 XT Challenger D OC ', 'ASRock Radeon RX 6600 XT Challenger ITX', 'ASRock Radeon RX 6600 XT Challenger Pro OC', 'ASRock Radeon RX 6600 XT Phantom Gaming D OC', 'Asus Radeon RX 6600 XT DUAL OC', 'Asus Radeon RX 6600 XT ROG STRIX GAMING OC', 'Gigabyte Radeon RX 6600 XT EAGLE', 'Gigabyte Radeon RX 6600 XT GAMING OC Pro', 'MSI Radeon RX 6600 XT GAMING X', 'MSI Radeon RX 6600 XT MECH 2X OC', 'PowerColor Radeon RX 6600 XT Fighter', 'PowerColor Radeon RX 6600 XT Hellhound', 'Sapphire Radeon RX 6600 XT NITRO+', 'Sapphire Radeon RX 6600 XT PULSE', 'XFX Radeon RX 6600 XT Speedster MERC 308', 'XFX Radeon RX 6600 XT Speedster SWFT 210',
         // 6600
