@@ -1,6 +1,6 @@
 
 export default function Sleeved12PinColors(props) {
-    switch (props.color.value) {
+    switch (props.color?.value) {
         case 'Black':
             return <h2>{props.color.name}: <span className="black">{props.color.value}</span></h2>
         case 'White':
