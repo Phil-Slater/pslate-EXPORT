@@ -397,6 +397,31 @@ function updateUnsleeved(orders) {
                 // Not an option for Lian Li (SFX-L)
             }
 
+            // Silverstone SX700-LPT
+            else if (product.psuModel = 'Silverstone SX700-LPT (SFX-L)') {
+                // 24 PIN
+                if (uCG.unsleeved24GroupOne.includes(product.title)) {
+                    product.instructions = "24 pin - Start at 160 - Build from left - 23 single wires only, 2x 24 pin connectors w/ cross"
+                }
+
+                // EPS
+                else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
+                    product.instructions = "310 - EPS - Silverstone Type 1 (like 280 Silverstone - Type 1 but longer"
+                }
+
+                // 8 & 6 PCIE
+                else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
+                    product.instructions = "300 - PCIE - Silverstone Type 1"
+                }
+
+                // SATA
+                else if (uCG.unsleevedSATAGroupOne.includes(product.title)) {
+                    product.instructions = "Single SATA - 100 - Silverstone"
+                }
+
+                // DUAL SATA
+                // Not an option for SX700-LPT
+            }
         })
     })
     return orders
