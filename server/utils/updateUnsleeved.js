@@ -398,7 +398,7 @@ function updateUnsleeved(orders) {
             }
 
             // Silverstone SX700-LPT
-            else if (product.psuModel = 'Silverstone SX700-LPT (SFX-L)') {
+            else if (product.psuModel === 'Silverstone SX700-LPT (SFX-L)') {
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
                     product.instructions = "24 pin - Start at 160 - Build from left - 23 single wires only, 2x 24 pin connectors w/ cross"
