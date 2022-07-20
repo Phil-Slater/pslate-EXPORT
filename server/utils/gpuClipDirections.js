@@ -36,6 +36,8 @@ const gpuClipDirections = {
         'Biostar Radeon RX 6650 XT', ',PowerColor Radeon RX 6650 XT Red Devil OC',
         // 6600xt
         'PowerColor Radeon RX 6600 XT Red Devil',
+        // 3050
+        'EVGA GeForce RTX 3050 XC GAMING', 'Gainward GeForce RTX 3050 Ghost OC', 'Gainward GeForce RTX 3050 Pegasus OC', 'GALAX GeForce RTX 3050 EX (1-Click OC)', 'Inno3D GeForce RTX 3050 Gaming OC X2', 'Inno3D GeForce RTX 3050 Twin X2 OC', 'Palit GeForce RTX 3050 Dual OC', 'Palit GeForce RTX 3050 StormX OC', 'PNY GeForce RTX 3050 UPRISING', 'PNY GeForce RTX 3050 XLR8 Gaming REVEL EPIC-X RGB',
         // vega64
         'ASRock Radeon RX VEGA 64 Phantom Gaming', 'Gigabyte Radeon RX VEGA 64 Blower', 'HIS Radeon RX VEGA 64 AIR', 'HIS Radeon RX VEGA 64 Limited Edition', 'MSI Radeon RX VEGA 64', 'MSI Radeon RX VEGA 64 AIR BOOST OC', 'MSI Radeon RX VEGA 64 IRON', 'MSI Radeon RX VEGA 64 WAVE', 'PowerColor Radeon RX VEGA 64', 'Sapphire Radeon RX VEGA 64', 'XFX Radeon RX VEGA 64',
         // radeon VII
@@ -110,6 +112,8 @@ const gpuClipDirections = {
         'ASRock Radeon RX 6600 XT Challenger D OC ', 'ASRock Radeon RX 6600 XT Challenger ITX', 'ASRock Radeon RX 6600 XT Challenger Pro OC', 'ASRock Radeon RX 6600 XT Phantom Gaming D OC', 'Asus Radeon RX 6600 XT DUAL OC', 'Asus Radeon RX 6600 XT ROG STRIX GAMING OC', 'Gigabyte Radeon RX 6600 XT EAGLE', 'Gigabyte Radeon RX 6600 XT GAMING OC Pro', 'MSI Radeon RX 6600 XT GAMING X', 'MSI Radeon RX 6600 XT MECH 2X OC', 'PowerColor Radeon RX 6600 XT Fighter', 'PowerColor Radeon RX 6600 XT Hellhound', 'Sapphire Radeon RX 6600 XT NITRO+', 'Sapphire Radeon RX 6600 XT PULSE', 'XFX Radeon RX 6600 XT Speedster MERC 308', 'XFX Radeon RX 6600 XT Speedster SWFT 210',
         // 6600
         'ASRock Radeon RX 6600 Challenger D', 'ASRock Radeon RX 6600 Challenger ITX', 'Asus Radeon RX 6600 DUAL', 'Gigabyte Radeon RX 6600 EAGLE', 'MSI Radeon RX 6600 ARMOR', 'MSI Radeon RX 6600 MECH 2X', 'PowerColor Radeon RX 6600 Fighter', 'PowerColor Radeon RX 6600 Hellhound', 'Sapphire Radeon RX 6600', 'Sapphire Radeon RX 6600 PULSE', 'XFX Radeon RX 6600 Speedster SWFT 210',
+        // 3050
+        'Asus GeForce RTX 3050 8GB DUAL OC', 'Asus GeForce RTX 3050 8GB Phoenix', 'Asus GeForce RTX 3050 8GB ROG STRIX GAMING OC', 'Gigabyte GeForce RTX 3050 EAGLE OC', 'Gigabyte GeForce RTX 3050 GAMING OC', 'MSI GeForce RTX 3050 AERO ITX OC', 'MSI GeForce RTX 3050 GAMING', 'MSI GeForce RTX 3050 GAMING X', 'MSI GeForce RTX 3050 VENTUS 2X OC', '   Zotac GeForce RTX 3050 8GB 8 GB GAMING Twin Edge OC',
         // Vega
         'Asus Radeon RX VEGA 64 AREZ STRIX OC', 'Asus Radeon RX VEGA 64 ROG STRIX', 'Gigabyte Radeon RX VEGA 64', 'PowerColor Radeon RX VEGA 64 Red Devil', 'Sapphire Radeon RX VEGA 64 NITRO+', 'Asus Radeon RX VEGA 56 AREZ STRIX', 'Asus Radeon RX VEGA 56 ROG STRIX', 'Gigabyte Radeon RX VEGA 56', 'PowerColor Radeon RX VEGA 56 Red Devil', 'PowerColor Radeon RX VEGA 56 Red Dragon', 'Sapphire Radeon RX VEGA 56 NITRO+', 'XFX Radeon RX VEGA 56',
         // 2080ti
