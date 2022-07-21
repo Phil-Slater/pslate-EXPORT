@@ -34,6 +34,7 @@ function PowerSwitches() {
                         return <div key={product.id}><h2>{splitSku[0]} - {splitSku[3]} {splitSku[4]}</h2>
                             {product.properties[0] ? <h2>{product.properties[0].name}: {product.properties[0].value}</h2> : null}
                             {product.properties[1] ? <h2>{product.properties[1].name === 'Case' && product.title.includes('12mm') ? `Case: ${product.properties[1].value}` : null}</h2> : null}
+                            {product.properties.length === 1 ? <h2 className='red' style={{ textAlign: "center" }}>UNSLEEVED SWITCH</h2> : null}
                         </div>
                     }
                 })}
