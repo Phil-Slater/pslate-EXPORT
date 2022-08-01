@@ -9,9 +9,17 @@ function updateUnsleeved(orders) {
             if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
                 if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'EVGA 450/550/650/750/850 GM' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750') {
                     if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
-                        product.instructions = '300 Silverstone 12 pin'
+                        if (product.gpuModel === 'RTX 3090 Ti') {
+                            product.instructions = '300 Silverstone 12 pin - 3x 8 pin build'
+                        } else {
+                            product.instructions = '300 Silverstone 12 pin'
+                        }
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
-                        product.instructions = '360 Silverstone 12 pin'
+                        if (product.gpuModel === 'RTX 3090 Ti') {
+                            product.instructions = '360 Silverstone 12 pin - 3x 8 pin build'
+                        } else {
+                            product.instructions = '360 Silverstone 12 pin'
+                        }
                     } else if (product.gpuModel === 'RTX 3060 Ti Founders Edition' || product.gpuModel === 'RTX 3070 Founders Edition') {
                         product.instructions = '360 Silverstone 12 pin'
                     } else if (product.gpuModel === 'RTX 3080/3070 Ti/3080 Ti Founders Edition') {
@@ -26,14 +34,28 @@ function updateUnsleeved(orders) {
                         } else if (uCG.unsleeved12PCIECaseGroupTwo3090Silverstone.includes(product.case)) {
                             product.instructions = '400 Silverstone 12 pin'
                         }
+                    } else if (product.gpuModel === 'RTX 3090 Ti') {
+                        if (uCG.unsleeved12PCIECaseGroupOne3090Silverstone.includes(product.case)) {
+                            product.instructions = '360 Silverstone 12 pin - 3x 8 pin build'
+                        } else if (uCG.unsleeved12PCIECaseGroupTwo3090Silverstone.includes(product.case)) {
+                            product.instructions = '400 Silverstone 12 pin - 3x 8 pin build'
+                        }
                     }
                 }
 
                 else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750/SX1000') {
                     if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
-                        product.instructions = '300 Cooler Master 12 pin'
+                        if (product.gpuModel === 'RTX 3090 Ti') {
+                            product.instructions = '300 Cooler Master 12 pin - 3x 8 pin build'
+                        } else {
+                            product.instructions = '300 Cooler Master 12 pin'
+                        }
                     } else if (product.case === 'Cooler Master NR200p MAX' || product.case === 'Lazer3D LZ7 XTD' || product.case === 'XTIA Xproto') {
-                        product.instructions = '360 Cooler Master 12 pin'
+                        if (product.gpuModel === 'RTX 3090 Ti') {
+                            product.instructions = '360 Cooler Master 12 pin - 3x 8 pin build'
+                        } else {
+                            product.instructions = '360 Cooler Master 12 pin'
+                        }
                     } else if (product.gpuModel === 'RTX 3060 Ti Founders Edition' || product.gpuModel === 'RTX 3070 Founders Edition') {
                         product.instructions = '360 Cooler Master 12 pin'
                     } else if (product.gpuModel === 'RTX 3080/3070 Ti/3080 Ti Founders Edition') {
@@ -47,6 +69,12 @@ function updateUnsleeved(orders) {
                             product.instructions = '360 Cooler Master 12 pin'
                         } else if (uCG.unsleeved12PCIECaseGroupTwo3090Silverstone.includes(product.case)) {
                             product.instructions = '400 Cooler Master 12 pin'
+                        }
+                    } else if (product.gpuModel === 'RTX 3090 Ti') {
+                        if (uCG.unsleeved12PCIECaseGroupOne3090Silverstone.includes(product.case)) {
+                            product.instructions = '360 Cooler Master 12 pin - 3x 8 pin build'
+                        } else if (uCG.unsleeved12PCIECaseGroupTwo3090Silverstone.includes(product.case)) {
+                            product.instructions = '400 Cooler Master 12 pin - 3x 8 pin build'
                         }
                     }
                 }
@@ -121,13 +149,29 @@ function updateUnsleeved(orders) {
 
             else if (product.title === '12 Pin PCIE Unsleeved Custom Cable - Choose Your Length') {
                 if (product.psuModel === 'Corsair SF450/SF600/SF750 Gold/Platinum' || product.psuModel === 'Lian-Li SP750') {
-                    product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - Corsair Type 1 6 pin build'
+                    if (product.gpuModel === 'RTX 3090 Ti') {
+                        product.instructions = 'Double outside crimps - 12 pin and 3x 8 EPS connectors - 4 wires per 8 pin'
+                    } else {
+                        product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - Corsair Type 1 6 pin build'
+                    }
                 } else if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750' || product.psuModel === 'EVGA 450/550/650/750/850 GM') {
-                    product.instructions = 'Double outside crimps - 12 pin and 2x FULL 8 PCIE connectors - Silverstone Type 1 6 pin build'
+                    if (product.gpuModel === 'RTX 3090 Ti') {
+                        product.instructions = 'Double outside crimps - 12 pin and 3x FULL 8 PCIE connectors - 4 wires per 8 pin'
+                    } else {
+                        product.instructions = 'Double outside crimps - 12 pin and 2x FULL 8 PCIE connectors - Silverstone Type 1 6 pin build'
+                    }
                 } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750' || product.psuModel === 'Silverstone SX1000') {
-                    product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - 1:1 with cross (top left and bottom left ports on EPS left open)'
+                    if (product.gpuModel === 'RTX 3090 Ti') {
+                        product.instructions = 'Double outside crimps - 12 pin and 3x 8 EPS connectors - 4 wires per 8 pin - With cross'
+                    } else {
+                        product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - 1:1 with cross (top left and bottom left ports on EPS left open)'
+                    }
                 } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
-                    product.instructions = 'Double outside crimps - 12 pin and 2x FULL 8 PCIE connectors - Corsair Type 1 6 pin build (with full 8 PCIE connector instead of EPS)'
+                    if (product.gpuModel === 'RTX 3090 Ti') {
+                        product.instructions = 'Double outside crimps - 12 pin and 3x FULL 8 PCIE connectors - 4 wires per 8 pin'
+                    } else {
+                        product.instructions = 'Double outside crimps - 12 pin and 2x FULL 8 PCIE connectors - Corsair Type 1 6 pin build (with full 8 PCIE connector instead of EPS)'
+                    }
                 }
             }
 
@@ -182,7 +226,11 @@ function updateUnsleeved(orders) {
                 // 12 PCIE
                 else if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
                     if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
-                        product.instructions = '300 - Corsair 12 pin'
+                        if (product.gpuModel === 'RTX 3090 Ti') {
+                            product.instructions = '300 - Corsair 12 pin - 3x 8 pin build'
+                        } else {
+                            product.instructions = '300 - Corsair 12 pin'
+                        }
                     } else if (product.gpuModel === 'RTX 3060 Ti Founders Edition') {
                         product.instructions = '360 - Corsair 12 pin'
                     } else if (product.gpuModel === 'RTX 3070 Founders Edition') {
@@ -198,6 +246,12 @@ function updateUnsleeved(orders) {
                             product.instructions = '400 - Corsair 12 pin'
                         } else if (uCG.unsleeved12PCIECaseGroupTwo3090Corsair.includes(product.case)) {
                             product.instructions = '360 - Corsair 12 pin'
+                        }
+                    } else if (product.gpuModel === 'RTX 3090 Ti') {
+                        if (uCG.unsleeved12PCIECaseGroupOne3090Corsair.includes(product.case)) {
+                            product.instructions = '400 - Corsair 12 pin - 3x 8 pin build'
+                        } else if (uCG.unsleeved12PCIECaseGroupTwo3090Corsair.includes(product.case)) {
+                            product.instructions = '360 - Corsair 12 pin - 3x 8 pin build'
                         }
                     }
                 }
