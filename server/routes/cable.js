@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Cable = require('../schemas/cable')
+const Cable = require('../schemas/cable');
 
 router.post('/missing', async (req, res) => {
     console.log(req.body.product)
@@ -43,18 +43,15 @@ router.post('/missing', async (req, res) => {
 })
 
 router.get('/missing', async (req, res) => {
-    const missingCables = await Cable.find({})
-    missingCables.sort((a, b) => {
+    await deleteFulfilledFromMissing()
+    const missing = await Cable.find({})
+    missing.sort((a, b) => {
         if (a.rushOrder !== b.rushOrder) {
             return a.rushOrder ? 1 : -1
         }
         return (a.orderNumber < b.orderNumber) ? 1 : -1
     })
-
-    // missingCables.sort((a, b) => {
-    //     return a.hasOwnProperty('rushOrder') ? -1 : b.hasOwnProperty('rushOrder') ? 1 : 0
-    // })
-    res.json(missingCables)
+    res.json(missing)
 })
 
 router.delete('/missing', async (req, res) => {
@@ -71,5 +68,39 @@ router.delete('/missing', async (req, res) => {
     }
 
 })
+
+async function getOrders() {
+    const unfulfilled = await instance.get(`/orders.json?status=unfulfilled&limit=250&fields=order_number`)
+    return unfulfilled.data.orders
+}
+
+async function deleteFulfilledFromMissing() {
+    const missingCables = await Cable.find({})
+    const openOrders = await getOrders()
+
+    let missingOrderNums = []
+    missingCables.forEach(cable => {
+        missingOrderNums.push(cable.orderNumber)
+    })
+
+    let openOrderNums = []
+    openOrders.forEach(order => {
+        openOrderNums.push(order.order_number)
+    })
+
+    // find order numbers that are in missing list an NOT in unfulfilled orders
+    const fulfilledOrdersInMissing = missingOrderNums.filter(num => !openOrderNums.includes(num))
+
+    for (const orderNum of fulfilledOrdersInMissing) {
+        // delete by order number
+        try {
+            await Cable.deleteOne({
+                orderNumber: orderNum
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
 
 module.exports = router;
