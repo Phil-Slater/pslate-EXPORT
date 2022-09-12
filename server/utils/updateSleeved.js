@@ -1057,7 +1057,7 @@ function updateSleeved(orders) {
                             product.doubles = 'Bottom left double - #1 is double'
                             product.combs = "2 combs"
                         }
-                    } else if (product.gpuMountPosition.includes('Vertical GPU')) {
+                    } else if (product.gpuMountPosition?.includes('Vertical GPU')) {
                         if (gCD.fanClips.includes(product.gpuModel)) {
                             product.crimps = 'Same crimps - Female'
                             product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
