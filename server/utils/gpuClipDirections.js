@@ -21,7 +21,7 @@ const gpuClipDirections = {
         // 3080
         'NVIDIA GeForce RTX 3080 Founders Edition', 'EVGA GeForce RTX 3080 FTW3 Ultra Hybrid', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra Hybrid', 'GALAX GeForce RTX 3080 SG', 'GALAX GeForce RTX 3080 EX', 'KFA2 GeForce RTX 3080 EX Gamer', 'KFA2 GeForce RTX 3080 SG (1-Click OC)', 'Palit GeForce RTX 3080 GamingPro OC', 'PNY GeForce RTX 3080 XLR8 Gaming REVEL EPIC-X RGB', 'EVGA GeForce RTX 3080 FTW3 Ultra', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra', 'Gainward GeForce RTX 3080 Phoenix',
         //6750xt
-        'Biostar Radeon RX 6750 XT', 'PowerColor Radeon RX 6750 XT Red Devil OC', 
+        'Biostar Radeon RX 6750 XT', 'PowerColor Radeon RX 6750 XT Red Devil OC',
         // 6700 XT
         'Gigabyte Radeon RX 6700 XT',
         // 3070ti
@@ -83,7 +83,7 @@ const gpuClipDirections = {
         // 3090
         'Asus GeForce RTX 3090 Strix Gaming OC', 'Asus GeForce RTX 3090 TUF Gaming OC', 'Gainward GeForce RTX 3090 Phantom GS', 'Gigabyte GeForce RTX 3090 Aorus Master Xtreme', 'Gigabyte GeForce RTX 3090 GAMING OC', 'MSI GeForce RTX 3090 Gaming X Trio Suprim', 'MSI GeForce RTX 3090 Ventus 3X OC', 'Palit GeForce RTX 3090 GameRock', 'Zotac GeForce RTX 3090 Gaming Trinity', 'Zotac GeForce RTX 3090 GAMING AMP Extreme Holo', 'ZOTAC GAMING GeForce RTX 3090 ArcticStorm', 'Gigabyte GeForce RTX 3090 Aorus Xtreme',
         // 3080ti
-        'Asus GeForce RTX 3080 Ti ROG Strix Gaming OC', 'Asus GeForce RTX 3080 Ti TUF GAMING OC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'Gigabyte GeForce RTX 3080 Ti GAMING OC', 'Gigabyte GeForce RTX 3080 Ti Vision OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC',
+        'Asus GeForce RTX 3080 Ti ROG Strix Gaming OC', 'Asus GeForce RTX 3080 Ti TUF Gaming OC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'Gigabyte GeForce RTX 3080 Ti GAMING OC', 'Gigabyte GeForce RTX 3080 Ti Vision OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC',
         // 6950xt
         'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Gigabyte Radeon RX 6950 XT GAMING OC', 'MSI Radeon RX 6950 XT GAMING X TRIO', 'Sapphire Radeon RX 6950 XT NITRO+', 'Sapphire Radeon RX 6950 XT TOXIC Limited Edition',
         // 6900xt

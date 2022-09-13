@@ -208,10 +208,20 @@ function updateUnsleeved(orders) {
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
                     product.instructions = "300 - PCIE - Corsair Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
-                    if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '180/165 - PCIE - Corsair Type 2'
-                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '180/175 - PCIE - Corsair Type 2'
+                    if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
+                        product.instructions = "300 - PCIE - Corsair Type 1"
+                    } else if (product.gpuCableRouting === 'Over GPU Backplate') {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = '180/165 - PCIE - Corsair Type 2'
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = '180/175 - PCIE - Corsair Type 2'
+                        }
+                    } else if (product.gpuMountPosition?.includes('Vertical GPU')) {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = '240/215 - PCIE - Corsair Type 1'
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = '240 - PCIE - Corsair Type 1'
+                        }
                     }
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
@@ -221,8 +231,13 @@ function updateUnsleeved(orders) {
                     }
                 } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
                     product.instructions = '150 - PCIE - Corsair Type 1'
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable') {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '180/165 - PCIE - Corsair Type 2'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '180/175 - PCIE - Corsair Type 2'
+                    }
                 }
-
                 // 12 PCIE
                 else if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
                     if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
@@ -298,6 +313,24 @@ function updateUnsleeved(orders) {
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title) || uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     product.instructions = "300 - PCIE - Silverstone Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
+                    if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
+                        product.instructions = "300 - PCIE - Silverstone Type 1"
+                    } else if (product.gpuCableRouting === 'Over GPU Backplate') {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = '155/150 - PCIE - Silverstone Type 2'
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = '170/155 - PCIE - Silverstone Type 2'
+                        }
+                    } else if (product.gpuMountPosition?.includes('Vertical GPU')) {
+                        product.instructions = "300 - PCIE - Silverstone Type 1"
+                        // not currently checking for fan vs backplate clips with silverstone psu in this group
+                        // if (gCD.fanClips.includes(product.gpuModel)) {
+                        //     product.instructions = ''
+                        // } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        //     product.instructions = ''
+                        // }
+                    }
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.instructions = '155/150 - PCIE - Silverstone Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
@@ -347,10 +380,20 @@ function updateUnsleeved(orders) {
                 else if (uCG.unsleevedPCIEGroupOne.includes(product.title)) {
                     product.instructions = "300 - PCIE - Cooler Master Type 1"
                 } else if (uCG.unsleevedPCIEGroupTwo.includes(product.title)) {
-                    if (gCD.fanClips.includes(product.gpuModel)) {
-                        product.instructions = '170/155 - PCIE - Cooler Master Type 2'
-                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                        product.instructions = '160/155 - PCIE - Cooler Master Type 2'
+                    if (product.gpuCableRouting === 'Around end of GPU (for use with a side mounted radiator)') {
+                        product.instructions = "300 - PCIE - Cooler Master Type 1"
+                    } else if (product.gpuCableRouting === 'Over GPU Backplate') {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = '170/155 - PCIE - Cooler Master Type 2'
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = '160/155 - PCIE - Cooler Master Type 2'
+                        }
+                    } else if (product.gpuMountPosition?.includes('Vertical GPU')) {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = '220 - PCIE - Cooler Master Type 1'
+                        }
                     }
                 } else if (uCG.unsleevedPCIEGroupThree.includes(product.title)) {
                     if (gCD.fanClips.includes(product.gpuModel)) {
@@ -358,9 +401,13 @@ function updateUnsleeved(orders) {
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.instructions = '220 - PCIE - Cooler Master Type 1'
                     }
-                }
-
-                else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable') {
+                    if (gCD.fanClips.includes(product.gpuModel)) {
+                        product.instructions = '170/155 - PCIE - Cooler Master Type 2'
+                    } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                        product.instructions = '160/155 - PCIE - Cooler Master Type 2'
+                    }
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
                     product.instructions = "150 - PCIE - Cooler Master Type 1 (opposite, bottom left double, no cross)"
                 }
 

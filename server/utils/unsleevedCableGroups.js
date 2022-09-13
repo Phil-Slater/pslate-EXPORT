@@ -12,7 +12,7 @@ const unsleevedCableGroups = {
 
     unsleevedPCIEGroupOne: ['SSUPD Meshlicious 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'SSUPD Meshlicious 6 Pin PCIE Unsleeved Custom Cable', 'FormD T1 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'FormD T1 6 Pin PCIE Unsleeved Custom Cable', 'XTIA Xproto 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'XTIA Xproto 6 Pin PCIE Unsleeved Custom Cable', 'DAN Cases A4-SFX 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'DAN Cases A4-SFX 6 Pin PCIE Unsleeved Custom Cable', 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Unsleeved Custom Cable'],
 
-    unsleevedPCIEGroupTwo: ['Cooler Master NR200 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'Cooler Master NR200 6 Pin PCIE Unsleeved Custom Cable', 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable', 'Sliger S610/S620 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'Sliger S610/S620 6 Pin PCIE Unsleeved Custom Cable'],
+    unsleevedPCIEGroupTwo: ['Cooler Master NR200 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'Cooler Master NR200 6 Pin PCIE Unsleeved Custom Cable', 'Sliger S610/S620 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'Sliger S610/S620 6 Pin PCIE Unsleeved Custom Cable'],
 
     unsleevedPCIEGroupThree: ['LOUQE Ghost S1 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'LOUQE Ghost S1 6 Pin PCIE Unsleeved Custom Cable', 'LOUQE RAW S1 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'LOUQE RAW S1 6 Pin PCIE Unsleeved Custom Cable', 'Nouvolo Steck 8 (6+2) Pin PCIE Unsleeved Custom Cable', 'Nouvolo Steck 6 Pin PCIE Unsleeved Custom Cable'],
 
