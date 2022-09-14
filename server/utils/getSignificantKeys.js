@@ -19,7 +19,7 @@ function getSignificantKeys(orders) {
                 }
 
                 // || property.name.includes('GPU Make')
-                if (property.name.includes('GPUs') || property.name === 'GPU Model' || property.name.includes('GPU Make')) {
+                if (property.name.includes('GPUs') || property.name === 'GPU Model' || property.name.includes('GPU Make') || property.value === 'Radeon VII') {
                     product.gpuModel = property.value
                 }
 

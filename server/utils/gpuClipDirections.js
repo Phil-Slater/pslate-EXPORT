@@ -41,7 +41,7 @@ const gpuClipDirections = {
         // vega64
         'ASRock Radeon RX VEGA 64 Phantom Gaming', 'Gigabyte Radeon RX VEGA 64 Blower', 'HIS Radeon RX VEGA 64 AIR', 'HIS Radeon RX VEGA 64 Limited Edition', 'MSI Radeon RX VEGA 64', 'MSI Radeon RX VEGA 64 AIR BOOST OC', 'MSI Radeon RX VEGA 64 IRON', 'MSI Radeon RX VEGA 64 WAVE', 'PowerColor Radeon RX VEGA 64', 'Sapphire Radeon RX VEGA 64', 'XFX Radeon RX VEGA 64',
         // radeon VII
-        'Radeon VII - Reference Model',
+        'Radeon VII',
         // vega 56
         'ASRock Radeon RX VEGA 56 Phantom Gaming X', 'MSI Radeon RX VEGA 56 AIR BOOST OC', 'MSI Radeon RX VEGA 56', 'PowerColor Radeon RX VEGA 56', 'PowerColor Radeon RX VEGA 56 NANO', 'Sapphire Radeon RX VEGA 56', 'Sapphire Radeon RX VEGA 56', 'Sapphire Radeon RX VEGA 56 PULSE', 'XFX Radeon RX VEGA 56 Blower',
         // 2080ti
