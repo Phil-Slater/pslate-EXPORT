@@ -77,7 +77,7 @@ function Order() {
             <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
             <p>{product.combs ? <span className='combs'>{product.combs}</span> : null}</p>
             {product.design ? <img src={product.design} className="product-image" /> : null}
-            {product.sku.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
+            {product.sku?.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
             {
                 product.properties.map((property, index) => {
                     if (property.name?.includes('Color')) {
