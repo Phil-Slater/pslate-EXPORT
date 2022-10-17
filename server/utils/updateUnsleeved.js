@@ -390,7 +390,7 @@ function updateUnsleeved(orders) {
                         }
                     } else if (product.gpuMountPosition?.includes('Vertical GPU')) {
                         if (gCD.fanClips.includes(product.gpuModel)) {
-                            product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
+                            product.instructions = '230/205 - PCIE - Cooler Master Type 1'
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
                             product.instructions = '220 - PCIE - Cooler Master Type 1'
                         }
