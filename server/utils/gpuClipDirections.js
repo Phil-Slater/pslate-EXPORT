@@ -11,7 +11,7 @@ const gpuClipDirections = {
         // 3080ti
         'NVIDIA GeForce RTX 3080 Ti Founders Edition', 'EVGA GeForce RTX 3080 Ti FTW3 Ultra Gaming', 'EVGA GeForce RTX 3080 Ti XC3 GAMING', 'GALAX GeForce RTX 3080 Ti SG (1-Click OC)', 'GALAX GeForce RTX 3080 Ti EXG (1-Click OC)', 'Inno3D GeForce RTX 3080 Ti iChill X4', 'PNY GeForce RTX 3080 Ti XLR8 Gaming UPRISING EPIC-X RGB',
         // 6950xt
-        'ASRock Radeon RX 6950 XT OC',
+        'ASRock Radeon RX 6950 XT OC', 'AMD Radeon RX 6950 XT', 
         // 6900xt
         'Radeon RX 6900 XT - Reference Model', 'PowerColor Radeon RX 6900 XT Red Devil Limited Edition',
         // 6800xt
