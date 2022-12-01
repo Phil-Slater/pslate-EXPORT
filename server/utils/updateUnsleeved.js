@@ -128,8 +128,10 @@ function updateUnsleeved(orders) {
             }
 
             else if (product.title === 'Single SATA Power Unsleeved Custom Cable - Choose Your Length') {
-                const splitPsuModel = product.psuModel.split(" ")
-                product.instructions = `${splitPsuModel[0]} SATA build`
+                if (product.psuModel) {
+                    const splitPsuModel = product.psuModel.split(" ")
+                    product.instructions = `${splitPsuModel[0]} SATA build`
+                }
                 if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
                     product.instructions = 'Cooler Master SATA build'
                 } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
@@ -138,8 +140,10 @@ function updateUnsleeved(orders) {
             }
 
             else if (product.title === 'Molex Power Unsleeved Custom Cable - Choose Your Length') {
-                const splitPsuModel = product.psuModel.split(" ")
-                product.instructions = `${splitPsuModel[0]} Molex build`
+                if (product.psuModel) {
+                    const splitPsuModel = product.psuModel.split(" ")
+                    product.instructions = `${splitPsuModel[0]} Molex build`
+                }
                 if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
                     product.instructions = 'Cooler Master Molex build'
                 } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
