@@ -14,7 +14,7 @@ function getSignificantKeys(orders) {
                     product.psuModel = property.value
                 }
 
-                if (property.name.includes('Motherboards') || property.name.includes('Motherboard') {
+                if (property.name.includes('Motherboards') || property.name.includes('Motherboard')) {
                     product.moboModel = property.value
                 }
 
