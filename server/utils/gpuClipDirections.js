@@ -11,7 +11,7 @@ const gpuClipDirections = {
         // 3080ti
         'NVIDIA GeForce RTX 3080 Ti Founders Edition', 'EVGA GeForce RTX 3080 Ti FTW3 Ultra Gaming', 'EVGA GeForce RTX 3080 Ti XC3 GAMING', 'GALAX GeForce RTX 3080 Ti SG (1-Click OC)', 'GALAX GeForce RTX 3080 Ti EXG (1-Click OC)', 'Inno3D GeForce RTX 3080 Ti iChill X4', 'PNY GeForce RTX 3080 Ti XLR8 Gaming UPRISING EPIC-X RGB',
         // 6950xt
-        'ASRock Radeon RX 6950 XT OC', 'AMD Radeon RX 6950 XT', 'AMD Radeon RX 6950 XT ', 
+        'ASRock Radeon RX 6950 XT OC', 'AMD Radeon RX 6950 XT', 'AMD Radeon RX 6950 XT ',
         // 6900xt
         'Radeon RX 6900 XT - Reference Model', 'PowerColor Radeon RX 6900 XT Red Devil Limited Edition',
         // 6800xt
@@ -76,14 +76,14 @@ const gpuClipDirections = {
         'MSI Radeon RX 570 GT OC',
 
         // others
-        'Evga 1080 ti SC2', 'Evga SC2', 'EVGA RTX 3080 XC3 Black', 'Powercolor 6600XT', 'EVGA RTX 3080 XC3 Ultra', 'EVGA 3080 FTW3', 'Amd radeon 6900 xt', 'PNY XLR8 Gaming REVEL EPIC-X RGB', "NVIDIA GeForce RTX 2080 SUPER Founders Edition"
+        'Evga 1080 ti SC2', 'Evga SC2', 'EVGA RTX 3080 XC3 Black', 'Powercolor 6600XT', 'EVGA RTX 3080 XC3 Ultra', 'EVGA 3080 FTW3', 'Amd radeon 6900 xt', 'PNY XLR8 Gaming REVEL EPIC-X RGB', "NVIDIA GeForce RTX 2080 SUPER Founders Edition", 'EVGA RTX 3080 FTW3 Hydro Copper Ultra HC'
     ],
 
     backplateClips: [
         // 3090
         'Asus GeForce RTX 3090 Strix Gaming OC', 'Asus GeForce RTX 3090 TUF Gaming OC', 'Gainward GeForce RTX 3090 Phantom GS', 'Gigabyte GeForce RTX 3090 Aorus Master Xtreme', 'Gigabyte GeForce RTX 3090 GAMING OC', 'Inno3D Gaming X3 GeForce RTX 3090', 'MSI GeForce RTX 3090 Gaming X Trio Suprim', 'MSI GeForce RTX 3090 Ventus 3X OC', 'Palit GeForce RTX 3090 GameRock', 'Zotac GeForce RTX 3090 Gaming Trinity', 'Zotac GeForce RTX 3090 GAMING AMP Extreme Holo', 'ZOTAC GAMING GeForce RTX 3090 ArcticStorm', 'Gigabyte GeForce RTX 3090 Aorus Xtreme', 'Gigabyte GeForce RTX 3090 TURBO',
         // 3080ti
-        'Asus GeForce RTX 3080 Ti ROG Strix Gaming OC', 'Asus GeForce RTX 3080 Ti TUF Gaming OC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'Gigabyte GeForce RTX 3080 Ti GAMING OC', 'Gigabyte GeForce RTX 3080 Ti Vision OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti AMP Holo', 
+        'Asus GeForce RTX 3080 Ti ROG Strix Gaming OC', 'Asus GeForce RTX 3080 Ti TUF Gaming OC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'Gigabyte GeForce RTX 3080 Ti GAMING OC', 'Gigabyte GeForce RTX 3080 Ti Vision OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti AMP Holo',
         // 6950xt
         'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Gigabyte Radeon RX 6950 XT GAMING OC', 'MSI Radeon RX 6950 XT GAMING X TRIO', 'Sapphire Radeon RX 6950 XT NITRO+', 'Sapphire Radeon RX 6950 XT TOXIC Limited Edition',
         // 6900xt
@@ -156,7 +156,7 @@ const gpuClipDirections = {
         'ASRock Radeon RX 570 Phantom Gaming D', 'ASRock Radeon RX 570 Phantom Gaming X', 'Asus Radeon RX 570 AREZ Expedition', 'Asus Radeon RX 570 AREZ STRIX OC', 'Asus Radeon RX 570 Expedition', 'Asus Radeon RX 570 ROG STRIX', 'Asus Radeon RX 570 STRIX GAMING OC', 'Gigabyte Radeon RX 570 GAMING 8G', 'Gigabyte Radeon RX 570 AORUS', 'Gigabyte Radeon RX 570 GAMING MI', 'MSI Radeon RX 570 ARMOR OC', 'MSI Radeon RX 570 GAMING X', 'PowerColor Radeon RX 570', 'PowerColor Radeon RX 570 Red Devil', 'PowerColor Radeon RX 570 Red Dragon', 'Sapphire Radeon RX 570 NITRO+', 'Sapphire Radeon RX 570 PULSE', 'Sapphire Radeon RX 570 PULSE ITX', 'Sapphire Radeon RX 570 PULSE UEFI', 'VisionTek Radeon RX 570', 'XFX Radeon RX 570 Black Edition', 'XFX Radeon RX 570 RS XXX', 'XFX Radeon RX 570', 'XFX Radeon RX 570 XXX', ~
 
         // others
-        'asus tuf 3070ti', 'asus ', 'ASUS TUF Gaming GeForce RTX 3070 8GB GDDR6', 'TUF-RTX3070TI-O8G-GAMING', "MSI GeForce RTX 3060 Ti 'VENTUS 3X OC", 'msi nvidia geforce gtx 1080', 'GIGABYTE GeForce RTX 3080', 'Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled', 'zotac GeForce RTX 3080 Trinity OC White Edition LHR', 'v850 SFX COOLERMASTER', 'MSI RX580 8GB ARMOR OC', 'Gigabyte GeForce RTX 3060 GAMING OC ']
+        'asus tuf 3070ti', 'asus ', 'ASUS TUF Gaming GeForce RTX 3070 8GB GDDR6', 'TUF-RTX3070TI-O8G-GAMING', "MSI GeForce RTX 3060 Ti 'VENTUS 3X OC", 'msi nvidia geforce gtx 1080', 'GIGABYTE GeForce RTX 3080', 'Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled', 'zotac GeForce RTX 3080 Trinity OC White Edition LHR', 'v850 SFX COOLERMASTER', 'MSI RX580 8GB ARMOR OC', 'Gigabyte GeForce RTX 3060 GAMING OC ', 'MSI NVIDIA GeForce RTX 3080 Gaming Z Trio LHR']
 }
 
 module.exports = gpuClipDirections

@@ -1125,6 +1125,59 @@ function updateSleeved(orders) {
 
             // next PSU model here
 
+            // logic for sleeved extensions
+            if (product.title.includes("Create Your Own")) {
+                product.crimps = 'Same crimps - Male'
+                product.combs = "3 combs"
+                if (product.title === "Create Your Own 24 Pin Extension Cable") {
+                    if (product.variant_title === "200mm") {
+                        product.instructions = "202/184 - Latch down, long on top"
+                    } else if (product.variant_title === "250mm") {
+                        product.instructions = "250/232 - Latch down, long on top"
+                    } else if (product.variant_title === "300mm") {
+                        product.instructions = "304/286 - Latch down, long on top"
+                    }
+                } else if (product.title === "Create Your Own 8 Pin/4+4 Pin CPU/EPS Extension Cable") {
+                    if (product.variant_title === "200mm") {
+                        product.instructions = "202/184 - Latch down, long on top - 4+4 and 8 EPS male connectors"
+                    } else if (product.variant_title === "250mm") {
+                        product.instructions = "250/232 - Latch down, long on top - 4+4 and 8 EPS male connectors"
+                    } else if (product.variant_title === "300mm") {
+                        product.instructions = "304/286 - Latch down, long on top - 4+4 and 8 EPS male connectors"
+                    }
+                } else if (product.title === "Create Your Own 8 Pin PCIE Extension Cable" || product.title === "Create Your Own 6 Pin PCIE Extension Cable") {
+                    if (product.variant_title === "200mm") {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = "202/184 - Latch down, long on top"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = "202/184 - Latch UP, long on top"
+                        }
+                    } else if (product.variant_title === "250mm") {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = "250/232 - Latch down, long on top"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = "250/232 - Latch UP, long on top"
+                        }
+                    } else if (product.variant_title === "300mm") {
+                        if (gCD.fanClips.includes(product.gpuModel)) {
+                            product.instructions = "304/286 - Latch down, long on top"
+                        } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                            product.instructions = "304/286 - Latch UP, long on top"
+                        }
+                    }
+                    // if (gCD.fanClips.includes(product.gpuModel)) {
+                    //     product.crimps = 'Same crimps - Female'
+                    //     product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
+                    //     product.doubles = 'Bottom right double - #4 is double'
+                    //     product.combs = "2 combs"
+                    // } else if (gCD.backplateClips.includes(product.gpuModel)) {
+                    //     product.crimps = 'Opposite crimps'
+                    //     product.instructions = 'All 232'
+                    //     product.doubles = 'Bottom left double - #1 is double'
+                    //     product.combs = "2 combs"
+                    // }
+                }
+            }
         })
     })
     return orders

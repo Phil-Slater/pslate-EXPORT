@@ -171,7 +171,7 @@ function filterSleevedOrders(orders) {
     orders.data.orders.forEach(order => {
         order.line_items.forEach(product => {
             let orderNumberCheck = sleevedOrders.some(key => key.order_number === order.order_number)
-            if (!orderNumberCheck && product.title.includes('Sleeved')) {
+            if (!orderNumberCheck && (product.title.includes('Sleeved') || product.title.includes('Create Your Own'))) {
                 sleevedOrders.push(order)
             }
         })

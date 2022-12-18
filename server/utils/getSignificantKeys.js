@@ -6,9 +6,15 @@ function getSignificantKeys(orders) {
     orders.forEach(order => {
         order.total_items = 0
         order.line_items.forEach(product => {
+            console.log(product)
             delete product.name
             order.total_items += product.quantity
+
+            // if (product.title.includes("Create Your Own")) {
+            //     product.properties.push({ "name": "Length", "value": product.variant_title })
+            // }
             product.properties.forEach(property => {
+                //console.log(property)
 
                 if (psuModels.includes(property.value)) {
                     product.psuModel = property.value
@@ -68,7 +74,7 @@ function getSignificantKeys(orders) {
                     delete property.value
                 }
             })
-            //console.log(product)
+            console.log(product.properties)
         })
     })
     return orders
