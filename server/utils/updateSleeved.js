@@ -1165,17 +1165,6 @@ function updateSleeved(orders) {
                             product.instructions = "304/286 - Latch UP, long on top"
                         }
                     }
-                    // if (gCD.fanClips.includes(product.gpuModel)) {
-                    //     product.crimps = 'Same crimps - Female'
-                    //     product.instructions = '244/220 - Long on bottom - Cross then 2 combs'
-                    //     product.doubles = 'Bottom right double - #4 is double'
-                    //     product.combs = "2 combs"
-                    // } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                    //     product.crimps = 'Opposite crimps'
-                    //     product.instructions = 'All 232'
-                    //     product.doubles = 'Bottom left double - #1 is double'
-                    //     product.combs = "2 combs"
-                    // }
                 }
             }
         })
