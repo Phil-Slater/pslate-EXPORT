@@ -17,7 +17,7 @@ const gpuClipDirections = {
         // 6800xt
         'AMD Radeon RX 6800 XT - Reference Model', 'ASRock Radeon RX 6800 XT Phantom Gaming D OC', 'PowerColor Radeon RX 6800 XT Red Devil LE', 'PowerColor Radeon RX 6800 XT Red Devil OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Liquid Devil',
         // 6800
-        'AMD Radeon RX 6800', 'ASRock Radeon RX 6800', 'Asus Radeon RX 6800', 'XFX Radeon RX 6800', 'Gigabyte Radeon RX 6800', 'MSI Radeon RX 6800', 'PowerColor Radeon RX 6800 Fighter OC', 'PowerColor Radeon RX 6800 Red Devil LE OC', 'PowerColor Radeon RX 6800 Red Dragon OC', 'Sapphire Radeon RX 6800', 'Sapphire Radeon RX 6800 Pulse',
+        'AMD Radeon RX 6800', 'ASRock Radeon RX 6800', 'Asus Radeon RX 6800', 'XFX Radeon RX 6800', 'Gigabyte Radeon RX 6800', 'MSI Radeon RX 6800', 'PowerColor Radeon RX 6800 Fighter OC', 'PowerColor Radeon RX 6800 Red Devil LE OC', 'PowerColor Radeon RX 6800 Red Dragon OC',
         // 3080
         'NVIDIA GeForce RTX 3080 Founders Edition', 'EVGA GeForce RTX 3080 FTW3 Ultra Hybrid', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra Hybrid', 'GALAX GeForce RTX 3080 SG', 'GALAX GeForce RTX 3080 EX', 'KFA2 GeForce RTX 3080 EX Gamer', 'KFA2 GeForce RTX 3080 SG (1-Click OC)', 'Palit GeForce RTX 3080 GamingPro OC', 'PNY GeForce RTX 3080 XLR8 Gaming REVEL EPIC-X RGB', 'EVGA GeForce RTX 3080 FTW3 Ultra', 'EVGA GeForce RTX 3080 XC3 Gaming Ultra', 'Gainward GeForce RTX 3080 Phoenix',
         //6750xt
@@ -91,7 +91,7 @@ const gpuClipDirections = {
         // 6800xt
         'ASRock Radeon RX 6800 XT Taichi X OC ', 'Asus Radeon RX 6800 XT Strix LC Gaming OC', 'ASUS Radeon RX 6800 XT TUF Gaming', 'MSI Radeon RX 6800 XT Gaming X Trio', 'Sapphire Radeon RX 6800 XT NITRO+', 'Sapphire Radeon RX 6800 XT NITRO+ SE', 'Sapphire Radeon RX 6800 XT Pulse',
         // 6800
-        'ASRock Radeon RX 6800 Challenger Pro OC', 'ASRock Radeon RX 6800 Phantom Gaming D OC', 'Asus Radeon RX 6800 Strix Gaming OC', 'Asus Radeon RX 6800 TUF Gaming OC', 'Gigabyte Radeon RX 6800 Gaming OC', 'PowerColor Radeon RX 6800', 'Sapphire Radeon RX 6800 NITRO+',
+        'ASRock Radeon RX 6800 Challenger Pro OC', 'ASRock Radeon RX 6800 Phantom Gaming D OC', 'Asus Radeon RX 6800 Strix Gaming OC', 'Asus Radeon RX 6800 TUF Gaming OC', 'Gigabyte Radeon RX 6800 Gaming OC', 'PowerColor Radeon RX 6800', 'Sapphire Radeon RX 6800', 'Sapphire Radeon RX 6800 NITRO+', 'Sapphire Radeon RX 6800 Pulse',
         // 3080
         'Asus GeForce RTX 3080 Strix Gaming OC', 'Asus GeForce RTX 3080 TUF Gaming OC', 'Gigabyte GeForce RTX 3080 Aorus Master', 'Gigabyte GeForce RTX 3080 Aorus Xtreme', 'Gigabyte GeForce RTX 3080 Aorus Xtreme Waterforce', 'Gigabyte GeForce RTX 3080 Eagle OC', 'Gigabyte GeForce RTX 3080 Gaming OC', 'Gigabyte GeForce RTX 3080 Vision OC', 'MSI GeForce RTX 3080 Gaming X Trio', 'MSI GeForce RTX 3080 Suprim X', 'MSI GeForce RTX 3080 Ventus 3X OC', 'Palit GeForce RTX 3080 GameRock', 'Zotac GeForce RTX 3080 Gaming Amp Holo', 'Zotac GeForce RTX 3080 Trinity OC',
         // 6750xt
