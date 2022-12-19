@@ -1148,21 +1148,21 @@ function updateSleeved(orders) {
                 } else if (product.title === "Create Your Own 8 Pin PCIE Extension Cable" || product.title === "Create Your Own 6 Pin PCIE Extension Cable") {
                     if (product.variant_title === "200mm") {
                         if (gCD.fanClips.includes(product.gpuModel)) {
-                            product.instructions = "202/184 - Latch down, long on top"
+                            product.instructions = "202/184 - Latch down, long on top - 6+2 and 8 PCIE male connectors"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                            product.instructions = "202/184 - Latch UP, long on top"
+                            product.instructions = "202/184 - Latch UP, long on top - 6+2 and 8 PCIE male connectors"
                         }
                     } else if (product.variant_title === "250mm") {
                         if (gCD.fanClips.includes(product.gpuModel)) {
-                            product.instructions = "250/232 - Latch down, long on top"
+                            product.instructions = "250/232 - Latch down, long on top - 6+2 and 8 PCIE male connectors"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                            product.instructions = "250/232 - Latch UP, long on top"
+                            product.instructions = "250/232 - Latch UP, long on top - 6+2 and 8 PCIE male connectors"
                         }
                     } else if (product.variant_title === "300mm") {
                         if (gCD.fanClips.includes(product.gpuModel)) {
-                            product.instructions = "304/286 - Latch down, long on top"
+                            product.instructions = "304/286 - Latch down, long on top - 6+2 and 8 PCIE male connectors"
                         } else if (gCD.backplateClips.includes(product.gpuModel)) {
-                            product.instructions = "304/286 - Latch UP, long on top"
+                            product.instructions = "304/286 - Latch UP, long on top - 6+2 and 8 PCIE male connectors"
                         }
                     }
                 }
