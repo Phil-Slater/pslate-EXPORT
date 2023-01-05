@@ -25,6 +25,7 @@ import Guest from './components/Guest';
 import SleevedDoubles from './components/Sleeved Orders/SleevedDoubles';
 import AdapterCounts from './components/Adapter Counts/AdapterCounts';
 import MissingCables from './components/Unsleeved Orders/MissingCables';
+import UnsleevedCounts from './components/Unsleeved Orders/UnsleevedCounts';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
@@ -87,6 +88,10 @@ ReactDOM.render(
             <Route path='/adapter-counts' element={
               <ProtectedRoute>
                 <AdapterCounts />
+              </ProtectedRoute>} />
+            <Route path='/unsleeved-counts' element={
+              <ProtectedRoute>
+                <UnsleevedCounts />
               </ProtectedRoute>} />
             <Route path='/missing-cables' element={
               <ProtectedRoute>

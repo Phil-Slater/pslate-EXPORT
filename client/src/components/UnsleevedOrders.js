@@ -53,7 +53,8 @@ function UnsleevedOrders() {
         <div>
             <h1 className='text-white font-bold text-5xl p-4 text-center'>Unsleeved Orders</h1>
             <div className='buttons-div'>
-                {orders ? <NavLink to="/missing-cables"><button className="py-4 w-80 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200 mb-2">View Missing Cables</button></NavLink> : null}
+                {orders ? <NavLink to="/missing-cables"><button className="py-4 w-60 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200 mb-2">View Missing Cables</button></NavLink> : null}
+                {orders ? <NavLink to="/unsleeved-counts"><button className="py-4 w-60 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl transition duration-200 mb-2">View Unsleeved Counts</button></NavLink> : null}
             </div>
             <div className='order-container'>{ordersMapped}</div>
         </div>

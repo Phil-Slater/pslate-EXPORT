@@ -92,6 +92,16 @@ router.get('/adapter-counts', authenticate, async (req, res) => {
     res.json(adapterProducts)
 })
 
+router.get('/unsleeved-counts', authenticate, async (req, res) => {
+    const orders = await getOrders()
+    const sleevedFiltered = filterUnsleevedOrders(orders)
+    const rushFiltered = filterRushOrders(sleevedFiltered)
+    const orderKeysAdded = getSignificantKeys(rushFiltered)
+    const unsleevedUpdated = updateUnsleeved(orderKeysAdded)
+    const unsleevedProducts = filterUnsleevedProducts(unsleevedUpdated)
+    res.json(unsleevedProducts)
+})
+
 router.put('/order/:id', async (req, res) => {
     const id = req.params.id
     const tag = req.body.tag
@@ -147,7 +157,6 @@ async function updateOrder(id, tag) {
                 sanitizeMissingDB(orderUpdated)
                 return orderUpdated
             }
-
         } catch (error) {
             console.log(error)
         }
@@ -253,6 +262,18 @@ function filterAdapterProducts(orders) {
     })
     console.log(adapterProducts.length)
     return adapterProducts
+}
+
+function filterUnsleevedProducts(orders) {
+    let unsleevedProducts = []
+    orders.forEach(order => {
+        order.line_items.forEach(product => {
+            if (product.title.includes('Unsleeved')) {
+                unsleevedProducts.push(product)
+            }
+        })
+    })
+    return unsleevedProducts
 }
 
 function getPowerSwitchOrders(orders) {
