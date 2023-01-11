@@ -4,6 +4,12 @@
 const gpuClipDirections = {
 
     fanClips: [
+        // 7900 XT
+        'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT',
+        // 7900 XTX
+        'AMD Radeon RX 7900 XTX', 'ASRock Radeon RX 7900 XTX', 'Asus Radeon RX 7900 XTX', 'Gigabyte Radeon RX 7900 XTX', 'PowerColor Red Devil Radeon RX 7900 XTX', 'PowerColor Radeon RX 7900 XTX', 'Sapphire Radeon RX 7900 XTX', 'XFX Radeon RX 7900 XTX',
+        // Intel ARC
+        'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770', 
         // 3090ti
         'NVIDIA GeForce RTX 3090 Ti Founders Edition', 'Asus GeForce RTX 3090 Ti STRIX LC GAMING OC', 'EVGA GeForce RTX 3090 Ti FTW3 ULTRA GAMING', 'GALAX GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'Gigabyte GeForce RTX 3090 Ti AORUS XTREME WATERFORCE', 'Gigabyte GeForce RTX 3090 Ti GAMING OC', 'Inno3D GeForce RTX 3090 Ti X3 OC', 'KFA2 GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'MSI GeForce RTX 3090 Ti GAMING X TRIO', 'MSI GeForce RTX 3090 Ti  SUPRIM X', 'Palit GeForce RTX 3090 Ti GameRock OC', 'PNY GeForce RTX 3090 Ti XLR8 Gaming UPRISING EPIC-X RGB OC', 'Zotac GeForce RTX 3090 Ti AMP Extreme Holo',
         // 3090
@@ -80,6 +86,12 @@ const gpuClipDirections = {
     ],
 
     backplateClips: [
+        // 7900 XT
+        'ASRock Phantom Gaming OC Radeon RX 7900 XT', 'ASRock Taichi OC Radeon RX 7900 XT', 'Asus TUF GAMING OC Radeon RX 7900 XT', 'Gigabyte GAMING OC Radeon RX 7900 XT', 'PowerColor Hellhound Radeon RX 7900 XT', 'Sapphire NITRO+ Radeon RX 7900 XT', 'Sapphire PULSE Radeon RX 7900 XT', 'XFX Speedster MERC 310 Radeon RX 7900 XT',
+        // 7900 XTX
+        'ASRock Phantom Gaming OC Radeon RX 7900 XTX', 'ASRock Taichi OC Radeon RX 7900 XTX', 'Asus TUF GAMING OC Radeon RX 7900 XTX', 'Gigabyte AORUS ELITE Radeon RX 7900 XTX', 'Gigabyte GAMING OC Radeon RX 7900 XTX', 'PowerColor Hellhound Radeon RX 7900 XTX', 'Sapphire NITRO+ Radeon RX 7900 XTX', 'Sapphire PULSE Radeon RX 7900 XTX', 'XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX',
+        // Intel Arc
+        'ASRock Phantom Gaming D Arc A770', 'ASRock Intel Arc A380 Challenger ITX', 'ASRock Challenger D Arc A750',
         // 3090
         'Asus GeForce RTX 3090 Strix Gaming OC', 'Asus GeForce RTX 3090 TUF Gaming OC', 'Gainward GeForce RTX 3090 Phantom GS', 'Gigabyte GeForce RTX 3090 Aorus Master Xtreme', 'Gigabyte GeForce RTX 3090 GAMING OC', 'Inno3D Gaming X3 GeForce RTX 3090', 'MSI GeForce RTX 3090 Gaming X Trio Suprim', 'MSI GeForce RTX 3090 Ventus 3X OC', 'Palit GeForce RTX 3090 GameRock', 'Zotac GeForce RTX 3090 Gaming Trinity', 'Zotac GeForce RTX 3090 GAMING AMP Extreme Holo', 'ZOTAC GAMING GeForce RTX 3090 ArcticStorm', 'Gigabyte GeForce RTX 3090 Aorus Xtreme', 'Gigabyte GeForce RTX 3090 TURBO',
         // 3080ti
