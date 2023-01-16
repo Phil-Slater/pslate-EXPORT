@@ -269,6 +269,10 @@ function filterUnsleevedProducts(orders) {
     orders.forEach(order => {
         order.line_items.forEach(product => {
             if (product.title.includes('Unsleeved')) {
+                if (order.rushOrder) {
+                    product.rushOrder = "RUSH ORDER"
+                }
+                product.orderNumber = order.order_number
                 unsleevedProducts.push(product)
             }
         })
