@@ -13,19 +13,15 @@ const UnsleevedCounts = () => {
     const fetchUnsleevedProducts = async () => {
         try {
             const orders = await axios.get('/unsleeved-counts')
-            console.log(orders.data)
+            // console.log(orders.data)
             setProducts(orders.data)
         } catch (error) {
             console.log(error)
         }
     }
 
-    // const productsMapped = products && products.map((product) => {
-    //     return <div key={product.id} className="missing-div">
-    //         <h1>{product.instructions}</h1>
-    //     </div>
-    // })
-
+    const cyol = products && products.filter(product => product.title.includes('Choose Your Length'))
+    const cyolRush = cyol && cyol.filter(product => product.rushOrder)
     const atx24 = products && products.filter(product => product.title.includes('24 Pin') && !product.title.includes('Choose Your Length'))
     const pcie86 = products && products.filter(product => product.title.includes('8 (6+2)') || product.title.includes('6 Pin') && !product.title.includes('Choose Your Length'))
     const eps = products && products.filter(product => product.title.includes('CPU/EPS') && !product.title.includes('Choose Your Length'))
@@ -36,6 +32,8 @@ const UnsleevedCounts = () => {
     return (
         <div className='missing-container' style={{ flexDirection: "column" }}>
             <h1 className='text-white font-bold text-5xl p-4 text-center'>Unsleeved Counts</h1>
+            {cyol ? <><h1 className='text-white font-bold text-4xl p-4 text-center'>CYOL Total: {cyol.length}</h1>
+                <h1 className='text-white font-bold text-4xl p-4 text-center'>CYOL Rush: {cyolRush.length}</h1></> : null}
             <h1 className='text-white font-bold text-4xl p-4 text-center'>24 pin:</h1>
             <UnsleevedCountType products={atx24} />
             <h1 className='text-white font-bold text-4xl p-4 text-center'>EPS:</h1>
