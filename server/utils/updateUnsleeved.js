@@ -194,7 +194,7 @@ function updateUnsleeved(orders) {
                 } else if (product.title === 'XTIA Xproto 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "180 - 24 pin - Corsair Type 3"
                 } else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
-                    product.instructions = "295 - 24 pin - Corsair Type 1"
+                    product.instructions = "290 **CURVED** - 24 pin - Corsair Type 1"
                 }
 
                 // EPS
@@ -483,7 +483,7 @@ function updateUnsleeved(orders) {
 
                 // EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
-                    product.instructions = "310 - EPS - Silverstone Type 1 (like 280 Silverstone - Type 1 but longer"
+                    product.instructions = "310 - EPS - Silverstone Type 1 (like 280 Silverstone - Type 1 but longer)"
                 }
 
                 // 8 & 6 PCIE
