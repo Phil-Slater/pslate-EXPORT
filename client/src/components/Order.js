@@ -6,16 +6,22 @@ import Color from './Color';
 //import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
 import OrderNote from './OrderNote';
 import Sleeved12PinHighlight from './Sleeved12PinHighlight';
+import IsLoading from './Loading/IsLoading';
+import LoadingAnimation from './Loading/LoadingAnimation';
+
 
 function Order() {
 
     const [order, setOrder] = useState()
     const [style, setStyle] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const params = useParams()
 
     useEffect(() => {
+        setLoading(true)
         fetchOrder(params.id)
+        setLoading(false)
     }, [])
 
     const fetchOrder = async (orderNumber) => {
@@ -28,7 +34,6 @@ function Order() {
     }
 
     const updateStyle = (id) => {
-        console.log('single clicked!')
         if (style.includes(id)) {
             setStyle(style.filter(styleId => styleId !== id))
         } else {
@@ -46,7 +51,6 @@ function Order() {
     }
 
     const handleAddMissingCable = async (product, order) => {
-        console.log('double clicked!')
         try {
             const cable = await axios.post('/cable/missing', {
                 product: product,
@@ -92,13 +96,13 @@ function Order() {
         </div >
     })
     console.log(order)
-
     return (
 
         <div className='order-container'>
+            {order ? null : <LoadingAnimation />}
             <div className='order-button'>
                 {order ? order.tags ? <h2 className='order-note' style={{ textAlign: "center" }}>{order.tags}</h2> : null : null}
-                <h1>{order ? <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a> : `Loading...`}</h1>
+                <h1>{order && <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a>}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
                 <h2 style={{ marginBottom: '1em' }}>{order ? order.created_at : null}</h2>
                 <h3 className='rush'>{order ? order.rushOrder ? order.rushOrder : null : null}</h3>
@@ -107,14 +111,15 @@ function Order() {
                 <h3>{order ?
                     order.shipping_lines[0].title === 'Economy' ? 'Shipping method: First Class Package' :
                         `Shipping method: ${order.shipping_lines[0].title}` : null}</h3>
-                <button onClick={() => { handleUpdateOrderTags(order.id, "Ready to Ship") }}>Mark as Ready to Ship</button>
-                <button onClick={() => { handleUpdateOrderTags(order.id, "Unsleeved Done; Missing Sleeved") }} style={{ marginTop: "2em" }}>Mark as Unsleeved Items Complete</button>
+                <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+                    <button onClick={() => { handleUpdateOrderTags(order.id, "Ready to Ship") }} className="order-tag-button">Mark as Ready to Ship</button>
+                    <button onClick={() => { handleUpdateOrderTags(order.id, "Unsleeved Done; Missing Sleeved") }} className="order-tag-button">Mark as Unsleeved Items Complete</button>
+                </div>
             </div>
             {products}
         </div>
 
     )
 }
-
 
 export default Order
