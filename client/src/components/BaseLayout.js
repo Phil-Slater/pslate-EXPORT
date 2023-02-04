@@ -1,11 +1,11 @@
 
 import Menu from "./Menu"
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 
-function BaseLayout(props) {
+const BaseLayout = (props) => {
 
-    const { pathname } = useLocation()
-    // {pathname !== '/sign-up' ?   : null}
+    // const { pathname } = useLocation()
+
     return (
         <div>
             <Menu />

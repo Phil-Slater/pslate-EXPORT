@@ -10,6 +10,8 @@ function getSignificantKeys(orders) {
             order.total_items += product.quantity
             product.properties.forEach(property => {
 
+                if (property.value === "90 degree rotated") console.log("rotated:", order.order_number)
+
                 if (psuModels.includes(property.value)) {
                     product.psuModel = property.value
                 }
