@@ -4,10 +4,9 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding-top: 40vh;
     background-color: rgba(10, 10, 10, 0.7);
     z-index: 1;
-    color: white;
-    font-size: 2rem;
 }

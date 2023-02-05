@@ -3,25 +3,18 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
 import PSUModel from './PSUModel';
 import Color from './Color';
-//import useSingleAndDoubleClick from '../utils/useSingleAndDoubleClick'
 import OrderNote from './OrderNote';
 import Sleeved12PinHighlight from './Sleeved12PinHighlight';
-import IsLoading from './Loading/IsLoading';
-import LoadingAnimation from './Loading/LoadingAnimation';
-
 
 function Order() {
 
     const [order, setOrder] = useState()
     const [style, setStyle] = useState([])
-    const [loading, setLoading] = useState(false)
 
     const params = useParams()
 
     useEffect(() => {
-        setLoading(true)
         fetchOrder(params.id)
-        setLoading(false)
     }, [])
 
     const fetchOrder = async (orderNumber) => {
@@ -80,7 +73,7 @@ function Order() {
             <p>{product.doubles ? product.doubles : null}</p>
             <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
             <p>{product.combs ? <span className='combs'>{product.combs}</span> : null}</p>
-            {product.design ? <img src={product.design} className="product-image" /> : null}
+            {product.design ? <img src={product.design} className="product-image" alt="" /> : null}
             {product.sku?.includes('Power Switch') ? <p><b>Type:</b> {product.sku}</p> : null}
             {
                 product.properties.map((property, index) => {
@@ -90,6 +83,7 @@ function Order() {
                     if (property.name?.includes('Length')) {
                         return <p key={index}><b>{property.name}:</b> {property.value}</p>
                     }
+                    return null
                 })
             }
             <p>{product.psuModel ? <PSUModel psuModel={product.psuModel} /> : null}</p>
@@ -99,10 +93,9 @@ function Order() {
     return (
 
         <div className='order-container'>
-            {order ? null : <LoadingAnimation />}
             <div className='order-button'>
                 {order ? order.tags ? <h2 className='order-note' style={{ textAlign: "center" }}>{order.tags}</h2> : null : null}
-                <h1>{order && <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"}>#{order.order_number}</a>}</h1>
+                <h1>{order && <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"} rel={"noreferrer"}>#{order.order_number}</a>}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
                 <h2 style={{ marginBottom: '1em' }}>{order ? order.created_at : null}</h2>
                 <h3 className='rush'>{order ? order.rushOrder ? order.rushOrder : null : null}</h3>

@@ -1,16 +1,17 @@
-import ClipLoader from "react-spinners/ClipLoader";
-import './Loading.css'
+import Loader from "react-spinners/ClipLoader";
+import './Loading.css';
 
 const LoadingAnimation = () => {
     return (
         <div className="loading-bg">
-            <ClipLoader
+            <Loader
                 color={"white"}
                 loading={true}
-                size={150}
+                size={80}
+                speedMultiplier={0.8}
             />
         </div>
     )
-}
+};
 
-export default LoadingAnimation
+export default LoadingAnimation;
