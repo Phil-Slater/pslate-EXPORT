@@ -185,6 +185,9 @@ function updateUnsleeved(orders) {
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
                     product.instructions = "160 - 24 pin - Corsair Type 1"
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "180 - 24 pin - Corsair Type 3"
+                    }
                 } else if (product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "170 - 24 pin - Corsair Type 2"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title)) {
@@ -296,6 +299,9 @@ function updateUnsleeved(orders) {
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
                     product.instructions = "160 - 24 pin - Silverstone Type 1"
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated Silverstone -- need length from Phil!"
+                    }
                 } else if (product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "230 - 24 pin - Silverstone Type 2"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title)) {
@@ -363,6 +369,9 @@ function updateUnsleeved(orders) {
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
                     product.instructions = "140 - 24 pin - Cooler Master Type 1"
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated Cooler Master -- need length from Phil!"
+                    }
                 } else if (product.title === 'SSUPD Meshlicious 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "280/290 - 24 pin - Cooler Master Meshlicious"
                 } else if (uCG.unsleeved24GroupTwo.includes(product.title) || product.title === 'NCASE M1 24 Pin Unsleeved Custom Cable') {
@@ -437,6 +446,9 @@ function updateUnsleeved(orders) {
                 // 24 PIN
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
                     product.instructions = "170 - 24 pin - EVGA Type 1"
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated EVGA -- need length from Phil!"
+                    }
                 }
 
                 else if (product.title === 'Lian Li x DAN A4-H2O 24 Pin Unsleeved Custom Cable') {
