@@ -5,7 +5,7 @@ const gpuClipDirections = {
 
     fanClips: [
         // 7900 XT
-        'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT',
+        'AMD Radeon RX 7900 XT', 'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT',
         // 7900 XTX
         'AMD Radeon RX 7900 XTX', 'ASRock Radeon RX 7900 XTX', 'Asus Radeon RX 7900 XTX', 'Gigabyte Radeon RX 7900 XTX', 'PowerColor Red Devil Radeon RX 7900 XTX', 'PowerColor Radeon RX 7900 XTX', 'Sapphire Radeon RX 7900 XTX', 'XFX Radeon RX 7900 XTX',
         // Intel ARC
