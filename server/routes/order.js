@@ -267,6 +267,7 @@ function filterAdapterProducts(orders) {
 function filterUnsleevedProducts(orders) {
     let unsleevedProducts = []
     orders.forEach(order => {
+        console.log(order.order_number, order.tags)
         order.line_items.forEach(product => {
             if (product.title.includes('Unsleeved')) {
                 if (order.rushOrder) {
