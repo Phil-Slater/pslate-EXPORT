@@ -4,8 +4,6 @@
 const gpuClipDirections = {
 
     fanClips: [
-        // 4070
-        'Gainward Ghost OC GeForce RTX 4070', 'GALAX 1-Click OC 3X GeForce RTX 4070', 'Palit JetStream GeForce RTX 4070', 'PNY VERTO GeForce RTX 4070',
         // 7900 XT
         'AMD Radeon RX 7900 XT', 'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT',
         // 7900 XTX
@@ -88,8 +86,6 @@ const gpuClipDirections = {
     ],
 
     backplateClips: [
-        // 4070
-        'Asus DUAL OC GeForce RTX 4070', 'Asus TUF GAMING OC GeForce RTX 4070', 'Gigabyte EAGLE OC GeForce RTX 4070', 'Gigabyte WINDFORCE OC GeForce RTX 4070', 'Inno3D Twin X2 OC GeForce RTX 4070', 'KFA2 EX Gamer GeForce RTX 4070', 'MSI VENTUS 2X OC GeForce RTX 4070', 'MSI VENTUS 3X OC GeForce RTX 4070', 'Palit Dual OC GeForce RTX 4070', 'PNY XLR8 Gaming VERTO EPIC-X RGB OC GeForce RTX 4070', 'Zotac Twin Edge OC GeForce RTX 4070',
         // 7900 XT
         'ASRock Phantom Gaming OC Radeon RX 7900 XT', 'ASRock Taichi OC Radeon RX 7900 XT', 'Asus TUF GAMING OC Radeon RX 7900 XT', 'Gigabyte GAMING OC Radeon RX 7900 XT', 'PowerColor Hellhound Radeon RX 7900 XT', 'Sapphire NITRO+ Radeon RX 7900 XT', 'Sapphire PULSE Radeon RX 7900 XT', 'XFX Speedster MERC 310 Radeon RX 7900 XT',
         // 7900 XTX
