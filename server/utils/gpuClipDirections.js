@@ -31,7 +31,7 @@ const gpuClipDirections = {
         //6750xt
         'Biostar Radeon RX 6750 XT', 'PowerColor Radeon RX 6750 XT Red Devil OC',
         // 6700 XT
-        'Gigabyte Radeon RX 6700 XT',
+        'AMD Radeon 6700 XT,' 'Gigabyte Radeon RX 6700 XT',
         // 3070ti
         'NVIDIA GeForce RTX 3070 Ti Founders Edition', 'EVGA GeForce RTX 3070 Ti FTW3 ULTRA GAMING', 'EVGA GeForce RTX 3070 Ti XC3 ULTRA GAMING', 'Palit GeForce RTX 3070 Ti GameRock OC', 'Palit GeForce RTX 3070 Ti GamingPro', 'PNY GeForce RTX 3070 Ti XLR8 Gaming REVEL EPIC-X RGB',
         // 3070
