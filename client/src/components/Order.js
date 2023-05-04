@@ -70,6 +70,7 @@ function Order() {
                         : product.instructions
                 }
             </p>
+            <p>{product.numConnectors ? product.numConnectors + " connectors" : null}</p>
             <p>{product.doubles ? product.doubles : null}</p>
             <p>{product.crimps ? <span className="white">{product.crimps}</span> : null}</p>
             <p>{product.combs ? <span className='combs'>{product.combs}</span> : null}</p>

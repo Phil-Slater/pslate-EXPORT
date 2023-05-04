@@ -10,7 +10,13 @@ function getSignificantKeys(orders) {
             order.total_items += product.quantity
             product.properties.forEach(property => {
 
-                if (property.value === "90 degree rotated") product.t1RotatedPsu = true
+                if (property.name === "8 pin PSU Connectors") {
+                    product.numConnectors = property.value
+                }
+
+                if (property.value === "90 degree rotated") {
+                    product.t1RotatedPsu = true
+                }
 
                 if (psuModels.includes(property.value)) {
                     product.psuModel = property.value

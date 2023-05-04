@@ -3,10 +3,17 @@ const m24H = require('./motherboard24headers')
 const mEH = require('./motherboardEPSHeaders')
 const gCD = require('./gpuClipDirections')
 const uCG = require('./unsleevedCableGroups')
+const vhpwrSleeved = require('./instructionLogic/sleeved/vhpwrSleeved')
 
 function updateSleeved(orders) {
     orders.forEach(order => {
         order.line_items.forEach(product => {
+
+            // 12VHPWR
+            if (product.title === 'Nvidia 12VHPWR PCIE Sleeved Custom Cable') {
+                console.log(product)
+                // vhpwrSleeved(product)
+            }
 
             // ALL SLEEVED 12 PINS
             if (product.title === 'Nvidia 12 Pin PCIE Sleeved Custom Cable') {
