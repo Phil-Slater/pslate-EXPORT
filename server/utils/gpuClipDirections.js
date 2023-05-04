@@ -11,7 +11,7 @@ const gpuClipDirections = {
         // 7900 XTX
         'AMD Radeon RX 7900 XTX', 'ASRock Radeon RX 7900 XTX', 'Asus Radeon RX 7900 XTX', 'Gigabyte Radeon RX 7900 XTX', 'PowerColor Red Devil Radeon RX 7900 XTX', 'PowerColor Radeon RX 7900 XTX', 'Sapphire Radeon RX 7900 XTX', 'XFX Radeon RX 7900 XTX',
         // Intel ARC
-        'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770', 
+        'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770',
         // 3090ti
         'NVIDIA GeForce RTX 3090 Ti Founders Edition', 'Asus GeForce RTX 3090 Ti STRIX LC GAMING OC', 'EVGA GeForce RTX 3090 Ti FTW3 ULTRA GAMING', 'GALAX GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'Gigabyte GeForce RTX 3090 Ti AORUS XTREME WATERFORCE', 'Gigabyte GeForce RTX 3090 Ti GAMING OC', 'Inno3D GeForce RTX 3090 Ti X3 OC', 'KFA2 GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'MSI GeForce RTX 3090 Ti GAMING X TRIO', 'MSI GeForce RTX 3090 Ti  SUPRIM X', 'Palit GeForce RTX 3090 Ti GameRock OC', 'PNY GeForce RTX 3090 Ti XLR8 Gaming UPRISING EPIC-X RGB OC', 'Zotac GeForce RTX 3090 Ti AMP Extreme Holo',
         // 3090
@@ -31,7 +31,7 @@ const gpuClipDirections = {
         //6750xt
         'Biostar Radeon RX 6750 XT', 'PowerColor Radeon RX 6750 XT Red Devil OC',
         // 6700 XT
-        'AMD Radeon 6700 XT,' 'Gigabyte Radeon RX 6700 XT',
+        'AMD Radeon 6700 XT', 'Gigabyte Radeon RX 6700 XT',
         // 3070ti
         'NVIDIA GeForce RTX 3070 Ti Founders Edition', 'EVGA GeForce RTX 3070 Ti FTW3 ULTRA GAMING', 'EVGA GeForce RTX 3070 Ti XC3 ULTRA GAMING', 'Palit GeForce RTX 3070 Ti GameRock OC', 'Palit GeForce RTX 3070 Ti GamingPro', 'PNY GeForce RTX 3070 Ti XLR8 Gaming REVEL EPIC-X RGB',
         // 3070
