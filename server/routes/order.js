@@ -49,6 +49,7 @@ router.get('/sleeved-doubles', authenticate, async (req, res) => {
 })
 
 router.get('/order/:id', authenticate, async (req, res) => {
+    console.log(req.params.id)
     const order = await getOrder(req.params.id)
     const orderKeysAdded = getSignificantKeys(order.data.orders)
     const unsleevedUpdated = updateUnsleeved(orderKeysAdded)
@@ -119,8 +120,14 @@ router.put('/order/:id', async (req, res) => {
 
 // FUNCTIONS
 async function getOrder(id) {
-    const order = await instance.get(`/orders.json?name=${id}&${urlFields}`)
+    const order = await instance.get(`/orders.json?name=${id}&${urlFields}`) // only returns unarchived orders
     console.log(order.data)
+    if (order.data.orders.length === 0) {
+        const archived = await instance.get(`/orders.json?name=${id}&status=closed&${urlFields},closed_at`) // use status=closed to find archived orders
+        console.log(archived.data)
+        return archived
+    }
+
     return order
 }
 

@@ -95,6 +95,7 @@ function Order() {
 
         <div className='order-container'>
             <div className='order-button'>
+                {order ? order.closed_at ? <h2 className='archived' style={{ textAlign: "center" }}>This order is archived</h2> : null : null}
                 {order ? order.tags ? <h2 className='order-note' style={{ textAlign: "center" }}>{order.tags}</h2> : null : null}
                 <h1>{order && <a href={`https://pslatecustoms.myshopify.com/admin/orders/${order.id}`} target={"_blank"} rel={"noreferrer"}>#{order.order_number}</a>}</h1>
                 <h3>{order ? 'Order placed on:' : null}</h3>
