@@ -93,7 +93,7 @@ const gpuClipDirections = {
         // 7900 XT
         'ASRock Phantom Gaming OC Radeon RX 7900 XT', 'ASRock Taichi OC Radeon RX 7900 XT', 'Asus TUF GAMING OC Radeon RX 7900 XT', 'Gigabyte GAMING OC Radeon RX 7900 XT', 'PowerColor Hellhound Radeon RX 7900 XT', 'Sapphire NITRO+ Radeon RX 7900 XT', 'Sapphire PULSE Radeon RX 7900 XT', 'XFX Speedster MERC 310 Radeon RX 7900 XT',
         // 7900 XTX
-        'ASRock Phantom Gaming OC Radeon RX 7900 XTX', 'ASRock Taichi OC Radeon RX 7900 XTX', 'Asus TUF GAMING OC Radeon RX 7900 XTX', 'Gigabyte AORUS ELITE Radeon RX 7900 XTX', 'Gigabyte GAMING OC Radeon RX 7900 XTX', 'PowerColor Hellhound Radeon RX 7900 XTX', 'Sapphire NITRO+ Radeon RX 7900 XTX', 'Sapphire PULSE Radeon RX 7900 XTX', 'XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX',
+        'ASRock Phantom Gaming OC Radeon RX 7900 XTX', 'ASRock Taichi OC Radeon RX 7900 XTX', 'Asus TUF GAMING OC Radeon RX 7900 XTX', 'Gigabyte AORUS ELITE Radeon RX 7900 XTX', 'Gigabyte GAMING OC Radeon RX 7900 XTX', 'MSI GAMING TRIO CLASSIC Radeon RX 7900 XTX', 'PowerColor Hellhound Radeon RX 7900 XTX', 'Sapphire NITRO+ Radeon RX 7900 XTX', 'Sapphire PULSE Radeon RX 7900 XTX', 'XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX',
         // Intel Arc
         'ASRock Phantom Gaming D Arc A770', 'ASRock Intel Arc A380 Challenger ITX', 'ASRock Challenger D Arc A750',
         // 3090
