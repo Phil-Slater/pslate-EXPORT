@@ -21,7 +21,7 @@ const gpuClipDirections = {
         // 6950xt
         'ASRock Radeon RX 6950 XT OC', 'AMD Radeon RX 6950 XT', 'AMD Radeon RX 6950 XT ',
         // 6900xt
-        'Radeon RX 6900 XT - Reference Model', 'PowerColor Radeon RX 6900 XT Red Devil Limited Edition',
+        'PowerColor Radeon RX 6900 XT Red Devil Limited Edition',
         // 6800xt
         'AMD Radeon RX 6800 XT - Reference Model', 'ASRock Radeon RX 6800 XT Phantom Gaming D OC', 'PowerColor Radeon RX 6800 XT Red Devil LE', 'PowerColor Radeon RX 6800 XT Red Devil OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Red Dragon OC', 'PowerColor Radeon RX 6800 XT Liquid Devil',
         // 6800
@@ -101,7 +101,7 @@ const gpuClipDirections = {
         // 3080ti
         'Asus GeForce RTX 3080 Ti ROG Strix Gaming OC', 'Asus GeForce RTX 3080 Ti TUF Gaming OC', 'Colorful GeForce RTX 3080 Ti iGame Advanced OC-V', 'Colorful GeForce RTX 3080 Ti iGame Vulcan OC-V', 'Colorful GeForce RTX 3080 Ti NB-V', 'Gigabyte GeForce RTX 3080 Ti Aorus Master Xtreme', 'Gigabyte GeForce RTX 3080 Ti Eagle OC', 'Gigabyte GeForce RTX 3080 Ti GAMING OC', 'Gigabyte GeForce RTX 3080 Ti Vision OC', 'KFA2 GeForce RTX 3080 Ti EXG (1-Click OC)', 'KFA2 GeForce RTX 3080 Ti SG (1-Click OC)', 'MSI GeForce RTX 3080 Ti Gaming X Trio', 'MSI GeForce RTX 3080 Ti Suprim X', 'MSI GeForce RTX 3080 Ti Ventus 3x OC', 'Palit GeForce RTX 3080 Ti GameRock', 'Palit GeForce RTX 3080 Ti GameRock', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti Gaming Trinity OC', 'Zotac GeForce RTX 3080 Ti AMP Holo',
         // 6950xt
-        'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Gigabyte Radeon RX 6950 XT GAMING OC', 'MSI Radeon RX 6950 XT GAMING X TRIO', 'Sapphire Radeon RX 6950 XT NITRO+', 'Sapphire Radeon RX 6950 XT TOXIC Limited Edition',
+        'Radeon RX 6900 XT - Reference Model', 'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Asus Radeon RX 6950 XT ROG STRIX LC GAMING OC', 'Gigabyte Radeon RX 6950 XT GAMING OC', 'MSI Radeon RX 6950 XT GAMING X TRIO', 'Sapphire Radeon RX 6950 XT NITRO+', 'Sapphire Radeon RX 6950 XT TOXIC Limited Edition',
         // 6900xt
         'Asus RX 6900 XT STRIX LC GAMING OC', 'Asus Radeon RX 6900 XT TUF GAMING OC', 'Sapphire Radeon RX 6900 XT NITRO+', 'XFX Radeon RX 6900 XT Speedster MERC 319 Ultra',
         // 6800xt
