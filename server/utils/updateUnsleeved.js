@@ -8,7 +8,7 @@ function updateUnsleeved(orders) {
             // UNSLEEVED 12 PINS - Siverstone / Cooler Master / EVGA PSUs
             if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
                 if (product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'EVGA 450/550/650/750/850 GM' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750') {
-                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O' || product.case === 'Dan C4') {
                         if (product.gpuModel === 'RTX 3090 Ti') {
                             product.instructions = '300 Silverstone 12 pin - 3x 8 pin build'
                         } else {
@@ -44,7 +44,7 @@ function updateUnsleeved(orders) {
                 }
 
                 else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750/SX1000') {
-                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O' || product.case === 'Dan C4') {
                         if (product.gpuModel === 'RTX 3090 Ti') {
                             product.instructions = '300 Cooler Master 12 pin - 3x 8 pin build'
                         } else {
@@ -207,7 +207,7 @@ function updateUnsleeved(orders) {
                     product.instructions = "200 - EPS - Corsair Type 2"
                 } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - EPS - Corsair Meshlicious"
-                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
                     product.instructions = "420 - EPS - Corsair Type 1"
                 }
 
@@ -238,7 +238,7 @@ function updateUnsleeved(orders) {
                     }
                 } else if (product.title === 'Lian Li x DAN A4-H2O 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'Lian Li x DAN A4-H2O 6 Pin PCIE Unsleeved Custom Cable') {
                     product.instructions = '150 - PCIE - Corsair Type 1'
-                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable') {
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Unsleeved Custom Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.instructions = '180/165 - PCIE - Corsair Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
@@ -247,7 +247,7 @@ function updateUnsleeved(orders) {
                 }
                 // 12 PCIE
                 else if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {
-                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O') {
+                    if (product.case === 'Sliger SV series' || product.case === 'Lian Li x DAN A4-H2O' || product.case === 'Dan C4') {
                         if (product.gpuModel === 'RTX 3090 Ti') {
                             product.instructions = '300 - Corsair 12 pin - 3x 8 pin build'
                         } else {
@@ -283,6 +283,8 @@ function updateUnsleeved(orders) {
                     product.instructions = "Single SATA - 100 - Corsair"
                 } else if (uCG.unsleevedSATAGroupTwo.includes(product.title)) {
                     product.instructions = "Single SATA - 150 - Corsair"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Unsleeved Custom Cable') {
+                    product.instructions = "Single SATA - 200 - Corsair"
                 }
 
                 // DUAL SATA
@@ -290,6 +292,8 @@ function updateUnsleeved(orders) {
                     product.instructions = "Dual SATA - 80 - Corsair"
                 } else if (uCG.unsleevedDualSATAGroupTwo.includes(product.title)) {
                     product.instructions = "Dual SATA - 150 - Corsair"
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Unsleeved Custom Cable') {
+                    product.instructions = "Dual SATA - 200 - Corsair"
                 }
             }
 
@@ -317,6 +321,8 @@ function updateUnsleeved(orders) {
                     product.instructions = "360 - EPS - Silverstone Type 2/3"
                 } else if (product.moboModel == 'Asus ROG Crosshair VIII Impact' && uCG.unsleevedEPSImpactGroup.includes(product.title)) {
                     product.instructions = "210 - EPS - Silverstone Type 2"
+                } else if (product.title === 'DAN Cases C4-SFX 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                    product.instructions = "420 - EPS - Silverstone Type 2/3"
                 }
 
                 // 8 & 6 PCIE
@@ -340,7 +346,7 @@ function updateUnsleeved(orders) {
                         //     product.instructions = ''
                         // }
                     }
-                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable') {
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Unsleeved Custom Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.instructions = '155/150 - PCIE - Silverstone Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
@@ -353,13 +359,18 @@ function updateUnsleeved(orders) {
                     product.instructions = "Single SATA - 100 - Silverstone"
                 } else if (uCG.unsleevedSATAGroupTwo.includes(product.title)) {
                     product.instructions = "Single SATA - 150 - Silverstone"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Unsleeved Custom Cable') {
+                    product.instructions = "Single SATA - 200 - Silverstone"
                 }
+
 
                 // DUAL SATA
                 else if (uCG.unsleevedDualSATAGroupOne.includes(product.title)) {
                     product.instructions = "Dual SATA - 80 - Silverstone"
                 } else if (uCG.unsleevedDualSATAGroupTwo.includes(product.title)) {
                     product.instructions = "Dual SATA - 150 - Silverstone"
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Unsleeved Custom Cable') {
+                    product.instructions = "Dual SATA - 200 - Silverstone"
                 }
             }
 
@@ -385,7 +396,7 @@ function updateUnsleeved(orders) {
                     product.instructions = "280 - EPS - Silverstone Type 1"
                 } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - EPS - Silverstone Type 2/3"
-                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
+                } else if (product.title === 'Lian Li x DAN A4-H2O 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 8 (4+4) Pin CPU/EPS Unsleeved Custom Cable') {
                     product.instructions = '420 - EPS - Silverstone Type 1 (double outside, no cross)'
                 }
 
@@ -414,7 +425,7 @@ function updateUnsleeved(orders) {
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
                         product.instructions = '220 - PCIE - Cooler Master Type 1'
                     }
-                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable') {
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'NCASE M1 6 Pin PCIE Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Unsleeved Custom Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Unsleeved Custom Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.instructions = '170/155 - PCIE - Cooler Master Type 2'
                     } else if (gCD.backplateClips.includes(product.gpuModel)) {
@@ -430,13 +441,18 @@ function updateUnsleeved(orders) {
                     product.instructions = "Single SATA - 100 - Cooler Master"
                 } else if (uCG.unsleevedSATAGroupTwo.includes(product.title)) {
                     product.instructions = "Single SATA - 150 - Cooler Master"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Unsleeved Custom Cable') {
+                    product.instructions = "Single SATA - 200 - Cooler Master"
                 }
+
 
                 // DUAL SATA
                 else if (uCG.unsleevedDualSATAGroupOne.includes(product.title)) {
                     product.instructions = "Dual SATA - 80 - Cooler Master"
                 } else if (uCG.unsleevedDualSATAGroupTwo.includes(product.title)) {
                     product.instructions = "Dual SATA - 150 - Cooler Master"
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Unsleeved Custom Cable') {
+                    product.instructions = "Dual SATA - 200 - Cooler Master"
                 }
             }
 
