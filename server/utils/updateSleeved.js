@@ -177,8 +177,8 @@ function updateSleeved(orders) {
                         product.instructions = 'Start at 190 - Red Box - Build from right'
                         product.combs = "3 combs"
                     }
-                    // NR200
-                } else if (product.title === 'Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable') {
+                    // NR200 and DAN C4
+                } else if (product.title === 'Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 24 Pin Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Male'
                     product.doubles = 'No doubles'
                     if (m24H.cornerHeaders.includes(product.moboModel)) {
@@ -287,7 +287,7 @@ function updateSleeved(orders) {
                     }
 
 
-                } else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                } else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
                     if (mEH.insideHeaders.includes(product.moboModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
@@ -385,7 +385,7 @@ function updateSleeved(orders) {
                         }
                     }
 
-                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                } else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '190/172 - Long on top - With cross (cross then 2 combs)'
@@ -478,7 +478,7 @@ function updateSleeved(orders) {
                     product.instructions = 'Corsair SATA build'
                     product.crimps = 'Same crimps - Female'
                     product.combs = "1 comb for every 100mm in length"
-                } else if (product.title === 'Sliger SV590 SATA Power Paracord Custom Sleeved Cable') {
+                } else if (product.title === 'Sliger SV590 SATA Power Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX SATA Power Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '214 - Corsair'
                     product.combs = "2 combs"
@@ -494,6 +494,11 @@ function updateSleeved(orders) {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = 'Dual SATA - 148 - Corsair'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = 'Dual SATA - 214 - Corsair'
+                    product.combs = "2 combs"
                     product.doubles = '5 doubles'
                 }
             }
@@ -591,7 +596,7 @@ function updateSleeved(orders) {
                 }
 
                 // NR200 EPS
-                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
                     if (mEH.insideHeaders.includes(product.moboModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
@@ -669,7 +674,7 @@ function updateSleeved(orders) {
                     }
                 }
 
-                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
@@ -697,6 +702,10 @@ function updateSleeved(orders) {
                     product.instructions = 'Silverstone SATA build'
                     product.crimps = 'Same crimps - Female'
                     product.combs = "1 comb for every 100mm in length"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '214 - Silverstone'
+                    product.combs = "2 combs"
                 }
 
                 // DUAL SATA
@@ -709,6 +718,11 @@ function updateSleeved(orders) {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = 'Dual SATA - 148 - Silverstone'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = 'Dual SATA - 214 - Silverstone'
+                    product.combs = "2 combs"
                     product.doubles = '5 doubles'
                 }
             }
@@ -775,7 +789,7 @@ function updateSleeved(orders) {
                 }
 
                 // NR200 EPS
-                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
                     if (mEH.insideHeaders.includes(product.moboModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
@@ -853,7 +867,7 @@ function updateSleeved(orders) {
                     }
                 }
 
-                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '172/166 - Long on top - Silverstone PCIE build!'
@@ -888,18 +902,27 @@ function updateSleeved(orders) {
                     product.instructions = 'EVGA SATA build'
                     product.crimps = 'Opposite crimps'
                     product.combs = "1 comb for every 100mm in length"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = '214 - EVGA'
+                    product.combs = "2 combs"
                 }
 
                 // DUAL SATA
                 else if (sCG.sleevedDualSATAGroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-                    product.instructions = 'Dual SATA - 148 - Silverstone'
+                    product.instructions = 'Dual SATA - 148 - EVGA'
                     product.combs = "1 comb"
                     product.doubles = '5 doubles'
                 } else if (sCG.sleevedDualSATAGroupTwo.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-                    product.instructions = 'Dual SATA - 178 - Silverstone'
+                    product.instructions = 'Dual SATA - 178 - EVGA'
                     product.combs = "2 comb"
+                    product.doubles = '5 doubles'
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = 'Dual SATA - 214 - EVGA'
+                    product.combs = "2 combs"
                     product.doubles = '5 doubles'
                 }
             }
@@ -922,8 +945,8 @@ function updateSleeved(orders) {
                     }
                 }
 
-                // NR200 / S610 24
-                else if (product.title === 'Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Sliger S610/S620 24 Pin Paracord Custom Sleeved Cable') {
+                // NR200 / S610 / C4 24
+                else if (product.title === 'Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Sliger S610/S620 24 Pin Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 24 Pin Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Male'
                     product.doubles = 'No doubles'
                     product.combs = "3 combs"
@@ -993,7 +1016,7 @@ function updateSleeved(orders) {
                 }
 
                 // NR200 EPS
-                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
+                else if (product.title === 'Cooler Master NR200 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (4+4) pin CPU/EPS Paracord Custom Sleeved Cable') {
                     if (mEH.insideHeaders.includes(product.moboModel)) {
                         product.crimps = 'Opposite crimps'
                         product.instructions = '518/512 - Colors: 4, 3, 2, 1 - With cross'
@@ -1079,7 +1102,7 @@ function updateSleeved(orders) {
                     }
                 }
 
-                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                else if (product.title === 'NCASE M1 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'NCASE M1 6 Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'DAN Cases C4-SFX 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     if (gCD.fanClips.includes(product.gpuModel)) {
                         product.crimps = 'Same crimps - Female'
                         product.instructions = '178/160 - Long on bottom - Cross then 2 combs'
@@ -1114,6 +1137,10 @@ function updateSleeved(orders) {
                     product.instructions = 'Cooler Master SATA build'
                     product.crimps = 'Same crimps - Female'
                     product.combs = "1 comb for every 100mm in length"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '214 - Cooler Master'
+                    product.combs = "2 combs"
                 }
 
                 // DUAL SATA
@@ -1126,6 +1153,11 @@ function updateSleeved(orders) {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = 'Dual SATA - 148 - Cooler Master'
                     product.combs = "1 comb"
+                    product.doubles = '5 doubles'
+                } else if (product.title === 'DAN Cases C4-SFX Dual SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = 'Dual SATA - 214 - Cooler Master'
+                    product.combs = "2 combs"
                     product.doubles = '5 doubles'
                 }
             }

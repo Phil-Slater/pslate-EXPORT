@@ -2,7 +2,7 @@ const sleevedCableGroups = {
 
     sleeved24GroupOne: ['FormD T1 24 Pin Paracord Custom Sleeved Cable', 'DAN Cases A4-SFX 24 Pin Paracord Custom Sleeved Cable', 'LOUQE Ghost S1 24 Pin Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 24 Pin Paracord Custom Sleeved Cable', 'Nouvolo Steck 24 Pin Paracord Custom Sleeved Cable'],
 
-    sleeved24GroupTwo: ['Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable', 'NCASE M1 24 Pin Paracord Custom Sleeved Cable', 'Sliger S610/S620 24 Pin Paracord Custom Sleeved Cable'],
+    sleeved24GroupTwo: ['Cooler Master NR200 24 Pin Paracord Custom Sleeved Cable', 'NCASE M1 24 Pin Paracord Custom Sleeved Cable', 'Sliger S610/S620 24 Pin Paracord Custom Sleeved Cable', 'DAN Cases C4-SFX 24 Pin Paracord Custom Sleeved Cable'],
 
     sleevedEPSGroupOne: ['FormD T1 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable', 'DAN Cases A4-SFX 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable', 'LOUQE Ghost S1 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable', 'Nouvolo Steck 8 (4+4) Pin CPU/EPS Paracord Custom Sleeved Cable'],
 
