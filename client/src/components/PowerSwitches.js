@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../css/styles.css'
 import { NavLink } from 'react-router-dom'
+import Color from './Color';
 
 function PowerSwitches() {
 
@@ -31,14 +32,18 @@ function PowerSwitches() {
                 {order.line_items.map(product => {
                     if (product.title.includes('Switch Power Button')) {
                         const splitSku = product.sku.split(' ')
-                        return <div key={product.id}><h2>{splitSku[0]} - {splitSku[3]} {splitSku[4]}</h2>
-                            {product.properties[0] ? <h2>{product.properties[0].name}: {product.properties[0].value}</h2> : null}
-                            {product.properties[1] ? <h2>{product.properties[1].name === 'Case' && product.title.includes('12mm') ? `Case: ${product.properties[1].value}` : null}</h2> : null}
-                            {product.properties.length === 1 ? <h2 className='red' style={{ textAlign: "center" }}>UNSLEEVED SWITCH</h2> : null}
+                        console.log(product.properties[0].value)
+                        console.log(splitSku[0])
+                        const ledColor = product.properties[0].value.split(' (').at(-1).split(' ')[0]
+                        return <div key={product.id}>
+                            <h2 style={{ marginBottom: "0.5em" }}>{splitSku[0]}mm {product.properties[0].value.split(' ')[0]} <span className={ledColor}>{ledColor} LED</span></h2>
+                            {/* {product.properties[0] ? <h2>{product.properties[0].name}: {product.properties[0].value}</h2> : null} */}
+                            {product.properties[1] ? <h2>{product.properties[1].name === 'Case' && splitSku[0] === '12' ? `Case: ${product.properties[1].value}` : null}</h2> : null}
+                            {splitSku.at(-1) === 'unsleeved' ? <h2 className='green' style={{ textAlign: "center", marginBottom: "0.5em" }}>Unsleeved Switch</h2> : null}
                         </div>
                     }
                 })}
-                {order.line_items.length === 1 ? <h2 style={{ color: "yellow" }}>Power Switch Only</h2> : null}
+                {order.line_items.length === 1 ? <h2 className='gold' style={{ textAlign: "center" }}>Power Switch Only</h2> : null}
             </div>
         </NavLink>
     })
