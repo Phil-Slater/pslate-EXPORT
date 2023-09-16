@@ -11,8 +11,7 @@ function updateSleeved(orders) {
 
             // 12VHPWR
             if (product.title === 'Nvidia 12VHPWR PCIE Sleeved Custom Cable') {
-                console.log(product)
-                // vhpwrSleeved(product)
+                vhpwrSleeved(product)
             }
 
             // ALL SLEEVED 12 PINS

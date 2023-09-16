@@ -1,9 +1,15 @@
 const uCG = require('./unsleevedCableGroups')
 const gCD = require('./gpuClipDirections')
+const vhpwrUnsleeved = require('./instructionLogic/unsleeved/vhpwrUnsleeved')
 
 function updateUnsleeved(orders) {
     orders.forEach(order => {
         order.line_items.forEach(product => {
+
+            // 12VHPWR
+            if (product.title === 'Nvidia 12VHPWR PCIE Unsleeved Custom Cable') {
+                vhpwrUnsleeved(product)
+            }
 
             // UNSLEEVED 12 PINS - Siverstone / Cooler Master / EVGA PSUs
             if (product.title === 'Nvidia 12 Pin PCIE Unsleeved Custom Cable') {

@@ -28,7 +28,7 @@ const unsleevedCableGroups = {
 
     unsleeved12PCIECaseGroupTwo3080Corsair: ['Dan A4', 'Sliger SM series', 'Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto', 'SSUPD Meshlicious'],
 
-    unsleeved12PCIECaseGroupOne3090Corsair: ['NCASE M1', 'LOUQE Ghost S1', 'LOUQE RAW S1', 'Dan A4', 'FormD T1', 'Sliger SM series', 'SSUPD Meshlicious', 'Nouvolo Steck'],
+    unsleeved12PCIECaseGroupOne3090Corsair: ['NCASE M1', 'LOUQE Ghost S1', 'LOUQE RAW S1', 'Dan A4', 'FormD T1', 'Sliger SM series', 'SSUPD Meshlicious', 'Nouvolo Steck', 'Cooler Master NR200', 'Sliger S610/S620'],
 
     unsleeved12PCIECaseGroupTwo3090Corsair: ['Cooler Master NR200p MAX', 'Lazer3D LZ7 XTD', 'XTIA Xproto'],
 
