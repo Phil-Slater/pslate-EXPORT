@@ -4,12 +4,17 @@
 const gpuClipDirections = {
 
     fanClips: [
+        
         // 4070
         'Gainward Ghost OC GeForce RTX 4070', 'GALAX 1-Click OC 3X GeForce RTX 4070', 'Palit JetStream GeForce RTX 4070', 'PNY VERTO GeForce RTX 4070',
         // 7900 XT
         'AMD Radeon RX 7900 XT', 'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT',
         // 7900 XTX
         'AMD Radeon RX 7900 XTX', 'ASRock Radeon RX 7900 XTX', 'Asus Radeon RX 7900 XTX', 'Gigabyte Radeon RX 7900 XTX', 'PowerColor Red Devil Radeon RX 7900 XTX', 'PowerColor Radeon RX 7900 XTX', 'Sapphire Radeon RX 7900 XTX', 'XFX Radeon RX 7900 XTX',
+        // 7800 XT
+        'PowerColor Red Devil OC Radeon RX 7800 XT', 'Sapphire Radeon RX 7800 XT',
+        // 7700 XT
+        'PowerColor Red Devil OC Radeon RX 7700 XT', 
         // Intel ARC
         'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770',
         // 3090ti
@@ -94,6 +99,10 @@ const gpuClipDirections = {
         'ASRock Phantom Gaming OC Radeon RX 7900 XT', 'ASRock Taichi OC Radeon RX 7900 XT', 'Asus TUF GAMING OC Radeon RX 7900 XT', 'Gigabyte GAMING OC Radeon RX 7900 XT', 'PowerColor Hellhound Radeon RX 7900 XT', 'Sapphire NITRO+ Radeon RX 7900 XT', 'Sapphire PULSE Radeon RX 7900 XT', 'XFX Speedster MERC 310 Radeon RX 7900 XT',
         // 7900 XTX
         'ASRock Phantom Gaming OC Radeon RX 7900 XTX', 'ASRock Taichi OC Radeon RX 7900 XTX', 'Asus TUF GAMING OC Radeon RX 7900 XTX', 'Gigabyte AORUS ELITE Radeon RX 7900 XTX', 'Gigabyte GAMING OC Radeon RX 7900 XTX', 'MSI GAMING TRIO CLASSIC Radeon RX 7900 XTX', 'PowerColor Hellhound Radeon RX 7900 XTX', 'Sapphire NITRO+ Radeon RX 7900 XTX', 'Sapphire PULSE Radeon RX 7900 XTX', 'XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX',
+        // 7800 XT
+        'ASRock Challenger OC Radeon RX 7800 XT', 'ASRock Phantom Gaming OC Radeon RX 7800 XT', 'ASRock Steel Legend OC Radeon RX 7800 XT', 'Asus TUF GAMING OC Radeon RX 7800 XT', 'Gigabyte GAMING OC Radeon RX 7800 XT', 'PowerColor Hellhound OC Radeon RX 7800 XT', 'Sapphire PULSE Radeon RX 7800 XT', 'Sapphire PURE Radeon RX 7800 XT', 'XFX Speedster MERC 319 Black Radeon RX 7800 XT', 'XFX Speedster QICK 319 Core Radeon RX 7800 XT',
+        // 7700 XT
+        'ASRock Challenger OC Radeon RX 7700 XT', 'ASRock Phantom Gaming OC Radeon RX 7700 XT', 'ASRock Steel Legend OC Radeon RX 7700 XT', 'Asus TUF GAMING OC Radeon RX 7700 XT', 'Gigabyte GAMING OC Radeon RX 7700 XT', 'PowerColor Fighter OC Radeon RX 7700 XT', 'PowerColor Hellhound OC Radeon RX 7700 XT', 'Sapphire NITRO+ Radeon RX 7700 XT', 'Sapphire PULSE Radeon RX 7700 XT', 'Sapphire PURE Radeon RX 7700 XT', 'XFX Speedster QICK 319 BLACK Radeon RX 7700 XT',
         // Intel Arc
         'ASRock Phantom Gaming D Arc A770', 'ASRock Intel Arc A380 Challenger ITX', 'ASRock Challenger D Arc A750',
         // 3090
