@@ -125,8 +125,11 @@ function updateSleeved(orders) {
                     product.crimps = 'Opposite crimps'
                     product.doubles = 'No doubles'
 
-                    // POSITION OF 24 HEADER
-                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "Start at 180 (chart) - Build from right"
+                        product.combs = "1 comb"
+                        // POSITION OF 24 HEADER
+                    } else if (m24H.cornerHeaders.includes(product.moboModel)) {
                         product.instructions = "Start at 178 - Build from left"
                         product.combs = "1 comb"
                     } else if (m24H.offsetHeaders.includes(product.moboModel)) {
@@ -139,8 +142,11 @@ function updateSleeved(orders) {
 
                 } else if (sCG.sleeved24GroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-
-                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "Start at 180 (chart) - Build from right"
+                        product.doubles = '3, 4, 6, 12 - 160/64, 150/64, 130/55, 70/85 - top, bottom, bottom, bottom'
+                        product.combs = "1 comb"
+                    } else if (m24H.cornerHeaders.includes(product.moboModel)) {
                         product.instructions = "Start at 178 - Build from left"
                         product.doubles = '1, 7, 9, 10 - 172/85, 136/55, 124/64x2 - bottom, bottom, bottom, top'
                         product.combs = "1 comb"
@@ -509,9 +515,11 @@ function updateSleeved(orders) {
                 if (sCG.sleeved24GroupOne.includes(product.title) && product.senseWires === 'No') {
                     product.crimps = 'Opposite crimps'
                     product.doubles = 'No doubles'
-
-                    // POSITION OF 24 HEADER
-                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated Silverstone -- need length from Phil!"
+                        product.combs = '1 comb'
+                        // POSITION OF 24 HEADER
+                    } else if (m24H.cornerHeaders.includes(product.moboModel)) {
                         product.instructions = "Start at 178 - Build from right - Connectors: 2x 24 pin"
                         product.combs = "1 comb"
                     } else if (m24H.offsetHeaders.includes(product.moboModel)) {
@@ -524,8 +532,10 @@ function updateSleeved(orders) {
 
                 } else if (sCG.sleeved24GroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
-
-                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated Silverstone -- need length from Phil!"
+                        product.combs = '1 comb'
+                    } else if (m24H.cornerHeaders.includes(product.moboModel)) {
                         product.instructions = "Start at 178 - Build from right - Connectors: 2x 24 pin and 4 pin"
                         product.doubles = '6, 7, 9, 12 - 142/85, 136/85, 130/64, 106/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
@@ -734,7 +744,10 @@ function updateSleeved(orders) {
                 if (sCG.sleeved24GroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
 
-                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated EVGA -- need length from Phil!"
+                        product.combs = '1 comb'
+                    } else if (m24H.cornerHeaders.includes(product.moboModel)) {
                         product.instructions = "All 172 - Build from right"
                         product.doubles = '3, 4, 8, 10, 12 - 172/64, 172/55, 172/55, 172/55, 172/64, top, bottom, bottom, bottom, bottom - EVGA Build'
                         product.combs = "1 comb"
@@ -933,7 +946,10 @@ function updateSleeved(orders) {
                 if (sCG.sleeved24GroupOne.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
 
-                    if (m24H.cornerHeaders.includes(product.moboModel)) {
+                    if (product.t1RotatedPsu) {
+                        product.instructions = "90 Degree Rotated Cooler Master -- need length from Phil!"
+                        product.combs = '1 comb'
+                    } else if (m24H.cornerHeaders.includes(product.moboModel)) {
                         product.instructions = "All 124 - Build from right"
                         product.doubles = '1, 2, 3, 12 - 124/55, 124/55, 124/64, 124/55 - bottom, bottom, top, bottom'
                         product.combs = "1 comb"
