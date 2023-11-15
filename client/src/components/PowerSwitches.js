@@ -32,11 +32,9 @@ function PowerSwitches() {
                 {order.line_items.map(product => {
                     if (product.title.includes('Switch Power Button')) {
                         const splitSku = product.sku.split(' ')
-                        console.log(product.properties[0].value)
-                        console.log(splitSku[0])
-                        const ledColor = product.properties[0].value.split(' (').at(-1).split(' ')[0]
+                        const ledColor = product.properties[0]?.value.split(' (').at(-1).split(' ')[0]
                         return <div key={product.id}>
-                            <h2 style={{ marginBottom: "0.5em" }}>{splitSku[0]}mm {product.properties[0].value.split(' ')[0]} <span className={ledColor}>{ledColor} LED</span></h2>
+                            <h2 style={{ marginBottom: "0.5em" }}>{splitSku[0]}mm {product.properties[0]?.value.split(' ')[0]} <span className={ledColor}>{ledColor} LED</span></h2>
                             {/* {product.properties[0] ? <h2>{product.properties[0].name}: {product.properties[0].value}</h2> : null} */}
                             {product.properties[1] ? <h2>{product.properties[1].name === 'Case' && splitSku[0] === '12' ? `Case: ${product.properties[1].value}` : null}</h2> : null}
                             {splitSku.at(-1) === 'unsleeved' ? <h2 className='green' style={{ textAlign: "center", marginBottom: "0.5em" }}>Unsleeved Switch</h2> : null}
