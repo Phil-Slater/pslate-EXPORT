@@ -1,4 +1,5 @@
 const sCG = require('../../sleevedCableGroups')
+const uCG = require('../../unsleevedCableGroups')
 
 const vhpwrSleeved = (product) => {
 
