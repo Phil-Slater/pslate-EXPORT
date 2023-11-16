@@ -27,7 +27,7 @@ function getSignificantKeys(orders) {
                 }
 
                 // || property.name.includes('GPU Make')
-                if (property.name.includes('GPUs') || property.name === 'GPU Model' || property.name.includes('GPU Make') || property.value === 'Radeon VII' || property.value === 'Intel Arc GPU') {
+                if (property.name.includes('GPUs') || property.name === 'GPU Model' || property.name.includes('GPU Make') || property.value === 'Radeon VII' || property.value === 'Intel Arc GPU' || property.name.includes('Intel Arc GPU')) {
                     product.gpuModel = property.value
                 }
 
