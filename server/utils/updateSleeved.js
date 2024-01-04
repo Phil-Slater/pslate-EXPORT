@@ -415,7 +415,7 @@ function updateSleeved(orders) {
                         product.combs = "2 combs"
                     }
 
-                } else if (product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                } else if (sCG.sleevedPCIEGroupFour.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '360/354 - Long on top'
                     product.doubles = 'Top right double - #4 is double'
@@ -586,6 +586,19 @@ function updateSleeved(orders) {
                     }
                 }
 
+                // TERRA
+                else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = "Start at 190 - Build from right - Connectors: 2x 24 pin and 4 pin"
+                    product.combs = "1 comb"
+                    if (product.senseWires === 'No') {
+                        product.doubles = 'No doubles'
+                    } else {
+                        product.doubles = '6, 7, 9, 12 - 154/85, 148/85, 142/64, 118/55 - bottom, bottom, top, bottom'
+                        product.combs = "1 comb"
+                    }
+                }
+
                 // EPS
 
                 // sandwich EPS
@@ -641,7 +654,7 @@ function updateSleeved(orders) {
                 }
 
                 //8&6 PCIE
-                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                else if (sCG.sleevedPCIEGroupFour.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
                     product.doubles = 'No doubles'

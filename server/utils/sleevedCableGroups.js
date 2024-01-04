@@ -12,9 +12,11 @@ const sleevedCableGroups = {
 
     sleevedPCIEGroupThree: ['Cooler Master NR200 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable', 'Cooler Master NR200 6 Pin PCIE Paracord Custom Sleeved Cable', 'Sliger S610/S620 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable', 'Sliger S610/S620 6 Pin PCIE Paracord Custom Sleeved Cable'],
 
+    sleevedPCIEGroupFour: ['Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable', 'Fractal Terra 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable', 'Fractal Terra 6 Pin PCIE Paracord Custom Sleeved Cable'],
+
     sleevedSATAGroupOne: ['DAN Cases A4-SFX SATA Power Paracord Custom Sleeved Cable', 'LOUQE Ghost S1 SATA Power Paracord Custom Sleeved Cable', 'FormD T1 SATA Power Paracord Custom Sleeved Cable', 'Nouvolo Steck SATA Power Paracord Custom Sleeved Cable'],
 
-    sleevedSATAGroupTwo: ['Cooler Master NR200 SATA Power Paracord Custom Sleeved Cable', 'NCASE M1 SATA Power Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 SATA Power Paracord Custom Sleeved Cable', 'Sliger S610/S620 SATA Power Paracord Custom Sleeved Cable', 'Lazer3D LZ7 SATA Power Paracord Custom Sleeved Cable', 'Lian Li x DAN A4-H2O SATA Power Paracord Custom Sleeved Cable'],
+    sleevedSATAGroupTwo: ['Cooler Master NR200 SATA Power Paracord Custom Sleeved Cable', 'NCASE M1 SATA Power Paracord Custom Sleeved Cable', 'Sliger SM550/SM560/SM570/SM580 SATA Power Paracord Custom Sleeved Cable', 'Sliger S610/S620 SATA Power Paracord Custom Sleeved Cable', 'Lazer3D LZ7 SATA Power Paracord Custom Sleeved Cable', 'Lian Li x DAN A4-H2O SATA Power Paracord Custom Sleeved Cable', 'Fractal Terra SATA Power Paracord Custom Sleeved Cable'],
 
     sleevedDualSATAGroupOne: ['DAN Cases A4-SFX Dual SATA Power Paracord Custom Sleeved Cable', 'LOUQE Ghost S1 Dual SATA Power Paracord Custom Sleeved Cable'],
 
