@@ -795,8 +795,16 @@ function updateSleeved(orders) {
                     product.doubles = '3, 4, 8, 10, 12 - 256/64, 256/55, 256/55, 256/55, 256/64, top, bottom, bottom, bottom, bottom - EVGA Build'
                     product.combs = "1 comb"
                 }
-                // EPS
 
+                // TERRA
+                else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
+                    product.instructions = "All 172 - Build from right"
+                    product.doubles = '3, 4, 8, 10, 12 - 172/64, 172/55, 172/55, 172/55, 172/64, top, bottom, bottom, bottom, bottom - EVGA Build'
+                    product.combs = "1 comb"
+                    product.crimps = 'Opposite crimps'
+                }
+
+                // EPS
                 // sandwich EPS
                 else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
@@ -850,7 +858,7 @@ function updateSleeved(orders) {
                 }
 
                 //8&6 PCIE
-                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || sCG.sleevedPCIEGroupFour.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
                     product.doubles = 'No doubles'
@@ -1025,8 +1033,15 @@ function updateSleeved(orders) {
                     product.combs = "1 comb"
                 }
 
-                // EPS
+                // TERRA 24 
+                else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
+                    product.instructions = "All 124 - Build from right"
+                    product.doubles = '1, 2, 3, 12 - 124/55, 124/55, 124/64, 124/55 - bottom, bottom, top, bottom'
+                    product.combs = "1 comb"
+                    product.crimps = 'Opposite crimps'
+                }
 
+                // EPS
                 // sandwich EPS
                 else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
@@ -1088,7 +1103,7 @@ function updateSleeved(orders) {
 
                 //8&6 PCIE
                 // Sandwich PCIE + Meshlicious
-                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || product.title === 'Sliger SM550/SM560/SM570/SM580 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'Sliger SM550/SM560/SM570/SM580 6 Pin PCIE Paracord Custom Sleeved Cable') {
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || sCG.sleevedPCIEGroupFour.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
                     product.instructions = 'All 304'
                     product.doubles = 'Bottom left double - #1 is double'
@@ -1199,6 +1214,59 @@ function updateSleeved(orders) {
                     product.instructions = 'Dual SATA - 214 - Cooler Master'
                     product.combs = "2 combs"
                     product.doubles = '5 doubles'
+                }
+            }
+
+            // Silverstone 850R
+            else if (product.psuModel === 'Silverstone 850R Platinum') {
+                // 24 PIN
+                // TERRA
+                if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
+                    product.instructions = "Start at 178 - Build from right - Connectors: 2x 24 pin"
+                    product.doubles = '2, 7, 10, 12 - 172/64, 142/85, 118/85, 106/106 - top, top, bottom, bottom'
+                    product.combs = "1 comb"
+                    product.crimps = 'Opposite crimps'
+                }
+
+                // EPS
+                // TERRA
+                else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "3 combs"
+                    if (mEH.insideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 256 - Colors: 4, 3, 2, 1'
+                    } else if (mEH.outsideHeaders.includes(product.moboModel)) {
+                        product.instructions = 'Start at 286 - Colors: 4, 3, 2, 1'
+                    }
+                }
+
+                // PCIE
+                // TERRA
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || sCG.sleevedPCIEGroupFour.includes(product.title)) {
+                    product.crimps = 'Opposite crimps'
+                    product.instructions = 'All 304'
+                    product.doubles = 'Bottom left double - #1 is double'
+                    product.combs = "3 combs"
+                }
+
+                // SATA
+                else if (sCG.sleevedSATAGroupOne.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '100 - Silverstone'
+                    product.combs = "1 comb"
+                } else if (sCG.sleevedSATAGroupTwo.includes(product.title)) {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '148 - Silverstone'
+                    product.combs = "1 comb"
+                } else if (product.title === 'XTIA Xproto SATA Power Paracord Custom Sleeved Cable') {
+                    // length is provided by customer
+                    product.instructions = 'Silverstone SATA build'
+                    product.crimps = 'Same crimps - Female'
+                    product.combs = "1 comb for every 100mm in length"
+                } else if (product.title === 'DAN Cases C4-SFX SATA Power Paracord Custom Sleeved Cable') {
+                    product.crimps = 'Same crimps - Female'
+                    product.instructions = '214 - Silverstone'
+                    product.combs = "2 combs"
                 }
             }
 
