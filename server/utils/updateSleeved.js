@@ -259,6 +259,18 @@ function updateSleeved(orders) {
                     product.doubles = '3, 4, 6, 12 - 285/64, 275/64, 255/55, 195/85 - top, bottom, bottom, bottom'
                     product.instructions = 'Start at 305 (chart) - Build from right'
                     product.combs = "1 comb"
+                    // TERRA     
+                } else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable' && product.senseWires === 'No') {
+                    product.instructions = "Start at 190 - Build from left"
+                    product.doubles = '1, 7, 9, 10 - 184/85, 148/55, 136/64x2 - bottom, bottom, bottom, top'
+                    product.combs = "1 comb"
+                    product.crimps = 'Opposite crimps'
+
+                } else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
+                    product.instructions = "Start at 190 - Build from left"
+                    product.doubles = '1, 7, 9, 10 - 184/85, 148/55, 136/64x2 - bottom, bottom, bottom, top'
+                    product.combs = "1 comb"
+                    product.crimps = 'Opposite crimps'
                 }
 
                 // EPS
