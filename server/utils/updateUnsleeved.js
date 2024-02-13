@@ -387,7 +387,7 @@ function updateUnsleeved(orders) {
                 if (uCG.unsleeved24GroupOne.includes(product.title)) {
                     product.instructions = "140 - 24 pin - Cooler Master Type 1"
                     if (product.t1RotatedPsu) {
-                        product.instructions = "90 Degree Rotated Cooler Master -- need length from Phil!"
+                        product.instructions = "160 - 24 pin - Cooler Master Type 1"
                     }
                 } else if (product.title === 'SSUPD Meshlicious 24 Pin Unsleeved Custom Cable') {
                     product.instructions = "280/290 - 24 pin - Cooler Master Meshlicious"
