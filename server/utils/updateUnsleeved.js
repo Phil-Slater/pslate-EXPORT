@@ -104,7 +104,7 @@ function updateUnsleeved(orders) {
                     product.instructions = 'Silverstone SX1000 pinout - 20 single wires; 6 wires for doubles - 2x 24 and 4 pin connectors'
                 } else if (product.psuModel === 'EVGA 450/550/650/750/850 GM') {
                     product.instructions = 'EVGA pinout - 18 single wires; 10 wires for doubles - 24, 10, and 18 connectors'
-                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W' || product.psuModel === 'Asus ROG Loki SFX-L 750W/850W/1000W') {
                     product.instructions = 'Seasonic pinout - 19 single wires; 8 wires for doubles - 24, 10, and 18 connectors'
                 } else if (product.psuModel === 'Lian-Li SP750') {
                     product.instructions = 'Lian-Li SP750 pinout - 20 single wires; 6 wires for doubles - 24, 10, and 18 connectors'
@@ -116,7 +116,7 @@ function updateUnsleeved(orders) {
                     product.instructions = 'Opposite crimps - No cross - 4+4 and 8 EPS connectors'
                 } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX500-G/SX650-G/SX700-G/SX700-PT' || product.psuModel === 'Silverstone SX700-LPT(SFX-L)/ST45SF/SX600-G/Lian Li PE-550' || product.psuModel === 'Silverstone SX800-LTI/NJ450-SXL/Lian Li PE-750' || product.psuModel === 'Silverstone SX750' || product.psuModel === 'Silverstone SX1000' || product.psuModel === 'EVGA 450/550/650/750/850 GM') {
                     product.instructions = 'Double outside crimps - No cross - 4+4 and 8 EPS connectors'
-                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W' || product.psuModel === 'Asus ROG Loki SFX-L 750W/850W/1000W') {
                     product.instructions = 'Opposite crimps - No cross - 4+4 and FULL 8 PCIE connectors'
                 }
             }
@@ -128,7 +128,7 @@ function updateUnsleeved(orders) {
                     product.instructions = 'Double outside crimps - No double - 6+2 and FULL 8 PCIE connectors - Silverstone Type 1 PCIE build'
                 } else if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX' || product.psuModel === 'Silverstone SX750' || product.psuModel === 'Silverstone SX1000') {
                     product.instructions = 'Opposite crimps - Bottom left double - 6+2 and 8 EPS connectors - Cooler Master Type 1 PCIE build'
-                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W' || product.psuModel === 'Asus ROG Loki SFX-L 750W/850W/1000W') {
                     product.instructions = 'Double outside crimps - Top right double - 6+2 and FULL 8 PCIE connectors - Corsair Type 1 PCIE build (with full 8 PCIE connector instead of EPS)'
                 }
             }
@@ -140,7 +140,7 @@ function updateUnsleeved(orders) {
                 }
                 if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
                     product.instructions = 'Cooler Master SATA build'
-                } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W' || product.psuModel === 'Asus ROG Loki SFX-L 750W/850W/1000W') {
                     product.instructions = 'Seasonic SATA build'
                 }
             }
@@ -152,7 +152,7 @@ function updateUnsleeved(orders) {
                 }
                 if (product.psuModel === 'Cooler Master V550/V650/V750/V850 SFX') {
                     product.instructions = 'Cooler Master Molex build'
-                } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                } else if (product.psuModel === 'Fractal Ion SFX-L 500W/650W' || product.psuModel === 'Asus ROG Loki SFX-L 750W/850W/1000W') {
                     product.instructions = 'Seasonic Molex build'
                 }
             }
@@ -176,7 +176,7 @@ function updateUnsleeved(orders) {
                     } else {
                         product.instructions = 'Double outside crimps - 12 pin and 2x 8 EPS connectors - 1:1 with cross (top left and bottom left ports on EPS left open)'
                     }
-                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W') {
+                } else if (product.psuModel === 'Seasonic Focus SGX-450/SGX-500/SGX-650/SGX-750/SPX-750' || product.psuModel === 'Fractal Ion SFX-L 500W/650W' || product.psuModel === 'Asus ROG Loki SFX-L 750W/850W/1000W') {
                     if (product.gpuModel === 'RTX 3090 Ti') {
                         product.instructions = 'Double outside crimps - 12 pin and 3x FULL 8 PCIE connectors - 4 wires per 8 pin'
                     } else {
