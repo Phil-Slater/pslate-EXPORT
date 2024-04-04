@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SHOPIFY_ACCESS_TOKEN, SHOP, MONGO_URL } = process.env
 
 global.instance = axios.create({
-    baseURL: `https://${SHOPIFY_API_KEY}:${SHOPIFY_API_SECRET}@${SHOP}/admin/api/2022-01`,
+    baseURL: `https://${SHOPIFY_API_KEY}:${SHOPIFY_API_SECRET}@${SHOP}/admin/api/2024-04`,
     timeout: 10000,
     headers: {
         'Content-Type': 'application/json',
