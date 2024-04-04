@@ -654,7 +654,7 @@ function updateSleeved(orders) {
                 }
 
                 //8&6 PCIE
-                else if (sCG.sleevedPCIEGroupFour.includes(product.title)) {
+                else if (sCG.sleevedPCIEGroupFour.includes(product.title) || product.title === 'XTIA Xproto 8 (6+2) Pin PCIE Paracord Custom Sleeved Cable' || product.title === 'XTIA Xproto 6 Pin PCIE Paracord Custom Sleeved Cable') {
                     product.crimps = 'Same crimps - Female'
                     product.instructions = '310/304 - Long on top - Silverstone PCIE build!'
                     product.doubles = 'No doubles'

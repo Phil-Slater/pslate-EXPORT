@@ -323,7 +323,7 @@ function updateUnsleeved(orders) {
                 //EPS
                 else if (uCG.unsleevedEPSGroupOne.includes(product.title)) {
                     product.instructions = "280 - EPS - Silverstone Type 1"
-                } else if (uCG.unsleeved24GroupTwo.includes(product.title)) {
+                } else if (uCG.unsleevedEPSGroupTwo.includes(product.title)) {
                     product.instructions = "360 - EPS - Silverstone Type 2/3"
                 } else if (product.moboModel == 'Asus ROG Crosshair VIII Impact' && uCG.unsleevedEPSImpactGroup.includes(product.title)) {
                     product.instructions = "210 - EPS - Silverstone Type 2"
