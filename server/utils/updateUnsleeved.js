@@ -556,6 +556,8 @@ function updateUnsleeved(orders) {
                 // SATA
                 else if (uCG.unsleevedSATAGroupOne.includes(product.title)) {
                     product.instructions = "Single SATA - 100 - Silverstone"
+                } else if (uCG.unsleevedSATAGroupTwo.includes(product.title)) {
+                    product.instructions = "Single SATA - 150 - Silverstone"
                 }
 
                 // DUAL SATA
