@@ -1218,7 +1218,7 @@ function updateSleeved(orders) {
             }
 
             // Silverstone 850R
-            else if (product.psuModel === 'Silverstone 850R Platinum') {
+            else if (product.psuModel === 'Silverstone 850R Platinum' || product.psuModel === 'PowerSpec PS 750SFXG/850SFXG') {
                 // 24 PIN
                 // TERRA
                 if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
