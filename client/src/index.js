@@ -25,8 +25,12 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 const token = localStorage.getItem('jwt')
 store.dispatch({ type: 'ON_AUTH', payload: token })
 
-//axios.defaults.baseURL = 'http://localhost:8080'
-axios.defaults.baseURL = 'https://pslate-export.herokuapp.com'
+if (window.location.href.includes('localhost')) {
+  axios.defaults.baseURL = 'http://localhost:8080'
+} else {
+  axios.defaults.baseURL = 'https://pslate-export.herokuapp.com'
+}
+
 axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
 axios.defaults.transformRequest = [(data) => {
   store.dispatch(requestSent())
