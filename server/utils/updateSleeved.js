@@ -1217,11 +1217,11 @@ function updateSleeved(orders) {
                 }
             }
 
-            // Silverstone 850R
+            // Silverstone 850R and PowerSpec PS 750SFXG/850SFXG
             else if (product.psuModel === 'Silverstone 850R Platinum' || product.psuModel === 'PowerSpec PS 750SFXG/850SFXG') {
                 // 24 PIN
-                // TERRA
-                if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
+                // TERRA & SANDWICH
+                if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable' || sCG.sleeved24GroupOne.includes(product.title)) {
                     product.instructions = "Start at 178 - Build from right - Connectors: 2x 24 pin"
                     product.doubles = '2, 7, 10, 12 - 172/64, 142/85, 118/85, 106/106 - top, top, bottom, bottom'
                     product.combs = "1 comb"
@@ -1229,7 +1229,7 @@ function updateSleeved(orders) {
                 }
 
                 // EPS
-                // TERRA
+                // SANDWICH
                 else if (sCG.sleevedEPSGroupOne.includes(product.title)) {
                     product.crimps = 'Same crimps - Female'
                     product.combs = "3 combs"
@@ -1241,8 +1241,8 @@ function updateSleeved(orders) {
                 }
 
                 // PCIE
-                // TERRA
-                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || sCG.sleevedPCIEGroupFour.includes(product.title)) {
+                // SANDWICH
+                else if (sCG.sleevedPCIEGroupOne.includes(product.title) || sCG.sleevedPCIEGroupFour.includes(product.title) || sCG.sleevedPCIEGroupTwo.includes(product.title)) {
                     product.crimps = 'Opposite crimps'
                     product.instructions = 'All 304'
                     product.doubles = 'Bottom left double - #1 is double'
