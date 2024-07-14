@@ -13,7 +13,7 @@ function Menu(props) {
                     <NavLink to='/'><div className="text-2xl text-white font-bold">
                         <img className="h-20" src={logo2} alt="" width="auto" />
                     </div></NavLink>
-                    <div className="lg:hidden">
+                    <div className="xl:hidden">
                         <button className="p-2 navbar-burger">
                             <svg className="w-10 h-3" width="39" height="13" viewBox="0 0 39 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +22,7 @@ function Menu(props) {
                             </svg>
                         </button>
                     </div>
-                    <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="hidden xl:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                         <ul className="flex items-center text-white space-x-8">
                             <NavLink to='/rush-orders'><li><div className="text-white font-bold text-lg">Rush Orders</div></li></NavLink>
                             <span>
@@ -49,13 +49,19 @@ function Menu(props) {
                                 </svg>
                             </span>
                             <NavLink to='/sleeved-12-pins'><li><div className="text-white font-bold text-lg" >Sleeved 12 Pins</div></li></NavLink>
+                            <span>
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>
+                                </svg>
+                            </span>
+                            <NavLink to='/war-ganizer-orders'><li><div className="text-white font-bold text-lg" >War-Ganizer Orders</div></li></NavLink>
                         </ul>
                     </div>
                     {!props.isAuthenticated ?
 
-                        <div className="hidden lg:block"><NavLink to='/sign-in'><div
+                        <div className="hidden xl:block"><NavLink to='/sign-in'><div
                             className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-xl">Sign In</div></NavLink></div>
-                        : <div className="hidden lg:block"><NavLink to='/sign-out'><div
+                        : <div className="hidden xl:block"><NavLink to='/sign-out'><div
                             className="inline-block px-8 py-4 text-white font-bold border border-gray-200 hover:border-white rounded-xl">Sign out</div></NavLink></div>
                     }
                 </nav>
@@ -74,6 +80,7 @@ function Menu(props) {
                                 <NavLink to='/unsleeved-orders'><li className="mb-1 px-10"><div className="block pl-8 py-4 text-xl text-white hover:bg-gray-400 rounded-xl">Unsleeved Orders</div></li></NavLink>
                                 <NavLink to='/power-switches'><li className="mb-1 px-10"><div className="block pl-8 py-4 text-xl text-white hover:bg-gray-400 rounded-xl">Power Switches</div></li></NavLink>
                                 <NavLink to='/sleeved-12-pins'><li className="mb-1 px-10"><div className="block pl-8 py-4 text-xl text-white hover:bg-gray-400 rounded-xl">Sleeved 12 Pins</div></li></NavLink>
+                                <NavLink to='/war-ganizer-orders'><li className="mb-1 px-10"><div className="block pl-8 py-4 text-xl text-white hover:bg-gray-400 rounded-xl">War-Ganizer Orders</div></li></NavLink>
                             </ul>
                         </div>
                         <div className="mt-auto px-10">
