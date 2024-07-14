@@ -117,6 +117,12 @@ router.put('/order/:id', async (req, res) => {
     }
 })
 
+router.get('/war-ganizers', authenticate, async (req, res) => {
+    const orders = await getOrders()
+    const warGazinerOrders = filterWarGanizerOrders(orders)
+    res.json(warGazinerOrders)
+})
+
 
 // FUNCTIONS
 async function getOrder(id) {
@@ -310,6 +316,20 @@ function getSleeved12PinOrders(orders) {
         })
     })
     return sleeved12PinOrders
+}
+
+function filterWarGanizerOrders(orders) {
+    let warGazinerOrders = []
+    orders.data.orders.forEach(order => {
+        order.line_items.forEach(product => {
+            let orderNumberCheck = warGazinerOrders.some(key => key.order_number === order.order_number)
+            if (!orderNumberCheck && product.title.includes('War-Ganizer')) {
+                warGazinerOrders.push(order)
+            }
+        })
+    })
+    console.log(warGazinerOrders.length)
+    return warGazinerOrders
 }
 
 module.exports = router
