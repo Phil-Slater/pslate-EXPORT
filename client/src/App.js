@@ -21,6 +21,7 @@ import MissingCables from './components/Unsleeved Orders/MissingCables';
 import UnsleevedCounts from './components/Unsleeved Orders/UnsleevedCounts';
 import HomePage from './components/HomePage';
 import LoadingAnimation from './components/Loading/LoadingAnimation';
+import WarGanizerOrders from './components/WarGanizerOrders.js';
 
 const App = () => {
 
@@ -76,6 +77,10 @@ const App = () => {
         <Route path='/missing-cables' element={
           <ProtectedRoute>
             <MissingCables />
+          </ProtectedRoute>} />
+        <Route path='/war-ganizer-orders' element={
+          <ProtectedRoute>
+            <WarGanizerOrders />
           </ProtectedRoute>} />
       </Routes>
     </>

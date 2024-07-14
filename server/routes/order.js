@@ -120,7 +120,8 @@ router.put('/order/:id', async (req, res) => {
 router.get('/war-ganizers', authenticate, async (req, res) => {
     const orders = await getOrders()
     const warGazinerOrders = filterWarGanizerOrders(orders)
-    res.json(warGazinerOrders)
+    const ordersFinalized = reWriteDate(warGazinerOrders)
+    res.json(ordersFinalized)
 })
 
 
