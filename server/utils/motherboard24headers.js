@@ -4,7 +4,7 @@ const motherboard24headers = {
 
     offsetHeaders: ['Biostar Racing Z490T-Silver', 'Biostar Z490GTN', 'ASRock Z490M-ITX/ac', 'ASRock H470M-ITX/ac', 'ASRock H410M-ITX/ac', 'ASRock B460M-ITX/ac', 'Colorful CVN B460I GAMING FROZEN V20', 'ASRock Z390M-ITX/ac', 'ASRock H370M-ITX/ac', 'ASRock Z370M-ITX/ac', 'ASRock H310CM-ITX/ac', 'ASRock H310M-ITX/ac', 'ASRock B360M-ITX/ac', 'ASRock B365M-ITX/ac', 'ASRock Z270M-ITX/ac', 'ASRock H270M-ITX/ac', 'ASRock Z590 Phantom Gaming-ITX/TB4', 'Biostar Z590I Valkyrie', 'MSI H510I PRO WIFI', 'ASRock Z690 Phantom Gaming-ITX/TB4', 'MSI MPG B550I GAMING EDGE WIFI', 'ASRock Fatal1ty X470 Gaming-ITX/ac', 'ASRock Fatal1ty B450 Gaming-ITX/ac', 'ASRock X370 Gaming-ITX/ac', 'ASRock AB350 Gaming-ITX/ac', 'ASRock A320M-ITX', 'ASRock Z690 Phantom Gaming-ITX TB4'],
 
-    middleHeaders: ['ASRock Z490 Phantom Gaming-ITX/TB3', 'ASRock Z390 Phantom Gaming-ITX/ac', 'ASRock Fatal1ty Z370 Gaming-ITX/ac', 'ASRock Fatal1ty Z270 Gaming-ITX/ac', 'Gigabyte GA-Z270N-Gaming 5', 'ASRock X570 PHANTOM GAMING-ITX/TB3', 'Asus ROG Crosshair VIII Impact', 'Biostar X470GTN', 'Biostar X470NH', 'MSI B450I GAMING PLUS AC', 'MSI B450I GAMING PLUS MAX WIFI', 'Biostar B350GTN', 'MSI B350I PRO AC', 'Biostar X370GTN', 'ASRock Z790 PG-ITX/TB4']
+    middleHeaders: ['ASRock Z490 Phantom Gaming-ITX/TB3', 'ASRock Z390 Phantom Gaming-ITX/ac', 'ASRock Fatal1ty Z370 Gaming-ITX/ac', 'ASRock Fatal1ty Z270 Gaming-ITX/ac', 'Gigabyte GA-Z270N-Gaming 5', 'ASRock X570 PHANTOM GAMING-ITX/TB3', 'Asus ROG Crosshair VIII Impact', 'Biostar X470GTN', 'Biostar X470NH', 'MSI B450I GAMING PLUS AC', 'MSI B450I GAMING PLUS MAX WIFI', 'Biostar B350GTN', 'MSI B350I PRO AC', 'Biostar X370GTN', 'ASRock Z790 PG-ITX/TB4', 'Gigabyte Z790I AORUS ULTRA']
 
 }
 
