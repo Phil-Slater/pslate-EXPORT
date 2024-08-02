@@ -4,17 +4,24 @@
 const gpuClipDirections = {
 
     fanClips: [
-        
+        // 7600 XT
+        'Acer Nitro OC Radeon RX 7600 XT',
+        // 7600
+        'Acer Predator BiFrost Radeon RX 7600', 
+        // 4060ti
+        'Palit Dual GeForce RTX 4060 Ti', 'Palit JetStream GeForce RTX 4060 Ti', 'Palit StormX GeForce RTX 4060 Ti', 'PNY VERTO GeForce RTX 4060 Ti', 
+        // 4060
+        'Palit Dual GeForce RTX 4060 Ti', 'Palit JetStream GeForce RTX 4060 Ti', 'Palit StormX GeForce RTX 4060 Ti', 'PNY VERTO GeForce RTX 4060 Ti', 'PNY XLR8 Gaming VERTO EPIC-X RGB GeForce RTX 4060 Ti',
         // 4070
         'Gainward Ghost OC GeForce RTX 4070', 'GALAX 1-Click OC 3X GeForce RTX 4070', 'Palit JetStream GeForce RTX 4070', 'PNY VERTO GeForce RTX 4070',
         // 7900 XT
-        'AMD Radeon RX 7900 XT', 'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT',
+        'AMD Radeon RX 7900 XT', 'ASRock Radeon RX 7900 XT', 'Asus Radeon RX 7900 XT', 'Gigabyte Radeon RX 7900 XT', 'PowerColor Red Devil Radeon RX 7900 XT', 'PowerColor RX 7900 XT', 'Sapphire Radeon RX 7900 XT', 'XFX Radeon RX 7900 XT', 'Biostar VA7906XE00 Radeon RX 7900 XT', 
         // 7900 XTX
-        'AMD Radeon RX 7900 XTX', 'ASRock Radeon RX 7900 XTX', 'Asus Radeon RX 7900 XTX', 'Gigabyte Radeon RX 7900 XTX', 'PowerColor Red Devil Radeon RX 7900 XTX', 'PowerColor Radeon RX 7900 XTX', 'Sapphire Radeon RX 7900 XTX', 'XFX Radeon RX 7900 XTX',
+        'AMD Radeon RX 7900 XTX', 'ASRock Radeon RX 7900 XTX', 'Asus Radeon RX 7900 XTX', 'Gigabyte Radeon RX 7900 XTX', 'PowerColor Red Devil Radeon RX 7900 XTX', 'PowerColor Radeon RX 7900 XTX', 'Sapphire Radeon RX 7900 XTX', 'XFX Radeon RX 7900 XTX', 'Biostar Radeon RX 7900 XTX', 
         // 7800 XT
-        'PowerColor Red Devil OC Radeon RX 7800 XT', 'Sapphire Radeon RX 7800 XT',
+        'PowerColor Red Devil OC Radeon RX 7800 XT', 'Sapphire Radeon RX 7800 XT', 'Acer Nitro OC Radeon RX 7800 XT', 'Acer Predator BiFrost OC Radeon RX 7800 XT',
         // 7700 XT
-        'PowerColor Red Devil OC Radeon RX 7700 XT', 
+        'PowerColor Red Devil OC Radeon RX 7700 XT', 'Acer Nitro OC Radeon RX 7700 XT', 
         // Intel ARC
         'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770',
         // 3090ti
@@ -93,14 +100,22 @@ const gpuClipDirections = {
     ],
 
     backplateClips: [
+        // 7600 XT
+        'ASRock Challenger OC Radeon RX 7600 XT', 'ASRock Steel Legend OC Radeon RX 7600 XT', 'Asus DUAL OC Radeon RX 7600 XT', 'Asus TUF GAMING OC Radeon RX 7600 XT', 'Gigabyte GAMING OC Radeon RX 7600 XT', 'PowerColor Fighter Radeon RX 7600 XT', 'PowerColor Hellhound OC Radeon RX 7600 XT', 'Sapphire PULSE Radeon RX 7600 XT', 'XFX Speedster QICK 309 Radeon RX 7600 XT', 'XFX Speedster SWFT 210 Radeon RX 7600 XT', 
+        // 7600
+        'AMD Radeon RX 7600', 'ASRock Challenger OC Radeon RX 7600', 'ASRock Phantom Gaming OC Radeon RX 7600', 'ASRock Steel Legend OC Radeon RX 7600', 'Asus DUAL OC Radeon RX 7600', 'Asus DUAL OC V2 Radeon RX 7600', 'Asus ROG STRIX OC Radeon RX 7600', 'Biostar Radeon RX 7600', 'Gigabyte GAMING OC Radeon RX 7600', 'MSI MECH 2X CLASSIC Radeon RX 7600', 'PowerColor Fighter Radeon RX 7600', 'PowerColor Hellhound Radeon RX 7600', 'Sapphire PULSE Radeon RX 7600', 'XFX Speedster QICK 308 Black Radeon RX 7600', 'XFX Speedster SWFT 210 Core Radeon RX 7600', 
+        // 4060ti
+        'Asus DUAL GeForce RTX 4060 Ti', 'Asus PRIME GeForce RTX 4060 Ti', 'Asus ProArt GeForce RTX 4060 Ti', 'Asus ROG STRIX GAMING GeForce RTX 4060 Ti', 'Gainward Ghost GeForce RTX 4060 Ti', 'Gainward Pegasus GeForce RTX 4060 Ti', 'GALAX (1-click OC) GeForce RTX 4060 Ti', 'GALAX (1-click OC) GeForce RTX 4060 Ti', 'GALAX EX GeForce RTX 4060 Ti', 'Gigabyte AERO OC GeForce RTX 4060 Ti', 'Gigabyte AORUS ELITE GeForce RTX 4060 Ti', 'Gigabyte EAGLE GeForce RTX 4060 Ti', 'Inno3D Twin X2 GeForce RTX 4060 Ti', 'KFA2 (1-Click OC) GeForce RTX 4060 Ti', 'KFA2 EX GeForce RTX 4060 Ti', 'MSI GAMING GeForce RTX 4060 Ti', 'MSI GAMING SLIM GeForce RTX 4060 Ti', 'MSI GAMING TRIO GeForce RTX 4060 Ti', 'MSI GAMING X GeForce RTX 4060 Ti', 'MSI GAMING X SLIM GeForce RTX 4060 Ti', 'MSI GAMING X TRIO GeForce RTX 4060 Ti', 'MSI VENTUS 2X BLACK GeForce RTX 4060 Ti', 'MSI VENTUS 3X GeForce RTX 4060 Ti', 'PNY XLR8 Gaming VERTO EPIC-X RGB GeForce RTX 4060 Ti', 'Zotac GAMING Twin Edge GeForce RTX 4060 Ti', 
+        // 4060
+        'Asus DUAL GeForce RTX 4060 Ti', 'Asus PRIME GeForce RTX 4060 Ti', 'Asus ProArt GeForce RTX 4060 Ti', 'Asus ROG STRIX GAMING GeForce RTX 4060 Ti', 'Asus TUF GAMING GeForce RTX 4060 Ti', 'Gainward Ghost GeForce RTX 4060 Ti', 'GALAX (1-click OC) GeForce RTX 4060 Ti', 'GALAX EX GeForce RTX 4060 Ti', 'Gigabyte AERO OC GeForce RTX 4060 Ti', 'Gigabyte AORUS ELITE GeForce RTX 4060 Ti', 'Gigabyte EAGLE GeForce RTX 4060 Ti', 'Gigabyte GAMING OC GeForce RTX 4060 Ti', 'Inno3D Twin X2 GeForce RTX 4060 Ti', 'KFA2 EX GeForce RTX 4060 Ti', 'MSI GAMING GeForce RTX 4060 Ti', 'MSI GAMING SLIM GeForce RTX 4060 Ti', 'MSI GAMING TRIO GeForce RTX 4060 Ti', 'MSI GAMING X SLIM GeForce RTX 4060 Ti', 'MSI GAMING X TRIO GeForce RTX 4060 Ti', 'MSI VENTUS 2X BLACK GeForce RTX 4060 Ti', 'MSI VENTUS 3X GeForce RTX 4060 Ti', 'Zotac GAMING Twin Edge GeForce RTX 4060 Ti', 
         // 4070
         'Asus DUAL OC GeForce RTX 4070', 'Asus TUF GAMING OC GeForce RTX 4070', 'Gigabyte EAGLE OC GeForce RTX 4070', 'Gigabyte WINDFORCE OC GeForce RTX 4070', 'Inno3D Twin X2 OC GeForce RTX 4070', 'KFA2 EX Gamer GeForce RTX 4070', 'MSI VENTUS 2X OC GeForce RTX 4070', 'MSI VENTUS 3X OC GeForce RTX 4070', 'Palit Dual OC GeForce RTX 4070', 'PNY XLR8 Gaming VERTO EPIC-X RGB OC GeForce RTX 4070', 'Zotac Twin Edge OC GeForce RTX 4070',
         // 7900 XT
-        'ASRock Phantom Gaming OC Radeon RX 7900 XT', 'ASRock Taichi OC Radeon RX 7900 XT', 'Asus TUF GAMING OC Radeon RX 7900 XT', 'Gigabyte GAMING OC Radeon RX 7900 XT', 'PowerColor Hellhound Radeon RX 7900 XT', 'Sapphire NITRO+ Radeon RX 7900 XT', 'Sapphire PULSE Radeon RX 7900 XT', 'XFX Speedster MERC 310 Radeon RX 7900 XT',
+        'ASRock Phantom Gaming OC Radeon RX 7900 XT', 'ASRock Taichi OC Radeon RX 7900 XT', 'Asus TUF GAMING OC Radeon RX 7900 XT', 'Gigabyte GAMING OC Radeon RX 7900 XT', 'PowerColor Hellhound Radeon RX 7900 XT', 'Sapphire NITRO+ Radeon RX 7900 XT', 'Sapphire PULSE Radeon RX 7900 XT', 'XFX Speedster MERC 310 Radeon RX 7900 XT', 'Asus DUAL OC Radeon RX 7900 XT', 'MSI GAMING TRIO CLASSIC Radeon RX 7900 XT', 
         // 7900 XTX
-        'ASRock Phantom Gaming OC Radeon RX 7900 XTX', 'ASRock Taichi OC Radeon RX 7900 XTX', 'Asus TUF GAMING OC Radeon RX 7900 XTX', 'Gigabyte AORUS ELITE Radeon RX 7900 XTX', 'Gigabyte GAMING OC Radeon RX 7900 XTX', 'MSI GAMING TRIO CLASSIC Radeon RX 7900 XTX', 'PowerColor Hellhound Radeon RX 7900 XTX', 'Sapphire NITRO+ Radeon RX 7900 XTX', 'Sapphire PULSE Radeon RX 7900 XTX', 'XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX',
+        'ASRock Phantom Gaming OC Radeon RX 7900 XTX', 'ASRock Taichi OC Radeon RX 7900 XTX', 'Asus TUF GAMING OC Radeon RX 7900 XTX', 'Gigabyte AORUS ELITE Radeon RX 7900 XTX', 'Gigabyte GAMING OC Radeon RX 7900 XTX', 'MSI GAMING TRIO CLASSIC Radeon RX 7900 XTX', 'PowerColor Hellhound Radeon RX 7900 XTX', 'Sapphire NITRO+ Radeon RX 7900 XTX', 'Sapphire PULSE Radeon RX 7900 XTX', 'XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX', 'Asus DUAL OC Radeon RX 7900 XTX', 
         // 7800 XT
-        'ASRock Challenger OC Radeon RX 7800 XT', 'ASRock Phantom Gaming OC Radeon RX 7800 XT', 'ASRock Steel Legend OC Radeon RX 7800 XT', 'Asus TUF GAMING OC Radeon RX 7800 XT', 'Gigabyte GAMING OC Radeon RX 7800 XT', 'PowerColor Hellhound OC Radeon RX 7800 XT', 'Sapphire PULSE Radeon RX 7800 XT', 'Sapphire PURE Radeon RX 7800 XT', 'XFX Speedster MERC 319 Black Radeon RX 7800 XT', 'XFX Speedster QICK 319 Core Radeon RX 7800 XT',
+        'ASRock Challenger OC Radeon RX 7800 XT', 'ASRock Phantom Gaming OC Radeon RX 7800 XT', 'ASRock Steel Legend OC Radeon RX 7800 XT', 'Asus TUF GAMING OC Radeon RX 7800 XT', 'Gigabyte GAMING OC Radeon RX 7800 XT', 'PowerColor Hellhound OC Radeon RX 7800 XT', 'Sapphire PULSE Radeon RX 7800 XT', 'Sapphire PURE Radeon RX 7800 XT', 'XFX Speedster MERC 319 Black Radeon RX 7800 XT', 'XFX Speedster QICK 319 Core Radeon RX 7800 XT', 'Asus DUAL OC Radeon RX 7800 XT', 'PowerColor Fighter OC Radeon RX 7800 XT', 'XFX Quicksilver Magnetic Air Radeon RX 7800 XT', 
         // 7700 XT
         'ASRock Challenger OC Radeon RX 7700 XT', 'ASRock Phantom Gaming OC Radeon RX 7700 XT', 'ASRock Steel Legend OC Radeon RX 7700 XT', 'Asus TUF GAMING OC Radeon RX 7700 XT', 'Gigabyte GAMING OC Radeon RX 7700 XT', 'PowerColor Fighter OC Radeon RX 7700 XT', 'PowerColor Hellhound OC Radeon RX 7700 XT', 'Sapphire NITRO+ Radeon RX 7700 XT', 'Sapphire PULSE Radeon RX 7700 XT', 'Sapphire PURE Radeon RX 7700 XT', 'XFX Speedster QICK 319 BLACK Radeon RX 7700 XT',
         // Intel Arc
