@@ -23,7 +23,7 @@ const gpuClipDirections = {
         // 7700 XT
         'PowerColor Red Devil OC Radeon RX 7700 XT', 'Acer Nitro OC Radeon RX 7700 XT', 
         // Intel ARC
-        'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770', 'Acer Predator BiFrost OC Arc A750', 
+        'Intel Limited Edition Arc A770', 'Intel Limited Edition Arc A750', 'Acer Predator BiFrost OC Arc A770', 'Acer Predator BiFrost OC Arc A750', 'ASRock Challenger OC Arc B580', 'ASRock Steel Legend OC Arc B580', 'ASRock Challenger OC Arc B570', 'Acer Predator BiFrost OC Arc A770',
         // 3090ti
         'NVIDIA GeForce RTX 3090 Ti Founders Edition', 'Asus GeForce RTX 3090 Ti STRIX LC GAMING OC', 'EVGA GeForce RTX 3090 Ti FTW3 ULTRA GAMING', 'GALAX GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'Gigabyte GeForce RTX 3090 Ti AORUS XTREME WATERFORCE', 'Gigabyte GeForce RTX 3090 Ti GAMING OC', 'Inno3D GeForce RTX 3090 Ti X3 OC', 'KFA2 GeForce RTX 3090 Ti EX Gamer ST (1-Click OC)', 'MSI GeForce RTX 3090 Ti GAMING X TRIO', 'MSI GeForce RTX 3090 Ti  SUPRIM X', 'Palit GeForce RTX 3090 Ti GameRock OC', 'PNY GeForce RTX 3090 Ti XLR8 Gaming UPRISING EPIC-X RGB OC', 'Zotac GeForce RTX 3090 Ti AMP Extreme Holo',
         // 3090
@@ -100,6 +100,8 @@ const gpuClipDirections = {
     ],
 
     backplateClips: [
+       // Intel ARC
+        'Sparkle TITAN OC Arc B580', 'Sparkle ROC OC Arc A770', 'Sparkle TITAN OC Arc A770', 'Sparkle ORC OC Arc A750', 'Sparkle TITAN OC Arc A750', 'ASRock Challenger OC Arc A580', 'Sparkle ORC OC Arc A580', 
         // 7600 XT
         'ASRock Challenger OC Radeon RX 7600 XT', 'ASRock Steel Legend OC Radeon RX 7600 XT', 'Asus DUAL OC Radeon RX 7600 XT', 'Asus TUF GAMING OC Radeon RX 7600 XT', 'Gigabyte GAMING OC Radeon RX 7600 XT', 'PowerColor Fighter Radeon RX 7600 XT', 'PowerColor Hellhound OC Radeon RX 7600 XT', 'Sapphire PULSE Radeon RX 7600 XT', 'XFX Speedster QICK 309 Radeon RX 7600 XT', 'XFX Speedster SWFT 210 Radeon RX 7600 XT', 
         // 7600
