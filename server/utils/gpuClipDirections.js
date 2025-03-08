@@ -4,6 +4,10 @@
 const gpuClipDirections = {
 
     fanClips: [
+        // 9070 XT
+        'PowerColor Red Devil OC Radeon RX 9070 XT', 
+        // 9070
+        'PowerColor Red Devil OC Radeon RX 9070',
         // 7600 XT
         'Acer Nitro OC Radeon RX 7600 XT',
         // 7600
@@ -100,6 +104,10 @@ const gpuClipDirections = {
     ],
 
     backplateClips: [
+        // 9070 XT
+        'ASRock Steel Legend Dark Radeon RX 9070 XT', 'ASRock Steel Legend Radeon RX 9070 XT', 'Asus PRIME OC Radeon RX 9070 XT', 'Asus TUF GAMING OC Radeon RX 9070 XT', 'Gigabyte AORUS ELITE Radeon RX 9070 XT', 'Gigabyte GAMING OC Radeon RX 9070', 'PowerColor Hellhound OC Radeon RX 9070 XT', 'PowerColor Reaper Radeon RX 9070 XT', 'Sapphire PULSE Radeon RX 9070 XT', 'Sapphire PURE Radeon RX 9070 XT', 'XFX Mercury OC Magnetic Air RGB Radeon RX 9070 XT', 'XFX Quicksilver Radeon RX 9070 XT', 
+        // 9070
+        'ASRock Challenger Radeon RX 9070', 'ASRock Steel Legend OC Radeon RX 9070', 'Asus PRIME OC Radeon RX 9070', 'Asus TUF GAMING OC Radeon RX 9070', 'Gigabyte GAMING OC Radeon RX 9070', 'PowerColor Hellhound OC Radeon RX 9070', 'Sapphire PULSE Radeon RX 9070', 'Sapphire PURE Radeon RX 9070', 'XFX Quicksilver OC Radeon RX 9070', 'XFX Swift OC Radeon RX 9070', 
        // Intel ARC
         'Sparkle TITAN OC Arc B580', 'Sparkle ROC OC Arc A770', 'Sparkle TITAN OC Arc A770', 'Sparkle ORC OC Arc A750', 'Sparkle TITAN OC Arc A750', 'ASRock Challenger OC Arc A580', 'Sparkle ORC OC Arc A580', 
         // 7600 XT
