@@ -4,6 +4,7 @@ const mEH = require('./motherboardEPSHeaders')
 const gCD = require('./gpuClipDirections')
 const uCG = require('./unsleevedCableGroups')
 const vhpwrSleeved = require('./instructionLogic/sleeved/vhpwrSleeved')
+const corsairType5Sleeved = require('./instructionLogic/sleeved/corsairType5Sleeved')
 
 function updateSleeved(orders) {
     orders.forEach(order => {
@@ -1268,6 +1269,11 @@ function updateSleeved(orders) {
                     product.instructions = '214 - Silverstone'
                     product.combs = "2 combs"
                 }
+            }
+
+            // Silverstone 850R and PowerSpec PS 750SFXG/850SFXG
+            else if (product.psuModel === 'Corsair (2024) SF750/850/1000 Platinum (Type 5)') {
+                corsairType5Sleeved(product)
             }
 
             // next PSU model here
