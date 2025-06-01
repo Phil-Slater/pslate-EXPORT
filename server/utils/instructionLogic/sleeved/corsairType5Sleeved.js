@@ -11,39 +11,39 @@ const corsairType5Sleeved = (product) => {
         // product.doubles = 'No doubles'
 
         if (product.t1RotatedPsu) {
-            product.instructions = "Start at 180 (chart) - Build from right"
+            product.instructions = "Start at 180 (chart) - Build from left"
             product.combs = "1 comb"
             // POSITION OF 24 HEADER
         } else if (m24H.cornerHeaders.includes(product.moboModel)) {
-            product.instructions = "Start at 178 - Build from left"
+            product.instructions = "Start at 178 - Build from right"
             product.combs = "1 comb"
         } else if (m24H.offsetHeaders.includes(product.moboModel)) {
-            product.instructions = "Start at 190 - Build from left"
+            product.instructions = "Start at 190 - Build from right"
             product.combs = "1 comb"
         } else if (m24H.middleHeaders.includes(product.moboModel)) {
-            product.instructions = "Start at 214 - Build from left"
+            product.instructions = "Start at 214 - Build from right"
             product.combs = "1 comb"
         }
 
     } else if (sCG.sleeved24GroupOne.includes(product.title)) {
         product.crimps = 'Same crimps - Male'
         if (product.t1RotatedPsu) {
-            product.instructions = "Start at 180 (chart) - Build from right"
+            product.instructions = "Start at 180 (chart) - Build from left"
             product.doubles = 'No doubles'
             // product.doubles = '3, 4, 6, 12 - 160/64, 150/64, 130/55, 70/85 - top, bottom, bottom, bottom'
             product.combs = "1 comb"
         } else if (m24H.cornerHeaders.includes(product.moboModel)) {
-            product.instructions = "Start at 178 - Build from left"
+            product.instructions = "Start at 178 - Build from right"
             product.doubles = 'No doubles'
             // product.doubles = '1, 7, 9, 10 - 172/85, 136/55, 124/64x2 - bottom, bottom, bottom, top'
             product.combs = "1 comb"
         } else if (m24H.offsetHeaders.includes(product.moboModel)) {
-            product.instructions = "Start at 190 - Build from left"
+            product.instructions = "Start at 190 - Build from right"
             product.doubles = 'No doubles'
             // product.doubles = '1, 7, 9, 10 - 184/85, 148/55, 136/64x2 - bottom, bottom, bottom, top'
             product.combs = "1 comb"
         } else if (m24H.middleHeaders.includes(product.moboModel)) {
-            product.instructions = "Start at 214 - Build from left"
+            product.instructions = "Start at 214 - Build from right"
             product.doubles = 'No doubles'
             // product.doubles = '1, 7, 9, 10 - 208/85, 172/55, 160/64x2 - bottom, bottom, bottom, top'
             product.combs = "1 comb"
@@ -53,14 +53,14 @@ const corsairType5Sleeved = (product) => {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
-        product.instructions = 'All 292 (2 wires in box 5) - Build from right '
+        product.instructions = 'All 292 (2 wires in box 5) - Build from left'
         product.combs = "4 combs"
 
     } else if (product.title === 'SSUPD Meshlicious 24 Pin Paracord Custom Sleeved Cable') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = '3, 4, 6, 12 - 292/64x2, 292/55, 292/85 - top, bottom, bottom, bottom'
-        product.instructions = 'All 292 (2 wires in box 5) - Build from right'
+        product.instructions = 'All 292 (2 wires in box 5) - Build from left'
         product.combs = "4 combs"
         // NCASE
     } else if (product.title === 'NCASE M1 24 Pin Paracord Custom Sleeved Cable') {
@@ -68,10 +68,10 @@ const corsairType5Sleeved = (product) => {
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
         if (m24H.cornerHeaders.includes(product.moboModel)) {
-            product.instructions = 'Start at 208 - Red Box - Build from right'
+            product.instructions = 'Start at 208 - Red Box - Build from left'
             product.combs = "3 combs"
         } else if (m24H.offsetHeaders.includes(product.moboModel) || m24H.middleHeaders.includes(product.moboModel)) {
-            product.instructions = 'Start at 190 - Red Box - Build from right'
+            product.instructions = 'Start at 190 - Red Box - Build from left'
             product.combs = "3 combs"
         }
         // NR200 and DAN C4
@@ -80,10 +80,10 @@ const corsairType5Sleeved = (product) => {
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
         if (m24H.cornerHeaders.includes(product.moboModel)) {
-            product.instructions = 'Start at 214 - Red Box - Build from right'
+            product.instructions = 'Start at 214 - Red Box - Build from left'
             product.combs = "3 combs"
         } else if (m24H.offsetHeaders.includes(product.moboModel) || m24H.middleHeaders.includes(product.moboModel)) {
-            product.instructions = 'Start at 202 - Red Box - Build from right'
+            product.instructions = 'Start at 202 - Red Box - Build from left'
             product.combs = "3 combs"
         }
         // S610
@@ -92,10 +92,10 @@ const corsairType5Sleeved = (product) => {
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
         if (m24H.cornerHeaders.includes(product.moboModel)) {
-            product.instructions = 'Start at 220 - Red Box - Build from right'
+            product.instructions = 'Start at 220 - Red Box - Build from left'
             product.combs = "3 combs"
         } else if (m24H.offsetHeaders.includes(product.moboModel) || m24H.middleHeaders.includes(product.moboModel)) {
-            product.instructions = 'Start at 208 - Red Box - Build from right'
+            product.instructions = 'Start at 208 - Red Box - Build from left'
             product.combs = "3 combs"
         }
         // XPROTO
@@ -103,76 +103,76 @@ const corsairType5Sleeved = (product) => {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
-        product.instructions = 'Start at 180 (chart) - Build from right'
+        product.instructions = 'Start at 180 (chart) - Build from left'
         product.combs = "0 combs"
     } else if (product.title === 'XTIA Xproto 24 Pin Paracord Custom Sleeved Cable') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = '3, 4, 6, 12 - 160/64, 150/64, 130/55, 70/85 - top, bottom, bottom, bottom'
-        product.instructions = 'Start at 180 (chart) - Build from right'
+        product.instructions = 'Start at 180 (chart) - Build from left'
         product.combs = "0 combs"
         // LZ7
     } else if (product.title === 'Lazer3D LZ7 24 Pin Paracord Custom Sleeved Cable' && product.senseWires === 'No') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
-        product.instructions = '148/142 (pull 12 of each length) - Build from left - Long on bottom'
+        product.instructions = '148/142 (pull 12 of each length) - Build from right - Long on bottom'
         product.combs = "1 comb"
     } else if (product.title === 'Lazer3D LZ7 24 Pin Paracord Custom Sleeved Cable') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = '1, 7, 9, 10 - 148/85, 148/55, 148/64, 142/64 - bottom, bottom, bottom, top'
-        product.instructions = '148/142 (pull 9 148; 11 142) - Build from left - Long on bottom'
+        product.instructions = '148/142 (pull 9 148; 11 142) - Build from right - Long on bottom'
         product.combs = "1 comb"
         // LZ7 XTD
     } else if (product.title === 'Lazer3D LZ7 XTD 24 Pin Paracord Custom Sleeved Cable' && product.senseWires === 'No') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
-        product.instructions = 'Start at 268 - Build from right'
+        product.instructions = 'Start at 268 - Build from left'
         product.combs = "3 combs"
     } else if (product.title === 'Lazer3D LZ7 XTD 24 Pin Paracord Custom Sleeved Cable') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = '3, 4, 6, 12 - 256/64, 244/64, 232/55, 196/85 - top, bottom, bottom, bottom'
-        product.instructions = 'Start at 268 - Build from right'
+        product.instructions = 'Start at 268 - Build from left'
         product.combs = "3 combs"
         // SV590
     } else if (product.title === 'Sliger SV590 24 Pin Paracord Custom Sleeved Cable' && product.senseWires === 'No') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
-        product.instructions = 'Start at 304 - Build from left'
+        product.instructions = 'Start at 304 - Build from right'
         product.combs = "3 combs"
     } else if (product.title === 'Sliger SV590 24 Pin Paracord Custom Sleeved Cable') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = '1, 7, 9, 10 - 298/85, 262/55, 250/64x2 - bottom, bottom, bottom, top'
-        product.instructions = 'Start at 304 - Build from left'
+        product.instructions = 'Start at 304 - Build from right'
         product.combs = "3 combs"
         // ZABER
     } else if ((product.title === 'Dr Zaber Sentry 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 24 Pin Paracord Custom Sleeved Cable') && product.senseWires === 'No') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = 'No doubles'
-        product.instructions = 'Start at 305 (chart) - Build from right'
+        product.instructions = 'Start at 305 (chart) - Build from left'
         product.combs = "1 comb"
     } else if (product.title === 'Dr Zaber Sentry 24 Pin Paracord Custom Sleeved Cable' || product.title === 'Lian Li x DAN A4-H2O 24 Pin Paracord Custom Sleeved Cable') {
         product.crimps = 'Same crimps - Male'
         product.doubles = 'No doubles'
         // product.doubles = '3, 4, 6, 12 - 285/64, 275/64, 255/55, 195/85 - top, bottom, bottom, bottom'
-        product.instructions = 'Start at 305 (chart) - Build from right'
+        product.instructions = 'Start at 305 (chart) - Build from left'
         product.combs = "1 comb"
         // TERRA     
     } else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable' && product.senseWires === 'No') {
-        product.instructions = "Start at 190 - Build from left"
+        product.instructions = "Start at 190 - Build from right"
         product.doubles = 'No doubles'
         // product.doubles = '1, 7, 9, 10 - 184/85, 148/55, 136/64x2 - bottom, bottom, bottom, top'
         product.combs = "1 comb"
         product.crimps = 'Same crimps - Male'
 
     } else if (product.title === 'Fractal Terra 24 Pin Paracord Custom Sleeved Cable') {
-        product.instructions = "Start at 190 - Build from left"
+        product.instructions = "Start at 190 - Build from right"
         product.doubles = 'No doubles'
         // product.doubles = '1, 7, 9, 10 - 184/85, 148/55, 136/64x2 - bottom, bottom, bottom, top'
         product.combs = "1 comb"
