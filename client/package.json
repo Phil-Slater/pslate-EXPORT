@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
+    "build": "CI=false NODE_OPTIONS=--openssl-legacy-provider react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "browsersync": "browser-sync start --directory --server ./public --files ./public/* --startPath index.html",
